@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://characters/model_student/ModelGirlA1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ui/ModelLoader.gd" type="Script" id=152]
+
+[node name="ModelLoader" type="Node"]
+script = ExtResource( 152 )
+
+[node name="ModelGirlA1" parent="." instance=ExtResource( 4 )]
+visible = false

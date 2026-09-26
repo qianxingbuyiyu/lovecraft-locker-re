@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://characters/BaseGirl.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/euxi_assets/demonmaid_sprite/DM_headwear.png" type="Texture" id=2]
+
+[node name="Demonmaid" instance=ExtResource( 1 )]
+character_type = "demonmaid"
+
+[node name="AnimatedSprite" parent="." index="7"]
+frame = 0
+
+[node name="Sprite" type="Sprite" parent="." index="24"]
+position = Vector2( 15, -205 )
+texture = ExtResource( 2 )

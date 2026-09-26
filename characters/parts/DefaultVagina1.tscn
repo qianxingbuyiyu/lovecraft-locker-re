@@ -1,0 +1,168 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/cutscenes_nsfw/_main_tentacles/cum_particle.png" type="Texture" id=1]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_tentacles/cum_set1.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=24]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cum:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cum:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Cum1:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cum2:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "cum"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cum:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cum:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 0.4 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Cum1:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cum2:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Curve" id=22]
+min_value = 0.3
+max_value = 2.0
+_data = [ Vector2( 0.362745, 0.989659 ), 0.0, 0.0, 0, 0, Vector2( 0.852941, 1.73148 ), -1.09047, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=21]
+offsets = PoolRealArray( 0, 4.58251e-27, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[node name="DefaultVagina1" type="Node2D"]
+
+[node name="Cum" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -1.95874, 83.0324 )
+scale = Vector2( 1e-05, 1 )
+texture = ExtResource( 2 )
+
+[node name="Anim" type="AnimationPlayer" parent="Cum"]
+root_node = NodePath("../..")
+anims/RESET = SubResource( 24 )
+anims/cum = SubResource( 23 )
+
+[node name="Cum1" type="CPUParticles2D" parent="."]
+show_behind_parent = true
+position = Vector2( 7.97822, 81.13 )
+rotation = 0.492197
+z_index = 1
+emitting = false
+amount = 3
+lifetime = 2.0
+one_shot = true
+texture = ExtResource( 1 )
+flag_align_y = true
+direction = Vector2( 0, 0 )
+gravity = Vector2( 0, 60 )
+initial_velocity = 73.4
+angular_velocity_random = 0.04
+angle_random = 1.0
+scale_amount_curve = SubResource( 22 )
+color_ramp = SubResource( 21 )
+
+[node name="Cum2" type="CPUParticles2D" parent="."]
+show_behind_parent = true
+position = Vector2( -7.04033, 80.8989 )
+rotation = 3.08817
+z_index = 1
+emitting = false
+amount = 3
+lifetime = 2.0
+one_shot = true
+texture = ExtResource( 1 )
+flag_align_y = true
+direction = Vector2( 0, 0 )
+gravity = Vector2( 0, -60 )
+initial_velocity = 73.4
+angular_velocity_random = 0.04
+angle_random = 1.0
+scale_amount_curve = SubResource( 22 )
+color_ramp = SubResource( 21 )

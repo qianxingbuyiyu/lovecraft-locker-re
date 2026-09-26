@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://characters/BaseGirl.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/euxi_assets/_new teachers/teacher_02/glasses.png" type="Texture" id=2]
+
+[node name="Teacherfour" instance=ExtResource( 1 )]
+character_type = "teacherfour"
+
+[node name="Reflection" parent="." index="2"]
+frame = 1
+
+[node name="AnimatedSprite" parent="." index="7"]
+frame = 3
+
+[node name="Glasses" parent="Face" index="0"]
+visible = true
+position = Vector2( 3, 70 )
+texture = ExtResource( 2 )

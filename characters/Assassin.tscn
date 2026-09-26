@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://characters/BaseGirl.tscn" type="PackedScene" id=1]
+
+[node name="Assassin" instance=ExtResource( 1 )]
+speed = 4
+character_type = "assassin"
+hair_override = "assassin"
+
+[node name="Reflection" parent="." index="2"]
+frame = 2

@@ -1,0 +1,937 @@
+[gd_scene load_steps=82 format=2]
+
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/bg7.png" type="Texture" id=1]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/bg3.png" type="Texture" id=2]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/bg6.png" type="Texture" id=3]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/bg4.png" type="Texture" id=4]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/2.png" type="Texture" id=5]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/6.png" type="Texture" id=6]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/7.png" type="Texture" id=7]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/bg1.png" type="Texture" id=8]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/framev2.png" type="Texture" id=9]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/bg5.png" type="Texture" id=10]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/bg2.png" type="Texture" id=11]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/18.png" type="Texture" id=12]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/21.png" type="Texture" id=13]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/12.png" type="Texture" id=14]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/11.png" type="Texture" id=15]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/final_frame.png" type="Texture" id=16]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/3.png" type="Texture" id=17]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/9.png" type="Texture" id=18]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/20.png" type="Texture" id=19]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/13.png" type="Texture" id=20]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/17.png" type="Texture" id=21]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/1.png" type="Texture" id=22]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/14.png" type="Texture" id=23]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/15.png" type="Texture" id=24]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/10.png" type="Texture" id=25]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/19.png" type="Texture" id=26]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/4.png" type="Texture" id=27]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/8.png" type="Texture" id=28]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/16.png" type="Texture" id=29]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_border/flesh_front_Bg/5.png" type="Texture" id=30]
+[ext_resource path="res://characters/parts/HAIR_FRONT.tscn" type="PackedScene" id=31]
+[ext_resource path="res://demos/LockerMockup.gd" type="Script" id=32]
+[ext_resource path="res://characters/parts/HAIR_BACK.tscn" type="PackedScene" id=33]
+[ext_resource path="res://characters/parts/_ATTIRE_TENTACLE.tscn" type="PackedScene" id=34]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/used/head.png" type="Texture" id=35]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_tentacles/passive_background_blurred.png" type="Texture" id=36]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/main torso_v2_boobless.png" type="Texture" id=37]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/2arm0.png" type="Texture" id=38]
+[ext_resource path="res://characters/parts/Mouth.tscn" type="PackedScene" id=39]
+[ext_resource path="res://characters/parts/TentacleVagina1.tscn" type="PackedScene" id=40]
+[ext_resource path="res://characters/parts/Eyes.tscn" type="PackedScene" id=41]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_clothes/teacher/teacher_skirt.png" type="Texture" id=42]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_clothes/teacher/page_6.png" type="Texture" id=43]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_tentacles/leg_tentacle_2.png" type="Texture" id=44]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/head.png" type="Texture" id=45]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_tentacles/behind_tentacle_big.png" type="Texture" id=46]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_tentacles/leg_tentacle2.png" type="Texture" id=47]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/leg.png" type="Texture" id=48]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/thigh_trimmed_thicc.png" type="Texture" id=49]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_clothes/teacher/full_arm_upper.png" type="Texture" id=50]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blush_V2b.png" type="Texture" id=51]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/2thigh_thicc.png" type="Texture" id=52]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blush_V2.png" type="Texture" id=53]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/2leg.png" type="Texture" id=54]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/2arm2.png" type="Texture" id=55]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_tentacles/arm_tentacle.png" type="Texture" id=56]
+[ext_resource path="res://characters/model_student/ModelGirlB2.tscn" type="PackedScene" id=57]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/main body.png" type="Texture" id=58]
+[ext_resource path="res://characters/parts/_ATTIRE_TENTACLE2.tscn" type="PackedScene" id=59]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/upper arm.png" type="Texture" id=60]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type3/main body.png" type="Texture" id=81]
+[ext_resource path="res://characters/parts/boobs/typethree_naked.tscn" type="PackedScene" id=82]
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 5 ), ExtResource( 17 ), ExtResource( 27 ), ExtResource( 30 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 28 ), ExtResource( 18 ), ExtResource( 25 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 20 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 29 ), ExtResource( 21 ), ExtResource( 12 ), ExtResource( 26 ), ExtResource( 19 ), ExtResource( 13 ), ExtResource( 19 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 12 ), ExtResource( 29 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 25 ), ExtResource( 18 ), ExtResource( 28 ), ExtResource( 7 ), ExtResource( 30 ), ExtResource( 6 ), ExtResource( 27 ), ExtResource( 17 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://assets/fonts/haedus/Haedus.ttf"
+
+[sub_resource type="DynamicFont" id=11]
+size = 138
+outline_size = 3
+outline_color = Color( 0.117647, 0.109804, 0.109804, 1 )
+font_data = SubResource( 10 )
+
+[sub_resource type="DynamicFontData" id=12]
+font_path = "res://assets/fonts/curvilingus/Curvilingus.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+size = 70
+outline_size = 3
+outline_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+font_data = SubResource( 12 )
+
+[sub_resource type="Animation" id=14]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Lovecraft:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 24, -11 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Locker:rect_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 248, 74 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Locker:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 108, 127 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "idle"
+loop = true
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Lovecraft:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.52, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 24, -11 ), Vector2( 24, -2 ), Vector2( 24, -11 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Locker:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.52, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 107, 131 ), Vector2( 108, 127 ), Vector2( 107, 131 ) ]
+}
+
+[sub_resource type="DynamicFontData" id=18]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=17]
+size = 21
+outline_size = 7
+outline_color = Color( 0.317647, 0.0901961, 0.160784, 1 )
+font_data = SubResource( 18 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 51 ) ],
+"loop": true,
+"name": "cut",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 53 ) ],
+"loop": true,
+"name": "full",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 4.28491, -144.023 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Cum1:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Cum2:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "cum"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.17, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.410929, 0.410929 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.3197, -137.008 ), Vector2( 4.28491, -144.023 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Cum1:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.07, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Cum2:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.07, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+
+[sub_resource type="Animation" id=23]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 10 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ThighLeft:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -4.85299 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ThighRight:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -22.2532 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ArmRight:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 26.6888 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ArmLeft:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -27.63 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ArmRight/Sprite:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 25.1845 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ArmLeft/Sprite:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -18.7928 ]
+}
+
+[sub_resource type="Animation" id=24]
+length = 1.1
+loop = true
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.24, 0.77 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 10 ), Vector2( 0, -10 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ThighLeft:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.23, 0.93 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.330054, -4.85299 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ThighRight:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.22, 0.94 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -31.5288, -22.2532 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ArmRight:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.23, 0.93 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 26.6888, 24.3818 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ArmLeft:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.21, 0.93 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -27.63, -24.3809 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ArmRight/Sprite:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.2, 0.94 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 17.3891, 25.1845 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ArmLeft/Sprite:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.21, 0.94 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -14.4487, -17.4187 ]
+}
+
+[sub_resource type="DynamicFontData" id=19]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=20]
+size = 19
+font_data = SubResource( 19 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.270588, 0.270588, 0.270588, 0.792157 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 0.694118 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0, 0, 0, 0.792157 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 0.694118 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="LockerMockup" type="Node2D"]
+position = Vector2( 300, 301 )
+scale = Vector2( 0.8, 0.8 )
+script = ExtResource( 32 )
+mode = "hair"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_left = 923.0
+margin_top = -381.0
+margin_right = 1707.0
+margin_bottom = 434.0
+color = Color( 0.976471, 0.435294, 0.607843, 1 )
+
+[node name="BG" type="AnimatedSprite" parent="."]
+position = Vector2( -30, -8.75 )
+scale = Vector2( 1.18253, 1.18253 )
+frames = SubResource( 7 )
+frame = 4
+speed_scale = 3.0
+playing = true
+
+[node name="PassiveBG2" type="Sprite" parent="BG"]
+position = Vector2( -1.05703, -1.89721 )
+scale = Vector2( 0.823194, 0.926199 )
+texture = ExtResource( 36 )
+
+[node name="Models2" type="Node2D" parent="."]
+position = Vector2( 0, 10 )
+rotation = 0.0366515
+
+[node name="Models" type="Node2D" parent="."]
+position = Vector2( 0, 10 )
+rotation = 0.0366515
+
+[node name="Border" type="Node2D" parent="."]
+scale = Vector2( 1.2, 1.2 )
+
+[node name="Flesh" type="AnimatedSprite" parent="Border"]
+scale = Vector2( 0.974771, 0.974771 )
+frames = SubResource( 8 )
+frame = 31
+speed_scale = 2.0
+playing = true
+
+[node name="Frame" type="Sprite" parent="Border"]
+texture = ExtResource( 16 )
+
+[node name="Frame" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 1.16973, 1.16973 )
+texture = ExtResource( 9 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Title" type="Node2D" parent="."]
+visible = false
+position = Vector2( 256.25, -370 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="Lovecraft" type="Label" parent="Title"]
+margin_left = 24.0
+margin_top = -11.0
+margin_right = 513.0
+margin_bottom = 172.0
+custom_colors/font_color = Color( 0.298039, 0.717647, 0.592157, 1 )
+custom_colors/font_outline_modulate = Color( 0.113725, 0.113725, 0.113725, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = -10
+custom_constants/line_spacing = 1
+custom_constants/shadow_offset_y = 10
+custom_fonts/font = SubResource( 11 )
+text = "LOVECRAFT"
+
+[node name="Locker" type="Label" parent="Title"]
+margin_left = 108.0
+margin_top = 127.0
+margin_right = 356.0
+margin_bottom = 201.0
+custom_colors/font_color = Color( 1, 0.45098, 0.619608, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = -6
+custom_constants/shadow_offset_y = 6
+custom_fonts/font = SubResource( 13 )
+text = "LOCKER"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Title"]
+autoplay = "idle"
+playback_speed = 0.7
+anims/RESET = SubResource( 14 )
+anims/idle = SubResource( 15 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = -178.75
+margin_top = 345.0
+margin_right = 152.25
+margin_bottom = 370.0
+custom_fonts/font = SubResource( 17 )
+text = "https://strange-girl-studios.itch.io"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 266.25, 0 )
+current = true
+
+[node name="HAIR_BACK" type="Node2D" parent="."]
+visible = false
+position = Vector2( -268.75, 351.25 )
+rotation = -0.103128
+
+[node name="Head" type="Sprite" parent="."]
+visible = false
+position = Vector2( -251.25, 356.25 )
+texture = ExtResource( 35 )
+
+[node name="Specials" type="Node2D" parent="."]
+visible = false
+position = Vector2( -188.75, 15 )
+
+[node name="Node2D" type="Node2D" parent="Specials"]
+position = Vector2( 271.25, -72.5 )
+
+[node name="ModelGirlB2" parent="Specials/Node2D" instance=ExtResource( 57 )]
+
+[node name="naked_small" parent="Specials/Node2D/ModelGirlB2/_ATTIRE_TENTACLE" index="0"]
+frame = 9
+
+[node name="TentacleMouthV1" parent="Specials/Node2D/ModelGirlB2/Head" index="1"]
+frame = 11
+
+[node name="_ATTIRE" parent="Specials/Node2D/ModelGirlB2/ArmRight" index="0"]
+visible = true
+
+[node name="_ATTIRE" parent="Specials/Node2D/ModelGirlB2/ArmLeft" index="1"]
+visible = true
+
+[node name="Tentacle2" parent="Specials/Node2D/ModelGirlB2" index="7"]
+frame = 20
+
+[node name="TentacleBehind3" parent="Specials/Node2D/ModelGirlB2" index="11"]
+frame = 20
+
+[node name="Tentacle2Pussy" parent="Specials/Node2D/ModelGirlB2" index="12"]
+frame = 20
+
+[node name="Node2D2" type="Node2D" parent="Specials"]
+
+[node name="ModelTeacher12" type="Sprite" parent="Specials/Node2D2"]
+position = Vector2( 0, 10 )
+rotation = 0.0366515
+texture = ExtResource( 37 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="TentacleBehind" type="Node2D" parent="Specials/Node2D2/ModelTeacher12"]
+show_behind_parent = true
+
+[node name="Tenta1" type="Sprite" parent="Specials/Node2D2/ModelTeacher12/TentacleBehind"]
+position = Vector2( 64, -37 )
+rotation = -0.861342
+texture = ExtResource( 46 )
+offset = Vector2( 200, -190 )
+
+[node name="HAIR_BACK" parent="Specials/Node2D2/ModelTeacher12" instance=ExtResource( 33 )]
+position = Vector2( -3, -213.196 )
+
+[node name="_ATTIRE_TENTACLE" parent="Specials/Node2D2/ModelTeacher12" instance=ExtResource( 34 )]
+
+[node name="Head" type="Sprite" parent="Specials/Node2D2/ModelTeacher12"]
+position = Vector2( 3, -137 )
+rotation = 0.107698
+texture = ExtResource( 45 )
+offset = Vector2( 0, -70 )
+
+[node name="Eyes" parent="Specials/Node2D2/ModelTeacher12/Head" instance=ExtResource( 41 )]
+position = Vector2( -8.41328, -49.7667 )
+
+[node name="Mouth" parent="Specials/Node2D2/ModelTeacher12/Head" instance=ExtResource( 39 )]
+position = Vector2( -3.4033, -18.3835 )
+animation = "default2"
+
+[node name="Blush" type="AnimatedSprite" parent="Specials/Node2D2/ModelTeacher12/Head"]
+position = Vector2( -8.05048, -34.4017 )
+frames = SubResource( 4 )
+animation = "full"
+playing = true
+
+[node name="Glass" type="Sprite" parent="Specials/Node2D2/ModelTeacher12/Head"]
+position = Vector2( -8.66056, -52.5022 )
+texture = ExtResource( 43 )
+
+[node name="HAIR_FRONT" parent="Specials/Node2D2/ModelTeacher12/Head" instance=ExtResource( 31 )]
+
+[node name="ArmRight" type="Sprite" parent="Specials/Node2D2/ModelTeacher12"]
+show_behind_parent = true
+position = Vector2( 53, -96 )
+rotation = 0.465807
+texture = ExtResource( 38 )
+offset = Vector2( 20, 60 )
+flip_h = true
+
+[node name="_ATTIRE" type="Sprite" parent="Specials/Node2D2/ModelTeacher12/ArmRight"]
+position = Vector2( 20.1508, 56.6152 )
+rotation = 0.0193971
+texture = ExtResource( 50 )
+
+[node name="Sprite" type="Sprite" parent="Specials/Node2D2/ModelTeacher12/ArmRight"]
+position = Vector2( 44.8236, 123.239 )
+rotation = 0.439552
+texture = ExtResource( 55 )
+offset = Vector2( 40, 75 )
+flip_h = true
+
+[node name="ArmLeft" type="Sprite" parent="Specials/Node2D2/ModelTeacher12"]
+show_behind_parent = true
+position = Vector2( -61, -95 )
+rotation = -0.482234
+texture = ExtResource( 38 )
+offset = Vector2( -20, 60 )
+
+[node name="Sprite" type="Sprite" parent="Specials/Node2D2/ModelTeacher12/ArmLeft"]
+position = Vector2( -44.3352, 123.249 )
+rotation = -0.327996
+texture = ExtResource( 55 )
+offset = Vector2( -40, 75 )
+
+[node name="_ATTIRE" type="Sprite" parent="Specials/Node2D2/ModelTeacher12/ArmLeft"]
+position = Vector2( -17.8884, 58.0731 )
+texture = ExtResource( 50 )
+flip_h = true
+
+[node name="TENTACLE_ARM" type="Sprite" parent="Specials/Node2D2/ModelTeacher12"]
+show_behind_parent = true
+position = Vector2( 4, 95 )
+texture = ExtResource( 56 )
+
+[node name="TentacleVagina1" parent="Specials/Node2D2/ModelTeacher12" instance=ExtResource( 40 )]
+position = Vector2( -3, 232 )
+frame = 10
+
+[node name="Anim" parent="Specials/Node2D2/ModelTeacher12/TentacleVagina1/Cum" index="0"]
+anims/RESET = SubResource( 5 )
+anims/cum = SubResource( 6 )
+
+[node name="VageneAnim" parent="Specials/Node2D2/ModelTeacher12/TentacleVagina1" index="4"]
+frame = 1
+
+[node name="_ATTIRE_BOTTOM" type="Sprite" parent="Specials/Node2D2/ModelTeacher12"]
+position = Vector2( -3.8607, 31.1624 )
+texture = ExtResource( 42 )
+
+[node name="ThighRight" type="Sprite" parent="Specials/Node2D2/ModelTeacher12"]
+position = Vector2( 29.7568, 101.978 )
+rotation = -0.388392
+texture = ExtResource( 52 )
+offset = Vector2( 10, 80 )
+flip_h = true
+
+[node name="Leg" type="Sprite" parent="Specials/Node2D2/ModelTeacher12/ThighRight"]
+show_behind_parent = true
+position = Vector2( 4.57254, 184.532 )
+rotation = 1.05604
+texture = ExtResource( 54 )
+offset = Vector2( -30, -90 )
+flip_v = true
+
+[node name="Tentacle" type="Sprite" parent="Specials/Node2D2/ModelTeacher12/ThighRight/Leg"]
+position = Vector2( -38.5844, -107.895 )
+rotation = 3.11802
+texture = ExtResource( 47 )
+flip_h = true
+
+[node name="Tenta2" type="Sprite" parent="Specials/Node2D2/ModelTeacher12/ThighRight/Leg"]
+show_behind_parent = true
+position = Vector2( -7.01187, -243.065 )
+rotation = 2.25915
+texture = ExtResource( 46 )
+offset = Vector2( -200, -190 )
+flip_v = true
+
+[node name="ThighLeft" type="Sprite" parent="Specials/Node2D2/ModelTeacher12"]
+position = Vector2( -40.2595, 75.526 )
+rotation = -0.0847007
+texture = ExtResource( 49 )
+offset = Vector2( -40, -50 )
+flip_h = true
+
+[node name="Leg2" type="Sprite" parent="Specials/Node2D2/ModelTeacher12/ThighLeft"]
+position = Vector2( -88.5963, -104.77 )
+rotation = -0.000152446
+texture = ExtResource( 48 )
+offset = Vector2( -60, 80 )
+flip_h = true
+
+[node name="Tenta3" type="Sprite" parent="Specials/Node2D2/ModelTeacher12/ThighLeft/Leg2"]
+position = Vector2( -158.875, 215.427 )
+rotation = -2.90508
+texture = ExtResource( 46 )
+offset = Vector2( 200, 190 )
+flip_v = true
+
+[node name="Tentacle2" type="Sprite" parent="Specials/Node2D2/ModelTeacher12/ThighLeft/Leg2"]
+position = Vector2( -81.9008, 107.057 )
+texture = ExtResource( 44 )
+flip_h = true
+
+[node name="Anim" type="AnimationPlayer" parent="Specials/Node2D2/ModelTeacher12"]
+autoplay = "idle"
+anims/RESET = SubResource( 23 )
+anims/idle = SubResource( 24 )
+
+[node name="HAIR_FRONT" type="Node2D" parent="."]
+position = Vector2( -256.25, 396.25 )
+
+[node name="_ATTIRE_TENTACLE" type="Node2D" parent="."]
+position = Vector2( -295, 341.25 )
+
+[node name="Sprite2" type="Sprite" parent="_ATTIRE_TENTACLE"]
+position = Vector2( -44.8692, 20.25 )
+rotation = -0.491779
+texture = ExtResource( 38 )
+
+[node name="Sprite3" type="Sprite" parent="_ATTIRE_TENTACLE"]
+position = Vector2( 48.8808, 20.25 )
+rotation = 0.492183
+texture = ExtResource( 38 )
+flip_h = true
+
+[node name="Sprite" type="Sprite" parent="_ATTIRE_TENTACLE"]
+position = Vector2( 2.63083, 52.75 )
+texture = ExtResource( 37 )
+
+[node name="Head2" type="Sprite" parent="_ATTIRE_TENTACLE/Sprite"]
+position = Vector2( 3.75, -206.25 )
+texture = ExtResource( 35 )
+
+[node name="_ATTIRE_TENTACLE" type="Node2D" parent="_ATTIRE_TENTACLE"]
+
+[node name="_ATTIRE_TENTACLE2" parent="." instance=ExtResource( 59 )]
+visible = false
+position = Vector2( -270, 345 )
+frame = 16
+
+[node name="Sprite2" type="Sprite" parent="_ATTIRE_TENTACLE2"]
+show_behind_parent = true
+position = Vector2( 20, -3.75 )
+rotation = -0.136054
+texture = ExtResource( 60 )
+flip_h = true
+
+[node name="Sprite" type="Sprite" parent="_ATTIRE_TENTACLE2"]
+show_behind_parent = true
+position = Vector2( 53.75, 26.25 )
+texture = ExtResource( 58 )
+
+[node name="_ATTIRE_TENTACLE3" type="Node2D" parent="."]
+visible = false
+position = Vector2( 28.75, -60 )
+scale = Vector2( 1.15, 1.15 )
+
+[node name="Sprite" type="Sprite" parent="_ATTIRE_TENTACLE3"]
+position = Vector2( -376.5, 322.5 )
+texture = ExtResource( 81 )
+
+[node name="_ATTIRE_TENTACLE3" type="Node2D" parent="_ATTIRE_TENTACLE3"]
+position = Vector2( -286.5, 328.75 )
+
+[node name="typethree_naked" parent="_ATTIRE_TENTACLE3/_ATTIRE_TENTACLE3" instance=ExtResource( 82 )]
+frame = 12
+
+[node name="BOOB SPACE" type="ColorRect" parent="."]
+margin_left = -376.0
+margin_top = 274.0
+margin_right = -215.0
+margin_bottom = 374.0
+color = Color( 0, 0, 0, 0.278431 )
+
+[node name="generate" type="Button" parent="."]
+margin_left = 477.5
+margin_top = 122.5
+margin_right = 637.5
+margin_bottom = 167.5
+rect_scale = Vector2( 1.1, 1.1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 20 )
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 21 )
+custom_styles/focus = SubResource( 22 )
+custom_styles/disabled = SubResource( 22 )
+custom_styles/normal = SubResource( 22 )
+text = "GENERATE"
+
+[node name="mode" type="OptionButton" parent="."]
+margin_left = 442.5
+margin_top = -12.5
+margin_right = 602.5
+margin_bottom = 32.5
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 20 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="generate" to="." method="_on_generate_pressed"]
+
+[editable path="Specials/Node2D/ModelGirlB2"]
+[editable path="Specials/Node2D/ModelGirlB2/HAIR_BACK"]
+[editable path="Specials/Node2D/ModelGirlB2/Head/HAIR_FRONT"]
+[editable path="Specials/Node2D2/ModelTeacher12/HAIR_BACK"]
+[editable path="Specials/Node2D2/ModelTeacher12/Head/HAIR_FRONT"]
+[editable path="Specials/Node2D2/ModelTeacher12/TentacleVagina1"]

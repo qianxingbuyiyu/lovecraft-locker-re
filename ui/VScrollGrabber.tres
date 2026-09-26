@@ -1,0 +1,9 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=2]
+
+[ext_resource path="res://assets/ui/vscroll_grabber.png" type="Texture" id=1]
+
+[resource]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, -2.07252, 31.7954, 77.5782 )
+margin_top = 54.4254
+margin_bottom = 55.5041

@@ -1,0 +1,670 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://assets/game/locker/base_locker_opening_day2/locker_opening_export0010.png" type="Texture" id=1]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day0/locker_opening_export0010.png" type="Texture" id=2]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day1/locker_opening_export0010.png" type="Texture" id=3]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day3/locker_opening_export0010.png" type="Texture" id=4]
+[ext_resource path="res://assets/game/abilities/default.png" type="Texture" id=5]
+[ext_resource path="res://assets/ui/alerted_ui.png" type="Texture" id=6]
+[ext_resource path="res://ui/Tutorial2.gd" type="Script" id=7]
+[ext_resource path="res://assets/game/abilities/passive_ability.png" type="Texture" id=8]
+[ext_resource path="res://assets/game/abilities/gas_ability.png" type="Texture" id=9]
+[ext_resource path="res://assets/game/abilities/delete.png" type="Texture" id=10]
+[ext_resource path="res://assets/game/abilities/dimensional_ability.png" type="Texture" id=11]
+[ext_resource path="res://assets/game/abilities/unlock.png" type="Texture" id=12]
+[ext_resource path="res://assets/game/abilities/smart.png" type="Texture" id=13]
+[ext_resource path="res://assets/game/abilities/quick.png" type="Texture" id=14]
+
+[sub_resource type="StyleBoxFlat" id=104]
+bg_color = Color( 0.0588235, 0.0588235, 0.0588235, 0.933333 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.0588235, 0.0588235, 0.0588235, 0.933333 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="DynamicFontData" id=105]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=107]
+size = 30
+font_data = SubResource( 105 )
+
+[sub_resource type="DynamicFont" id=106]
+size = 20
+font_data = SubResource( 105 )
+
+[sub_resource type="DynamicFont" id=110]
+size = 19
+font_data = SubResource( 105 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=42]
+size = 34
+outline_size = 4
+outline_color = Color( 0.0705882, 0.0705882, 0.0705882, 1 )
+extra_spacing_char = 5
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFont" id=43]
+size = 34
+outline_size = 4
+outline_color = Color( 0.0705882, 0.0705882, 0.0705882, 1 )
+extra_spacing_char = 5
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFont" id=44]
+size = 34
+outline_size = 4
+outline_color = Color( 0.0705882, 0.0705882, 0.0705882, 1 )
+extra_spacing_char = 5
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFont" id=45]
+size = 34
+outline_size = 4
+outline_color = Color( 0.0705882, 0.0705882, 0.0705882, 1 )
+extra_spacing_char = 5
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFont" id=51]
+size = 32
+outline_size = 4
+outline_color = Color( 0.294118, 0.121569, 0.180392, 1 )
+extra_spacing_char = 5
+font_data = SubResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=50]
+bg_color = Color( 0.921569, 0.356863, 0.419608, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 0.294118, 0.121569, 0.180392, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 5
+
+[sub_resource type="DynamicFontData" id=111]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=112]
+size = 20
+outline_size = 3
+outline_color = Color( 0.2, 0, 0.0666667, 1 )
+extra_spacing_char = 5
+font_data = SubResource( 111 )
+
+[sub_resource type="Animation" id=109]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 384, -460 ) ]
+}
+
+[sub_resource type="Animation" id=108]
+resource_name = "intro"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 384, -460 ), Vector2( -414, -280 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFontData" id=58]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=20]
+size = 19
+font_data = SubResource( 58 )
+
+[sub_resource type="StyleBoxFlat" id=38]
+bg_color = Color( 0.270588, 0.270588, 0.270588, 0.792157 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 0.694118 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0, 0, 0, 0.792157 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 0.694118 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Tutorial2" type="Panel"]
+margin_left = 384.0
+margin_top = -460.0
+margin_right = 1226.0
+margin_bottom = 51.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+rect_pivot_offset = Vector2( -837, 246 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 104 )
+script = ExtResource( 7 )
+
+[node name="Dialogue5" type="Label" parent="."]
+margin_left = 38.0
+margin_top = 15.0
+margin_right = 834.0
+margin_bottom = 51.0
+custom_colors/font_color = Color( 0.980392, 0.447059, 0.611765, 1 )
+custom_fonts/font = SubResource( 107 )
+text = "HOW TO PLAY"
+
+[node name="Page1" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Dialogue5" type="RichTextLabel" parent="Page1"]
+margin_left = 40.0
+margin_top = 76.0
+margin_right = 711.0
+margin_bottom = 288.0
+custom_fonts/normal_font = SubResource( 106 )
+bbcode_enabled = true
+bbcode_text = "You are a naughty [color=#FA729C]tentacle god[/color] and your goal is to capture girls through [color=#FA729C]tentacle lockers.[/color]
+
+Press [img]res://assets/game/KEYS/left_arrow.png[/img][img]res://assets/game/KEYS/right_arrow.png[/img][img]res://assets/game/KEYS/A.png[/img][img]res://assets/game/KEYS/D.png[/img] keys to move to the next left or right locker.
+
+Use [img]res://assets/game/KEYS/space_bar.png[/img] to abduct a girl when they're in front of the currently active locker. Press [img]res://assets/game/KEYS/space_bar2.png[/img] to view the [color=#FA729C]locker scene[/color] of the current locker (the world is paused during a locker scene)."
+text = "You are a naughty tentacle god and your goal is to capture girls through tentacle lockers.
+
+Press  keys to move to the next left or right locker.
+
+Use  to abduct a girl when they're in front of the currently active locker. Press  to view the locker scene of the current locker (the world is paused during a locker scene)."
+
+[node name="Dialogue6" type="RichTextLabel" parent="Page1"]
+margin_left = 39.0
+margin_top = 298.0
+margin_right = 752.0
+margin_bottom = 381.0
+custom_fonts/normal_font = SubResource( 106 )
+bbcode_enabled = true
+bbcode_text = "Lastly, you get [color=#FA729C]lust points[/color] [img]res://assets/ui/heart_emoji.png[/img] whenever a girl exits the locker. You can use it to unlock lewd content on [color=#FA729C]Fap Mode[/color]."
+text = "Lastly, you get lust points  whenever a girl exits the locker. You can use it to unlock lewd content on Fap Mode."
+
+[node name="Dialogue7" type="Label" parent="Page1"]
+margin_left = 38.0
+margin_top = 456.0
+margin_right = 834.0
+margin_bottom = 492.0
+custom_colors/font_color = Color( 0.980392, 0.447059, 0.611765, 1 )
+custom_fonts/font = SubResource( 110 )
+text = "Page One: Gameplay and Controls"
+
+[node name="Page2" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Dialogue2" type="RichTextLabel" parent="Page2"]
+margin_left = 36.0
+margin_top = 99.0
+margin_right = 707.0
+margin_bottom = 182.0
+custom_fonts/normal_font = SubResource( 106 )
+bbcode_enabled = true
+bbcode_text = "You get [color=#FA729C]skill points[/color] every time you level up. Use them to make new lockers. Press [img]res://assets/game/KEYS/R.png[/img] to open the [color=#FA729C]locker creator panel[/color] on an empty locker. Empty lockers don't have tentacles on the bottom part of their door."
+text = "You get skill points every time you level up. Use them to make new lockers. Press  to open the locker creator panel on an empty locker. Empty lockers don't have tentacles on the bottom part of their door."
+
+[node name="Dialogue3" type="RichTextLabel" parent="Page2"]
+margin_left = 91.0
+margin_top = 196.0
+margin_right = 762.0
+margin_bottom = 267.0
+custom_fonts/normal_font = SubResource( 106 )
+bbcode_enabled = true
+bbcode_text = "The [color=#FA729C]basic locker[/color] allows you to abduct girls. It costs 2 skill points. It grows into the mature version [color=#FA729C]after 2 days.[/color]"
+text = "The basic locker allows you to abduct girls. It costs 2 skill points. It grows into the mature version after 2 days."
+
+[node name="TextureRect" type="TextureRect" parent="Page2"]
+margin_left = 31.0
+margin_top = 194.0
+margin_right = 86.0
+margin_bottom = 249.0
+texture = ExtResource( 5 )
+
+[node name="TextureRect2" type="TextureRect" parent="Page2"]
+margin_left = 249.0
+margin_top = 244.0
+margin_right = 493.0
+margin_bottom = 707.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+
+[node name="TextureRect3" type="TextureRect" parent="Page2"]
+margin_left = 331.0
+margin_top = 245.0
+margin_right = 575.0
+margin_bottom = 708.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 3 )
+
+[node name="TextureRect4" type="TextureRect" parent="Page2"]
+margin_left = 414.0
+margin_top = 244.0
+margin_right = 658.0
+margin_bottom = 707.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 1 )
+
+[node name="TextureRect5" type="TextureRect" parent="Page2"]
+margin_left = 499.0
+margin_top = 246.0
+margin_right = 743.0
+margin_bottom = 709.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 4 )
+
+[node name="Dialogue8" type="Label" parent="Page2"]
+margin_left = 38.0
+margin_top = 456.0
+margin_right = 834.0
+margin_bottom = 492.0
+custom_colors/font_color = Color( 0.980392, 0.447059, 0.611765, 1 )
+custom_fonts/font = SubResource( 110 )
+text = "Page Two: Lockers"
+
+[node name="Page3" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 110, 288 )
+
+[node name="Dialogue4" type="RichTextLabel" parent="Page3"]
+margin_left = 36.0
+margin_top = 99.0
+margin_right = 707.0
+margin_bottom = 392.0
+custom_fonts/normal_font = SubResource( 106 )
+bbcode_enabled = true
+bbcode_text = "Make sure the girls don't see you whenever you [color=#FA729C]capture[/color] a girl. Or when a girl exits a locker and they see it. If so, they'll report you to the school management once they leave the hallway."
+text = "Make sure the girls don't see you whenever you capture a girl. Or when a girl exits a locker and they see it. If so, they'll report you to the school management once they leave the hallway."
+
+[node name="Dialogue5" type="RichTextLabel" parent="Page3"]
+margin_left = 172.0
+margin_top = 318.0
+margin_right = 751.0
+margin_bottom = 420.0
+custom_fonts/normal_font = SubResource( 106 )
+bbcode_enabled = true
+bbcode_text = "Once the [color=#FA729C]alert meter[/color] reaches [color=#FA729C]50/50[/color], you're the one that will be caught and it's game over. You will then have to restart on your last saved check point  [color=#FA729C]3 days earlier[/color]."
+text = "Once the alert meter reaches 50/50, you're the one that will be caught and it's game over. You will then have to restart on your last saved check point  3 days earlier."
+
+[node name="NotifIndicator" type="RichTextLabel" parent="Page3"]
+margin_left = 295.0
+margin_top = 210.0
+margin_right = 661.0
+margin_bottom = 310.0
+rect_scale = Vector2( 0.7, 0.7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/mono_font = SubResource( 42 )
+custom_fonts/bold_italics_font = SubResource( 43 )
+custom_fonts/italics_font = SubResource( 44 )
+custom_fonts/bold_font = SubResource( 45 )
+custom_fonts/normal_font = SubResource( 51 )
+custom_styles/normal = SubResource( 50 )
+bbcode_enabled = true
+bbcode_text = "[center]A [color=#76A2E0]student[/color] reported you!"
+text = "A student reported you!"
+
+[node name="Alerted" type="TextureRect" parent="Page3"]
+margin_left = 41.0
+margin_top = 306.0
+margin_right = 131.0
+margin_bottom = 397.0
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Page3/Alerted"]
+margin_left = -10.0
+margin_top = 68.0
+margin_right = 104.0
+margin_bottom = 112.0
+custom_colors/font_color = Color( 1, 0.454902, 0.639216, 1 )
+custom_fonts/font = SubResource( 112 )
+text = "50/50"
+align = 1
+valign = 1
+
+[node name="Dialogue9" type="Label" parent="Page3"]
+margin_left = 38.0
+margin_top = 456.0
+margin_right = 834.0
+margin_bottom = 492.0
+custom_colors/font_color = Color( 0.980392, 0.447059, 0.611765, 1 )
+custom_fonts/font = SubResource( 110 )
+text = "Page Three: Game Over"
+
+[node name="Page4" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 295, 332 )
+
+[node name="default" type="Control" parent="Page4"]
+margin_left = 7.0
+margin_top = -29.0
+margin_right = 47.0
+margin_bottom = 11.0
+
+[node name="Dialogue3" type="RichTextLabel" parent="Page4/default"]
+margin_left = 104.0
+margin_top = 95.0
+margin_right = 775.0
+margin_bottom = 166.0
+custom_fonts/normal_font = SubResource( 106 )
+bbcode_enabled = true
+bbcode_text = "The [color=#FA729C]basic locker[/color] allows you to abduct girls. It costs 2 skill points. It grows into the mature version [color=#FA729C]after 2 days.[/color]"
+text = "The basic locker allows you to abduct girls. It costs 2 skill points. It grows into the mature version after 2 days."
+
+[node name="TextureRect" type="TextureRect" parent="Page4/default"]
+margin_left = 44.0
+margin_top = 93.0
+margin_right = 99.0
+margin_bottom = 148.0
+texture = ExtResource( 5 )
+
+[node name="default2" type="Control" parent="Page4"]
+margin_left = 11.0
+margin_top = 194.0
+margin_right = 51.0
+margin_bottom = 234.0
+
+[node name="Dialogue3" type="RichTextLabel" parent="Page4/default2"]
+margin_left = 107.0
+margin_top = 108.0
+margin_right = 775.0
+margin_bottom = 166.0
+custom_fonts/normal_font = SubResource( 106 )
+bbcode_enabled = true
+bbcode_text = "This is your ability to [color=#FA729C]leave a locker[/color] completely."
+text = "This is your ability to leave a locker completely."
+
+[node name="TextureRect" type="TextureRect" parent="Page4/default2"]
+margin_left = 44.0
+margin_top = 93.0
+margin_right = 99.0
+margin_bottom = 148.0
+texture = ExtResource( 10 )
+
+[node name="default3" type="Control" parent="Page4"]
+margin_left = 11.0
+margin_top = 247.0
+margin_right = 51.0
+margin_bottom = 287.0
+
+[node name="Dialogue3" type="RichTextLabel" parent="Page4/default3"]
+margin_left = 107.0
+margin_top = 108.0
+margin_right = 775.0
+margin_bottom = 166.0
+custom_fonts/normal_font = SubResource( 106 )
+bbcode_enabled = true
+bbcode_text = "This is your ability to [color=#FA729C]unlock a locker[/color] once they get locked.."
+text = "This is your ability to unlock a locker once they get locked.."
+
+[node name="TextureRect" type="TextureRect" parent="Page4/default3"]
+margin_left = 44.0
+margin_top = 93.0
+margin_right = 99.0
+margin_bottom = 148.0
+texture = ExtResource( 12 )
+
+[node name="passive" type="Control" parent="Page4"]
+margin_left = 11.0
+margin_top = 28.0
+margin_right = 51.0
+margin_bottom = 68.0
+
+[node name="Dialogue3" type="RichTextLabel" parent="Page4/passive"]
+margin_left = 104.0
+margin_top = 95.0
+margin_right = 775.0
+margin_bottom = 147.0
+custom_fonts/normal_font = SubResource( 106 )
+bbcode_enabled = true
+bbcode_text = "The [color=#FA729C]passive locker[/color] passively generates you lust over time when occupied."
+text = "The passive locker passively generates you lust over time when occupied."
+
+[node name="TextureRect" type="TextureRect" parent="Page4/passive"]
+margin_left = 44.0
+margin_top = 93.0
+margin_right = 99.0
+margin_bottom = 148.0
+texture = ExtResource( 8 )
+
+[node name="gaslocker" type="Control" parent="Page4"]
+margin_left = 10.0
+margin_top = 86.0
+margin_right = 50.0
+margin_bottom = 126.0
+
+[node name="Dialogue3" type="RichTextLabel" parent="Page4/gaslocker"]
+margin_left = 104.0
+margin_top = 95.0
+margin_right = 775.0
+margin_bottom = 166.0
+custom_fonts/normal_font = SubResource( 106 )
+bbcode_enabled = true
+bbcode_text = "The [color=#FA729C]gas locker[/color] generates gas that [color=#FA729C]brainwashes[/color] a girl once in a while. It costs 5 skill points. This locker cannot abduct girls."
+text = "The gas locker generates gas that brainwashes a girl once in a while. It costs 5 skill points. This locker cannot abduct girls."
+
+[node name="TextureRect" type="TextureRect" parent="Page4/gaslocker"]
+margin_left = 44.0
+margin_top = 93.0
+margin_right = 99.0
+margin_bottom = 148.0
+texture = ExtResource( 9 )
+
+[node name="gaslocker2" type="Control" parent="Page4"]
+margin_left = 11.0
+margin_top = 143.0
+margin_right = 51.0
+margin_bottom = 183.0
+
+[node name="Dialogue3" type="RichTextLabel" parent="Page4/gaslocker2"]
+margin_left = 104.0
+margin_top = 95.0
+margin_right = 775.0
+margin_bottom = 166.0
+custom_fonts/normal_font = SubResource( 106 )
+bbcode_enabled = true
+bbcode_text = "The [color=#FA729C]dimensional locker[/color] is very [color=#FA729C]mysterious[/color]. They say only the [color=#FA729C]patrons of the cosmic naughty[/color] know what it really is."
+text = "The dimensional locker is very mysterious. They say only the patrons of the cosmic naughty know what it really is."
+
+[node name="TextureRect" type="TextureRect" parent="Page4/gaslocker2"]
+margin_left = 44.0
+margin_top = 93.0
+margin_right = 99.0
+margin_bottom = 148.0
+rect_scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 11 )
+
+[node name="Dialogue10" type="Label" parent="Page4"]
+margin_left = 38.0
+margin_top = 456.0
+margin_right = 834.0
+margin_bottom = 492.0
+custom_colors/font_color = Color( 0.980392, 0.447059, 0.611765, 1 )
+custom_fonts/font = SubResource( 110 )
+text = "Page Four: Your Abilities"
+
+[node name="Page5" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 295, 332 )
+
+[node name="smart" type="Control" parent="Page5"]
+margin_left = 7.0
+margin_top = -29.0
+margin_right = 47.0
+margin_bottom = 11.0
+
+[node name="Dialogue3" type="RichTextLabel" parent="Page5/smart"]
+margin_left = 104.0
+margin_top = 95.0
+margin_right = 775.0
+margin_bottom = 166.0
+custom_fonts/normal_font = SubResource( 106 )
+bbcode_enabled = true
+bbcode_text = "The [color=#FA729C]smart locker[/color] automatically abducts girls for you. Other than that, it's just a basic locker."
+text = "The smart locker automatically abducts girls for you. Other than that, it's just a basic locker."
+
+[node name="TextureRect" type="TextureRect" parent="Page5/smart"]
+margin_left = 44.0
+margin_top = 93.0
+margin_right = 99.0
+margin_bottom = 148.0
+texture = ExtResource( 13 )
+
+[node name="quick" type="Control" parent="Page5"]
+margin_left = 7.0
+margin_top = 38.0
+margin_right = 47.0
+margin_bottom = 78.0
+
+[node name="Dialogue3" type="RichTextLabel" parent="Page5/quick"]
+margin_left = 104.0
+margin_top = 95.0
+margin_right = 775.0
+margin_bottom = 166.0
+custom_fonts/normal_font = SubResource( 106 )
+bbcode_enabled = true
+bbcode_text = "The [color=#FA729C]quick locker[/color] abducts girls so fast the others can't see the abduction, preventing them from reporting."
+text = "The quick locker abducts girls so fast the others can't see the abduction, preventing them from reporting."
+
+[node name="TextureRect" type="TextureRect" parent="Page5/quick"]
+margin_left = 44.0
+margin_top = 93.0
+margin_right = 99.0
+margin_bottom = 148.0
+texture = ExtResource( 14 )
+
+[node name="Dialogue10" type="Label" parent="Page5"]
+margin_left = 38.0
+margin_top = 456.0
+margin_right = 834.0
+margin_bottom = 492.0
+custom_colors/font_color = Color( 0.980392, 0.447059, 0.611765, 1 )
+custom_fonts/font = SubResource( 110 )
+text = "Page Five: More Abilities"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 109 )
+anims/intro = SubResource( 108 )
+
+[node name="Close" type="Button" parent="."]
+margin_left = 700.0
+margin_top = 18.0
+margin_right = 860.0
+margin_bottom = 63.0
+rect_scale = Vector2( 0.8, 0.8 )
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 20 )
+custom_styles/hover = SubResource( 38 )
+custom_styles/pressed = SubResource( 38 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/disabled = SubResource( 21 )
+custom_styles/normal = SubResource( 21 )
+text = "CLOSE"
+
+[node name="Next" type="Button" parent="."]
+margin_left = 683.0
+margin_top = 442.0
+margin_right = 843.0
+margin_bottom = 487.0
+rect_scale = Vector2( 0.8, 0.8 )
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 20 )
+custom_styles/hover = SubResource( 38 )
+custom_styles/pressed = SubResource( 38 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/disabled = SubResource( 21 )
+custom_styles/normal = SubResource( 21 )
+text = "Next Page"
+
+[node name="Prev" type="Button" parent="."]
+margin_left = 551.0
+margin_top = 443.0
+margin_right = 711.0
+margin_bottom = 488.0
+rect_scale = Vector2( 0.8, 0.8 )
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 20 )
+custom_styles/hover = SubResource( 38 )
+custom_styles/pressed = SubResource( 38 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/disabled = SubResource( 21 )
+custom_styles/normal = SubResource( 21 )
+text = "Prev Page"
+
+[connection signal="pressed" from="Next" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="Prev" to="." method="_on_Prev_pressed"]

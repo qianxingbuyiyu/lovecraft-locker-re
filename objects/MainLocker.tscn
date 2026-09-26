@@ -1,0 +1,889 @@
+[gd_scene load_steps=381 format=2]
+
+[ext_resource path="res://assets/cyril_assets/Hallway/new_locker_closed.png" type="Texture" id=1]
+[ext_resource path="res://assets/cyril_assets/Hallway/new_locker_active.png" type="Texture" id=2]
+[ext_resource path="res://assets/cyril_assets/Hallway/grabber_line_texture.png" type="Texture" id=3]
+[ext_resource path="res://assets/game/locker/default_locker_glow.png" type="Texture" id=4]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0001.png" type="Texture" id=5]
+[ext_resource path="res://assets/cyril_assets/Hallway/locker_hallway_border2.png" type="Texture" id=6]
+[ext_resource path="res://scenes/HeartParticles.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/cyril_assets/Hallway/new_locker_occupied1.png" type="Texture" id=8]
+[ext_resource path="res://objects/MainLocker.gd" type="Script" id=9]
+[ext_resource path="res://assets/sound/effects/locker_open.wav" type="AudioStream" id=10]
+[ext_resource path="res://assets/game/locker/default_locker_idle.png" type="Texture" id=11]
+[ext_resource path="res://assets/cyril_assets/Hallway/new_locker_occupied2.png" type="Texture" id=12]
+[ext_resource path="res://assets/cyril_assets/Hallway/new_locker_occupied3.png" type="Texture" id=13]
+[ext_resource path="res://assets/cyril_assets/Hallway/new_locker_occupied4.png" type="Texture" id=14]
+[ext_resource path="res://assets/cyril_assets/UI/guide_arrow.png" type="Texture" id=15]
+[ext_resource path="res://assets/sound/effects/locker_close.wav" type="AudioStream" id=16]
+[ext_resource path="res://assets/cyril_assets/Hallway/dimension_lockers/dragon_locker1.png" type="Texture" id=17]
+[ext_resource path="res://assets/sound/looped/locker_occupied.mp3" type="AudioStream" id=18]
+[ext_resource path="res://assets/sound/noloops/select.mp3" type="AudioStream" id=19]
+[ext_resource path="res://assets/game/KEYS/left_arrow.png" type="Texture" id=20]
+[ext_resource path="res://assets/game/KEYS/right_arrow.png" type="Texture" id=21]
+[ext_resource path="res://assets/game/KEYS/space_bar.png" type="Texture" id=22]
+[ext_resource path="res://assets/game/KEYS/space_bar2.png" type="Texture" id=23]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0000.png" type="Texture" id=24]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0018.png" type="Texture" id=25]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0039.png" type="Texture" id=26]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0009.png" type="Texture" id=27]
+[ext_resource path="res://assets/cyril_assets/Hallway/dimension_lockers/dragon_locker2.png" type="Texture" id=28]
+[ext_resource path="res://assets/cyril_assets/Hallway/dimension_lockers/dragon_locker3.png" type="Texture" id=29]
+[ext_resource path="res://assets/cyril_assets/Hallway/dimension_lockers/dragon_locker4.png" type="Texture" id=30]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0005.png" type="Texture" id=31]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0008.png" type="Texture" id=32]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0009.png" type="Texture" id=33]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0010.png" type="Texture" id=34]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0012.png" type="Texture" id=35]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0014.png" type="Texture" id=36]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0003.png" type="Texture" id=37]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0016.png" type="Texture" id=38]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0002.png" type="Texture" id=39]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0006.png" type="Texture" id=40]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0011.png" type="Texture" id=41]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0015.png" type="Texture" id=42]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0017.png" type="Texture" id=43]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0004.png" type="Texture" id=44]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0000.png" type="Texture" id=45]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0013.png" type="Texture" id=46]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0019.png" type="Texture" id=47]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0020.png" type="Texture" id=48]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0007.png" type="Texture" id=49]
+[ext_resource path="res://assets/game/locker/base_locker_default/new_hallway_locker_export0018.png" type="Texture" id=50]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0001.png" type="Texture" id=51]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0000.png" type="Texture" id=52]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0007.png" type="Texture" id=53]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0019.png" type="Texture" id=54]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0006.png" type="Texture" id=55]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0004.png" type="Texture" id=56]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0011.png" type="Texture" id=57]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0018.png" type="Texture" id=58]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0010.png" type="Texture" id=59]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0014.png" type="Texture" id=60]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0003.png" type="Texture" id=61]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0008.png" type="Texture" id=62]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0009.png" type="Texture" id=63]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0016.png" type="Texture" id=64]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0020.png" type="Texture" id=65]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0005.png" type="Texture" id=66]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0015.png" type="Texture" id=67]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0017.png" type="Texture" id=68]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0012.png" type="Texture" id=69]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0002.png" type="Texture" id=70]
+[ext_resource path="res://assets/game/locker/base_locker_active/new_hallway_locker_export0013.png" type="Texture" id=71]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0008.png" type="Texture" id=72]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0012.png" type="Texture" id=73]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0010.png" type="Texture" id=74]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0016.png" type="Texture" id=75]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0001.png" type="Texture" id=76]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0011.png" type="Texture" id=77]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0000.png" type="Texture" id=78]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0019.png" type="Texture" id=79]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0009.png" type="Texture" id=80]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0013.png" type="Texture" id=81]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0020.png" type="Texture" id=82]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0006.png" type="Texture" id=83]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0005.png" type="Texture" id=84]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0015.png" type="Texture" id=85]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0002.png" type="Texture" id=86]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0004.png" type="Texture" id=87]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0007.png" type="Texture" id=88]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0014.png" type="Texture" id=89]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0018.png" type="Texture" id=90]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0003.png" type="Texture" id=91]
+[ext_resource path="res://assets/game/locker/gas_locker_default/gas_locker_export0017.png" type="Texture" id=92]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0019.png" type="Texture" id=93]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0009.png" type="Texture" id=94]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0017.png" type="Texture" id=95]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0020.png" type="Texture" id=96]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0012.png" type="Texture" id=97]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0014.png" type="Texture" id=98]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0016.png" type="Texture" id=99]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0003.png" type="Texture" id=100]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0006.png" type="Texture" id=101]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0007.png" type="Texture" id=102]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0001.png" type="Texture" id=103]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0002.png" type="Texture" id=104]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0010.png" type="Texture" id=105]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0011.png" type="Texture" id=106]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0013.png" type="Texture" id=107]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0018.png" type="Texture" id=108]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0000.png" type="Texture" id=109]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0004.png" type="Texture" id=110]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0005.png" type="Texture" id=111]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0008.png" type="Texture" id=112]
+[ext_resource path="res://assets/game/locker/gas_locker_active/gas_locker_export0015.png" type="Texture" id=113]
+[ext_resource path="res://assets/game/locker/outoforder_locker_selected.png" type="Texture" id=114]
+[ext_resource path="res://assets/game/locker/outoforder_locker_default.png" type="Texture" id=115]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0000.png" type="Texture" id=116]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0003.png" type="Texture" id=117]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0004.png" type="Texture" id=118]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0010.png" type="Texture" id=119]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0016.png" type="Texture" id=120]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0017.png" type="Texture" id=121]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0009.png" type="Texture" id=122]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0001.png" type="Texture" id=123]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0002.png" type="Texture" id=124]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0012.png" type="Texture" id=125]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0013.png" type="Texture" id=126]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0014.png" type="Texture" id=127]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0004.png" type="Texture" id=128]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0018.png" type="Texture" id=129]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0006.png" type="Texture" id=130]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0012.png" type="Texture" id=131]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0007.png" type="Texture" id=132]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0007.png" type="Texture" id=133]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0003.png" type="Texture" id=134]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0009.png" type="Texture" id=135]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0011.png" type="Texture" id=136]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0008.png" type="Texture" id=137]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0015.png" type="Texture" id=138]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0015.png" type="Texture" id=139]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0011.png" type="Texture" id=140]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0017.png" type="Texture" id=141]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0019.png" type="Texture" id=142]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0019.png" type="Texture" id=143]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0020.png" type="Texture" id=144]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0013.png" type="Texture" id=145]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0000.png" type="Texture" id=146]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0018.png" type="Texture" id=147]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0014.png" type="Texture" id=148]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0002.png" type="Texture" id=149]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0006.png" type="Texture" id=150]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0020.png" type="Texture" id=151]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0005.png" type="Texture" id=152]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0016.png" type="Texture" id=153]
+[ext_resource path="res://assets/game/locker/passive_locker_idle_glow/passive_lockerv2_export0008.png" type="Texture" id=154]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0001.png" type="Texture" id=155]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0005.png" type="Texture" id=156]
+[ext_resource path="res://assets/game/locker/passive_locker_idle/passive_lockerv2_export0010.png" type="Texture" id=157]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0019.png" type="Texture" id=158]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0015.png" type="Texture" id=159]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0020.png" type="Texture" id=160]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0013.png" type="Texture" id=161]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0000.png" type="Texture" id=162]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0001.png" type="Texture" id=163]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0003.png" type="Texture" id=164]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0007.png" type="Texture" id=165]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0008.png" type="Texture" id=166]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0011.png" type="Texture" id=167]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0018.png" type="Texture" id=168]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0005.png" type="Texture" id=169]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0010.png" type="Texture" id=170]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0001.png" type="Texture" id=171]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0004.png" type="Texture" id=172]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0000.png" type="Texture" id=173]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0002.png" type="Texture" id=174]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0012.png" type="Texture" id=175]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0006.png" type="Texture" id=176]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0014.png" type="Texture" id=177]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0009.png" type="Texture" id=178]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0016.png" type="Texture" id=179]
+[ext_resource path="res://assets/game/locker/passive_locker_default/passive_locker_export0017.png" type="Texture" id=180]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0018.png" type="Texture" id=181]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0006.png" type="Texture" id=182]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0016.png" type="Texture" id=183]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0002.png" type="Texture" id=184]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0012.png" type="Texture" id=185]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0009.png" type="Texture" id=186]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0004.png" type="Texture" id=187]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0019.png" type="Texture" id=188]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0013.png" type="Texture" id=189]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0020.png" type="Texture" id=190]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0017.png" type="Texture" id=191]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0008.png" type="Texture" id=192]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0011.png" type="Texture" id=193]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0014.png" type="Texture" id=194]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0003.png" type="Texture" id=195]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0007.png" type="Texture" id=196]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0005.png" type="Texture" id=197]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0015.png" type="Texture" id=198]
+[ext_resource path="res://assets/game/locker/passive_locker_active/passive_locker_export0010.png" type="Texture" id=199]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day0/locker_opening_export0002.png" type="Texture" id=200]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day0/locker_opening_export0008.png" type="Texture" id=201]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day0/locker_opening_export0003.png" type="Texture" id=202]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day0/locker_opening_export0006.png" type="Texture" id=203]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day0/locker_opening_export0007.png" type="Texture" id=204]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day0/locker_opening_export0000.png" type="Texture" id=205]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day0/locker_opening_export0010.png" type="Texture" id=206]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day0/locker_opening_export0001.png" type="Texture" id=207]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day0/locker_opening_export0005.png" type="Texture" id=208]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day0/locker_opening_export0004.png" type="Texture" id=209]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day0/locker_opening_export0009.png" type="Texture" id=210]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day1/locker_opening_export0000.png" type="Texture" id=211]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day1/locker_opening_export0002.png" type="Texture" id=212]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day1/locker_opening_export0001.png" type="Texture" id=213]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day1/locker_opening_export0003.png" type="Texture" id=214]
+[ext_resource path="res://assets/game/locker/passive_locker_opening_day3/locker_opening_export0008.png" type="Texture" id=215]
+[ext_resource path="res://assets/game/locker/passive_locker_opening_day3/locker_opening_export0009.png" type="Texture" id=216]
+[ext_resource path="res://assets/game/locker/passive_locker_opening_day3/locker_opening_export0005.png" type="Texture" id=217]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day3/locker_opening_export0001.png" type="Texture" id=218]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day2/locker_opening_export0008.png" type="Texture" id=219]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day1/locker_opening_export0008.png" type="Texture" id=220]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day2/locker_opening_export0002.png" type="Texture" id=221]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day3/locker_opening_export0000.png" type="Texture" id=222]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day3/locker_opening_export0002.png" type="Texture" id=223]
+[ext_resource path="res://assets/game/locker/passive_locker_opening_day3/locker_opening_export0003.png" type="Texture" id=224]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day3/locker_opening_export0006.png" type="Texture" id=225]
+[ext_resource path="res://assets/game/locker/passive_locker_opening_day3/locker_opening_export0000.png" type="Texture" id=226]
+[ext_resource path="res://assets/game/locker/passive_locker_opening_day3/locker_opening_export0007.png" type="Texture" id=227]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day2/locker_opening_export0007.png" type="Texture" id=228]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day1/locker_opening_export0009.png" type="Texture" id=229]
+[ext_resource path="res://assets/game/locker/passive_locker_opening_day3/locker_opening_export0010.png" type="Texture" id=230]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day2/locker_opening_export0010.png" type="Texture" id=231]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day2/locker_opening_export0000.png" type="Texture" id=232]
+[ext_resource path="res://assets/game/locker/passive_locker_opening_day3/locker_opening_export0001.png" type="Texture" id=233]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day1/locker_opening_export0004.png" type="Texture" id=234]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day2/locker_opening_export0009.png" type="Texture" id=235]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day3/locker_opening_export0008.png" type="Texture" id=236]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day2/locker_opening_export0001.png" type="Texture" id=237]
+[ext_resource path="res://assets/game/locker/passive_locker_opening_day3/locker_opening_export0004.png" type="Texture" id=238]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day1/locker_opening_export0006.png" type="Texture" id=239]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day2/locker_opening_export0005.png" type="Texture" id=240]
+[ext_resource path="res://assets/game/locker/passive_locker_opening_day3/locker_opening_export0002.png" type="Texture" id=241]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day3/locker_opening_export0007.png" type="Texture" id=242]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day1/locker_opening_export0005.png" type="Texture" id=243]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day2/locker_opening_export0004.png" type="Texture" id=244]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day3/locker_opening_export0004.png" type="Texture" id=245]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day1/locker_opening_export0010.png" type="Texture" id=246]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day2/locker_opening_export0006.png" type="Texture" id=247]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day2/locker_opening_export0003.png" type="Texture" id=248]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day1/locker_opening_export0007.png" type="Texture" id=249]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day3/locker_opening_export0005.png" type="Texture" id=250]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day3/locker_opening_export0009.png" type="Texture" id=251]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day3/locker_opening_export0010.png" type="Texture" id=252]
+[ext_resource path="res://assets/game/locker/base_locker_opening_day3/locker_opening_export0003.png" type="Texture" id=253]
+[ext_resource path="res://assets/game/locker/passive_locker_opening_day3/locker_opening_export0006.png" type="Texture" id=254]
+[ext_resource path="res://assets/game/abilities/gas_cloud.png" type="Texture" id=255]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0006.png" type="Texture" id=256]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0007.png" type="Texture" id=257]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0009.png" type="Texture" id=258]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0010.png" type="Texture" id=259]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0000.png" type="Texture" id=260]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0011.png" type="Texture" id=261]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0012.png" type="Texture" id=262]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0001.png" type="Texture" id=263]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0002.png" type="Texture" id=264]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0005.png" type="Texture" id=265]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0003.png" type="Texture" id=266]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0008.png" type="Texture" id=267]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0004.png" type="Texture" id=268]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0019.png" type="Texture" id=269]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0020.png" type="Texture" id=270]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0018.png" type="Texture" id=271]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0015.png" type="Texture" id=272]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0013.png" type="Texture" id=273]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0016.png" type="Texture" id=274]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0017.png" type="Texture" id=275]
+[ext_resource path="res://assets/game/locker/dimensional_locker_idle/nameless_export0014.png" type="Texture" id=276]
+[ext_resource path="res://assets/game/KEYS/R.png" type="Texture" id=277]
+[ext_resource path="res://assets/game/locker/parasite_anim/parasite_anim9.png" type="Texture" id=278]
+[ext_resource path="res://assets/game/locker/parasite_anim/parasite_anim11.png" type="Texture" id=279]
+[ext_resource path="res://assets/game/locker/parasite_anim/parasite_anim10.png" type="Texture" id=280]
+[ext_resource path="res://assets/game/locker/parasite_anim/parasite_anim3.png" type="Texture" id=281]
+[ext_resource path="res://assets/game/locker/parasite_anim/parasite_anim2.png" type="Texture" id=282]
+[ext_resource path="res://assets/game/locker/parasite_anim/parasite_anim5.png" type="Texture" id=283]
+[ext_resource path="res://assets/game/locker/parasite_anim/parasite_anim1.png" type="Texture" id=284]
+[ext_resource path="res://assets/game/locker/parasite_anim/parasite_anim12.png" type="Texture" id=285]
+[ext_resource path="res://assets/game/locker/parasite_anim/parasite_anim6.png" type="Texture" id=286]
+[ext_resource path="res://assets/game/locker/parasite_anim/parasite_anim8.png" type="Texture" id=287]
+[ext_resource path="res://assets/game/locker/parasite_anim/parasite_anim7.png" type="Texture" id=288]
+[ext_resource path="res://assets/game/locker/parasite_anim/parasite_anim4.png" type="Texture" id=289]
+[ext_resource path="res://assets/game/locker/parasite_anim/parasite_anim0.png" type="Texture" id=290]
+[ext_resource path="res://assets/game/locker/locker_overlay_pink.png" type="Texture" id=291]
+[ext_resource path="res://assets/game/locker/day3.png" type="Texture" id=292]
+[ext_resource path="res://assets/game/locker/day0.png" type="Texture" id=293]
+[ext_resource path="res://assets/game/locker/day2.png" type="Texture" id=294]
+[ext_resource path="res://assets/game/locker/day1.png" type="Texture" id=295]
+[ext_resource path="res://assets/game/locker/access_locker.png" type="Texture" id=296]
+[ext_resource path="res://assets/game/locker/smart_locker/smart_locker_tentacle_default.png" type="Texture" id=297]
+[ext_resource path="res://assets/game/locker/smart_locker/smart_locker_tentacle_7.png" type="Texture" id=298]
+[ext_resource path="res://assets/game/locker/smart_locker/smart_locker_tentacle_2.png" type="Texture" id=299]
+[ext_resource path="res://assets/game/locker/smart_locker/smart_locker_tentacle_1.png" type="Texture" id=300]
+[ext_resource path="res://assets/game/locker/smart_locker/smart_locker_tentacle_6.png" type="Texture" id=301]
+[ext_resource path="res://assets/game/locker/smart_locker/smart_locker_tentacle_5.png" type="Texture" id=302]
+[ext_resource path="res://assets/game/locker/smart_locker/smart_locker_tentacle_3.png" type="Texture" id=303]
+[ext_resource path="res://assets/game/locker/smart_locker/smart_locker_tentacle_4.png" type="Texture" id=304]
+[ext_resource path="res://assets/game/locker/smart_locker/smart_locker_tentacle_closed.png" type="Texture" id=305]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0021.png" type="Texture" id=306]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0030.png" type="Texture" id=307]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0033.png" type="Texture" id=308]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0006.png" type="Texture" id=309]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0015.png" type="Texture" id=310]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0036.png" type="Texture" id=311]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0048.png" type="Texture" id=312]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0051.png" type="Texture" id=313]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0057.png" type="Texture" id=314]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0012.png" type="Texture" id=315]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0024.png" type="Texture" id=316]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0060.png" type="Texture" id=317]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0042.png" type="Texture" id=318]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0045.png" type="Texture" id=319]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0027.png" type="Texture" id=320]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0003.png" type="Texture" id=321]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0054.png" type="Texture" id=322]
+[ext_resource path="res://assets/game/locker/quick_locker_active/quick_locker_active0003.png" type="Texture" id=323]
+[ext_resource path="res://assets/game/locker/quick_locker_active/quick_locker_active0000.png" type="Texture" id=324]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0060.png" type="Texture" id=325]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0054.png" type="Texture" id=326]
+[ext_resource path="res://assets/game/locker/quick_locker_active/quick_locker_active0009.png" type="Texture" id=327]
+[ext_resource path="res://assets/game/locker/quick_locker_active/quick_locker_active0015.png" type="Texture" id=328]
+[ext_resource path="res://assets/game/locker/quick_locker_active_glow/quick_locker_active_glow0003.png" type="Texture" id=329]
+[ext_resource path="res://assets/game/locker/quick_locker_active_glow/quick_locker_active_glow0009.png" type="Texture" id=330]
+[ext_resource path="res://assets/game/locker/quick_locker_active_glow/quick_locker_active_glow0000.png" type="Texture" id=331]
+[ext_resource path="res://assets/game/locker/quick_locker_active_glow/quick_locker_active_glow0006.png" type="Texture" id=332]
+[ext_resource path="res://assets/game/locker/quick_locker_active/quick_locker_active0006.png" type="Texture" id=333]
+[ext_resource path="res://assets/game/locker/quick_locker_active_glow/quick_locker_active_glow0012.png" type="Texture" id=334]
+[ext_resource path="res://assets/game/locker/quick_locker_active/quick_locker_active0012.png" type="Texture" id=335]
+[ext_resource path="res://assets/game/locker/quick_locker_active_glow/quick_locker_active_glow0015.png" type="Texture" id=336]
+[ext_resource path="res://assets/game/locker/quick_locker_active/quick_locker_active0018.png" type="Texture" id=337]
+[ext_resource path="res://assets/game/locker/quick_locker_idle_glow/quick_locker_idle_glow0057.png" type="Texture" id=338]
+[ext_resource path="res://assets/game/locker/quick_locker_active_glow/quick_locker_active_glow0018.png" type="Texture" id=339]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0000.png" type="Texture" id=340]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0003.png" type="Texture" id=341]
+[ext_resource path="res://assets/game/locker/quick_locker_opening_day3/quick_locker_opening_day30005.png" type="Texture" id=342]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0006.png" type="Texture" id=343]
+[ext_resource path="res://assets/game/locker/quick_locker_opening_day3/quick_locker_opening_day30002.png" type="Texture" id=344]
+[ext_resource path="res://assets/game/locker/quick_locker_opening_day3/quick_locker_opening_day30001.png" type="Texture" id=345]
+[ext_resource path="res://assets/game/locker/quick_locker_opening_day3/quick_locker_opening_day30000.png" type="Texture" id=346]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0009.png" type="Texture" id=347]
+[ext_resource path="res://assets/game/locker/quick_locker_opening_day3/quick_locker_opening_day30008.png" type="Texture" id=348]
+[ext_resource path="res://assets/game/locker/quick_locker_opening_day3/quick_locker_opening_day30004.png" type="Texture" id=349]
+[ext_resource path="res://assets/game/locker/quick_locker_opening_day3/quick_locker_opening_day30009.png" type="Texture" id=350]
+[ext_resource path="res://assets/game/locker/quick_locker_opening_day3/quick_locker_opening_day30010.png" type="Texture" id=351]
+[ext_resource path="res://assets/game/locker/quick_locker_opening_day3/quick_locker_opening_day30003.png" type="Texture" id=352]
+[ext_resource path="res://assets/game/locker/quick_locker_opening_day3/quick_locker_opening_day30006.png" type="Texture" id=353]
+[ext_resource path="res://assets/game/locker/quick_locker_opening_day3/quick_locker_opening_day30007.png" type="Texture" id=354]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0015.png" type="Texture" id=355]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0027.png" type="Texture" id=356]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0033.png" type="Texture" id=357]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0018.png" type="Texture" id=358]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0021.png" type="Texture" id=359]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0045.png" type="Texture" id=360]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0012.png" type="Texture" id=361]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0024.png" type="Texture" id=362]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0030.png" type="Texture" id=363]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0036.png" type="Texture" id=364]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0039.png" type="Texture" id=365]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0048.png" type="Texture" id=366]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0051.png" type="Texture" id=367]
+[ext_resource path="res://assets/game/locker/quick_locker_idle/quick_locker_idle0042.png" type="Texture" id=368]
+
+[sub_resource type="SpriteFrames" id=1]
+resource_local_to_scene = true
+animations = [ {
+"frames": [ ExtResource( 296 ) ],
+"loop": true,
+"name": "access_idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "active",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 52 ), ExtResource( 51 ), ExtResource( 70 ), ExtResource( 61 ), ExtResource( 56 ), ExtResource( 66 ), ExtResource( 55 ), ExtResource( 53 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 59 ), ExtResource( 57 ), ExtResource( 69 ), ExtResource( 71 ), ExtResource( 60 ), ExtResource( 67 ), ExtResource( 64 ), ExtResource( 68 ), ExtResource( 58 ), ExtResource( 54 ), ExtResource( 65 ) ],
+"loop": true,
+"name": "default_active_glow",
+"speed": 40.0
+}, {
+"frames": [ ExtResource( 45 ), ExtResource( 5 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 44 ), ExtResource( 31 ), ExtResource( 40 ), ExtResource( 49 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 41 ), ExtResource( 35 ), ExtResource( 46 ), ExtResource( 36 ), ExtResource( 42 ), ExtResource( 38 ), ExtResource( 43 ), ExtResource( 50 ), ExtResource( 47 ), ExtResource( 48 ) ],
+"loop": true,
+"name": "default_active_noglow",
+"speed": 40.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "default_idle_glow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "default_idle_noglow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 205 ), ExtResource( 207 ), ExtResource( 200 ), ExtResource( 202 ), ExtResource( 209 ), ExtResource( 208 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 201 ), ExtResource( 210 ), ExtResource( 206 ) ],
+"loop": false,
+"name": "default_opening_day0",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 211 ), ExtResource( 213 ), ExtResource( 212 ), ExtResource( 214 ), ExtResource( 234 ), ExtResource( 243 ), ExtResource( 239 ), ExtResource( 249 ), ExtResource( 220 ), ExtResource( 229 ), ExtResource( 246 ) ],
+"loop": false,
+"name": "default_opening_day1",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 232 ), ExtResource( 237 ), ExtResource( 221 ), ExtResource( 248 ), ExtResource( 244 ), ExtResource( 240 ), ExtResource( 247 ), ExtResource( 228 ), ExtResource( 219 ), ExtResource( 235 ), ExtResource( 231 ) ],
+"loop": false,
+"name": "default_opening_day2",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 222 ), ExtResource( 218 ), ExtResource( 223 ), ExtResource( 253 ), ExtResource( 245 ), ExtResource( 250 ), ExtResource( 225 ), ExtResource( 242 ), ExtResource( 236 ), ExtResource( 251 ), ExtResource( 252 ) ],
+"loop": false,
+"name": "default_opening_day3",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 260 ), ExtResource( 263 ), ExtResource( 264 ), ExtResource( 266 ), ExtResource( 268 ), ExtResource( 265 ), ExtResource( 256 ), ExtResource( 257 ), ExtResource( 267 ), ExtResource( 258 ), ExtResource( 259 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 261 ), ExtResource( 262 ), ExtResource( 273 ), ExtResource( 276 ), ExtResource( 272 ), ExtResource( 274 ), ExtResource( 275 ), ExtResource( 271 ), ExtResource( 269 ), ExtResource( 270 ) ],
+"loop": true,
+"name": "dimensional_idle",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "dragonmaid_locker",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 109 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 100 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 112 ), ExtResource( 94 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 97 ), ExtResource( 107 ), ExtResource( 98 ), ExtResource( 113 ), ExtResource( 99 ), ExtResource( 95 ), ExtResource( 108 ), ExtResource( 93 ), ExtResource( 96 ) ],
+"loop": true,
+"name": "gas_idle_glow",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 78 ), ExtResource( 76 ), ExtResource( 86 ), ExtResource( 91 ), ExtResource( 87 ), ExtResource( 84 ), ExtResource( 83 ), ExtResource( 88 ), ExtResource( 72 ), ExtResource( 80 ), ExtResource( 74 ), ExtResource( 77 ), ExtResource( 73 ), ExtResource( 81 ), ExtResource( 89 ), ExtResource( 85 ), ExtResource( 75 ), ExtResource( 92 ), ExtResource( 90 ), ExtResource( 79 ), ExtResource( 82 ) ],
+"loop": true,
+"name": "gas_idle_noglow",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 114 ) ],
+"loop": true,
+"name": "locked_idle_glow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 115 ) ],
+"loop": true,
+"name": "locked_idle_noglow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "occupied",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "opening",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 162 ), ExtResource( 163 ), ExtResource( 184 ), ExtResource( 195 ), ExtResource( 187 ), ExtResource( 197 ), ExtResource( 182 ), ExtResource( 196 ), ExtResource( 192 ), ExtResource( 186 ), ExtResource( 199 ), ExtResource( 193 ), ExtResource( 185 ), ExtResource( 189 ), ExtResource( 194 ), ExtResource( 198 ), ExtResource( 183 ), ExtResource( 191 ), ExtResource( 181 ), ExtResource( 188 ), ExtResource( 190 ) ],
+"loop": true,
+"name": "passive_active_glow",
+"speed": 40.0
+}, {
+"frames": [ ExtResource( 173 ), ExtResource( 171 ), ExtResource( 174 ), ExtResource( 164 ), ExtResource( 172 ), ExtResource( 169 ), ExtResource( 176 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 178 ), ExtResource( 170 ), ExtResource( 167 ), ExtResource( 175 ), ExtResource( 161 ), ExtResource( 177 ), ExtResource( 159 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 168 ), ExtResource( 158 ), ExtResource( 160 ) ],
+"loop": true,
+"name": "passive_active_noglow",
+"speed": 40.0
+}, {
+"frames": [ ExtResource( 116 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 117 ), ExtResource( 128 ), ExtResource( 152 ), ExtResource( 130 ), ExtResource( 133 ), ExtResource( 154 ), ExtResource( 122 ), ExtResource( 119 ), ExtResource( 140 ), ExtResource( 131 ), ExtResource( 126 ), ExtResource( 148 ), ExtResource( 139 ), ExtResource( 153 ), ExtResource( 141 ), ExtResource( 147 ), ExtResource( 142 ), ExtResource( 151 ) ],
+"loop": true,
+"name": "passive_idle_glow",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 146 ), ExtResource( 155 ), ExtResource( 149 ), ExtResource( 134 ), ExtResource( 118 ), ExtResource( 156 ), ExtResource( 150 ), ExtResource( 132 ), ExtResource( 137 ), ExtResource( 135 ), ExtResource( 157 ), ExtResource( 136 ), ExtResource( 125 ), ExtResource( 145 ), ExtResource( 127 ), ExtResource( 138 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 129 ), ExtResource( 143 ), ExtResource( 144 ) ],
+"loop": true,
+"name": "passive_idle_noglow",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 226 ), ExtResource( 233 ), ExtResource( 241 ), ExtResource( 224 ), ExtResource( 238 ), ExtResource( 217 ), ExtResource( 254 ), ExtResource( 227 ), ExtResource( 215 ), ExtResource( 216 ), ExtResource( 230 ) ],
+"loop": false,
+"name": "passive_opening_day3",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 331 ), ExtResource( 329 ), ExtResource( 332 ), ExtResource( 330 ), ExtResource( 334 ), ExtResource( 336 ), ExtResource( 339 ) ],
+"loop": true,
+"name": "quick_active_glow",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 324 ), ExtResource( 323 ), ExtResource( 333 ), ExtResource( 327 ), ExtResource( 335 ), ExtResource( 328 ), ExtResource( 337 ) ],
+"loop": true,
+"name": "quick_active_noglow",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 321 ), ExtResource( 309 ), ExtResource( 27 ), ExtResource( 315 ), ExtResource( 310 ), ExtResource( 25 ), ExtResource( 306 ), ExtResource( 316 ), ExtResource( 320 ), ExtResource( 307 ), ExtResource( 308 ), ExtResource( 311 ), ExtResource( 26 ), ExtResource( 318 ), ExtResource( 319 ), ExtResource( 312 ), ExtResource( 313 ), ExtResource( 326 ), ExtResource( 338 ), ExtResource( 325 ) ],
+"loop": true,
+"name": "quick_idle_glow",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 340 ), ExtResource( 341 ), ExtResource( 343 ), ExtResource( 347 ), ExtResource( 361 ), ExtResource( 355 ), ExtResource( 358 ), ExtResource( 359 ), ExtResource( 362 ), ExtResource( 356 ), ExtResource( 363 ), ExtResource( 357 ), ExtResource( 364 ), ExtResource( 365 ), ExtResource( 368 ), ExtResource( 360 ), ExtResource( 366 ), ExtResource( 367 ), ExtResource( 322 ), ExtResource( 314 ), ExtResource( 317 ) ],
+"loop": true,
+"name": "quick_idle_noglow",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 346 ), ExtResource( 345 ), ExtResource( 344 ), ExtResource( 352 ), ExtResource( 349 ), ExtResource( 342 ), ExtResource( 353 ), ExtResource( 354 ), ExtResource( 348 ), ExtResource( 350 ), ExtResource( 351 ) ],
+"loop": false,
+"name": "quick_opening_day3",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": false,
+"name": "shake",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 293 ) ],
+"loop": true,
+"name": "day0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 295 ) ],
+"loop": true,
+"name": "day1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 294 ) ],
+"loop": true,
+"name": "day2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 292 ) ],
+"loop": true,
+"name": "day3",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 51.5, 127.5 )
+
+[sub_resource type="Curve" id=3]
+max_value = 2.0
+_data = [ Vector2( 0, 0.175 ), 0.0, 0.0, 0, 0, Vector2( 0.230392, 0.956818 ), 2.8613, 2.8613, 0, 0, Vector2( 0.77451, 1.575 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0, 1.4013e-44, 8.99996e-39, 2.33852e-15, 1.46047e-12, 0.0384615, 0.115, 0.964286, 27 )
+colors = PoolColorArray( 0, 0, 0, 0.0156863, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 54.5, 203 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 290 ), ExtResource( 284 ), ExtResource( 282 ), ExtResource( 281 ), ExtResource( 289 ), ExtResource( 283 ), ExtResource( 286 ), ExtResource( 288 ), ExtResource( 286 ), ExtResource( 288 ), ExtResource( 286 ), ExtResource( 288 ), ExtResource( 287 ), ExtResource( 278 ), ExtResource( 280 ), ExtResource( 279 ), ExtResource( 285 ), ExtResource( 284 ), ExtResource( 290 ) ],
+"loop": false,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "transform"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.13, 0.25, 0.37, 0.49 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 297 ), ExtResource( 297 ), ExtResource( 297 ), ExtResource( 297 ), ExtResource( 297 ), ExtResource( 297 ), ExtResource( 297 ), ExtResource( 300 ), ExtResource( 299 ), ExtResource( 303 ), ExtResource( 304 ), ExtResource( 302 ), ExtResource( 301 ), ExtResource( 298 ), ExtResource( 297 ), ExtResource( 297 ), ExtResource( 297 ), ExtResource( 297 ), ExtResource( 297 ), ExtResource( 297 ), ExtResource( 297 ), ExtResource( 297 ), ExtResource( 297 ), ExtResource( 297 ), ExtResource( 297 ), ExtResource( 305 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 7.00631 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 7.00631, -5.23882 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.937308 ) ]
+}
+
+[node name="MainLocker" type="Node2D" groups=["Locker"]]
+script = ExtResource( 9 )
+
+[node name="Reflection" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.137255 )
+position = Vector2( 0, 303 )
+scale = Vector2( 1, -0.75 )
+frames = SubResource( 1 )
+animation = "quick_opening_day3"
+frame = 10
+playing = true
+
+[node name="DefaultDayReflection" type="AnimatedSprite" parent="Reflection"]
+position = Vector2( 0, 115 )
+frames = SubResource( 9 )
+animation = "day3"
+playing = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "default_idle_noglow"
+playing = true
+
+[node name="TargetPos" type="Position2D" parent="."]
+position = Vector2( -10, 126 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -0.5, 206.5 )
+shape = SubResource( 2 )
+
+[node name="Gas" type="CPUParticles2D" parent="."]
+visible = false
+position = Vector2( -18, 298 )
+z_index = 2
+lifetime = 3.0
+speed_scale = 0.7
+texture = ExtResource( 255 )
+emission_shape = 2
+emission_rect_extents = Vector2( 55, 200 )
+gravity = Vector2( 0, -10 )
+scale_amount_curve = SubResource( 3 )
+color_ramp = SubResource( 4 )
+
+[node name="GasArea" type="Area2D" parent="Gas"]
+visible = false
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gas/GasArea"]
+position = Vector2( 17.5, 65 )
+shape = SubResource( 5 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="LineTentacle" type="Line2D" parent="."]
+visible = false
+rotation = 0.118695
+points = PoolVector2Array( 3.33414, 2.62364, 297.442, 87.3928 )
+width = 40.0
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 3 )
+texture_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
+margin_left = -46.0
+margin_top = 176.0
+margin_right = 47.0
+margin_bottom = 190.0
+max_value = 500.0
+step = 1.0
+
+[node name="Sound" type="Node2D" parent="."]
+
+[node name="Opened" type="AudioStreamPlayer2D" parent="Sound"]
+stream = ExtResource( 10 )
+volume_db = 4.0
+pitch_scale = 0.69
+
+[node name="Closed" type="AudioStreamPlayer2D" parent="Sound"]
+stream = ExtResource( 16 )
+volume_db = 4.0
+pitch_scale = 0.69
+
+[node name="Occupied" type="AudioStreamPlayer2D" parent="Sound"]
+stream = ExtResource( 18 )
+pitch_scale = 0.69
+max_distance = 1000.0
+
+[node name="Select" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource( 19 )
+volume_db = -9.614
+
+[node name="Guide" type="Node2D" parent="."]
+visible = false
+position = Vector2( -20, -2 )
+
+[node name="Guide" type="HBoxContainer" parent="Guide"]
+margin_left = -58.0
+margin_top = -194.0
+margin_right = 57.0
+margin_bottom = -175.0
+rect_scale = Vector2( 1.5, 1.5 )
+
+[node name="Left" type="TextureRect" parent="Guide/Guide"]
+margin_right = 19.0
+margin_bottom = 19.0
+texture = ExtResource( 20 )
+
+[node name="Space" type="TextureRect" parent="Guide/Guide"]
+margin_left = 23.0
+margin_right = 69.0
+margin_bottom = 19.0
+texture = ExtResource( 22 )
+
+[node name="Enter" type="TextureRect" parent="Guide/Guide"]
+visible = false
+margin_left = 23.0
+margin_right = 69.0
+margin_bottom = 19.0
+texture = ExtResource( 23 )
+
+[node name="Left2" type="TextureRect" parent="Guide/Guide"]
+margin_left = 73.0
+margin_right = 92.0
+margin_bottom = 19.0
+texture = ExtResource( 21 )
+
+[node name="R" type="TextureRect" parent="Guide/Guide"]
+margin_left = 96.0
+margin_right = 115.0
+margin_bottom = 19.0
+texture = ExtResource( 277 )
+
+[node name="Parasite" type="AnimatedSprite" parent="."]
+position = Vector2( -3, -164 )
+frames = SubResource( 6 )
+
+[node name="DefaultDay" type="AnimatedSprite" parent="."]
+position = Vector2( 2, 131 )
+frames = SubResource( 9 )
+animation = "day3"
+playing = true
+
+[node name="Particles" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="Glow" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 291 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Glow"]
+playback_speed = 0.5
+anims/RESET = SubResource( 8 )
+anims/transform = SubResource( 7 )
+
+[node name="GuideArrow" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.160784 )
+position = Vector2( 3, 165 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 15 )
+
+[node name="CaptureTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="CaptureDelay" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[node name="ClimaxTimer" type="Timer" parent="."]
+wait_time = 0.3
+
+[node name="GasTimer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+
+[node name="OpeningWaitTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="PassiveTimer" type="Timer" parent="."]
+wait_time = 20.0
+autostart = true
+
+[node name="DimensionalTimer" type="Timer" parent="."]
+
+[node name="PassiveCaptureTimer" type="Timer" parent="."]
+
+[node name="Eye" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 1, -139 )
+rotation = 0.122283
+frames = SubResource( 10 )
+animation = "idle"
+frame = 17
+playing = true
+offset = Vector2( 0, 90 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Eye"]
+autoplay = "idle"
+anims/RESET = SubResource( 12 )
+anims/idle = SubResource( 11 )
+
+[node name="CooldownTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="animation_finished" from="Reflection" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="frame_changed" from="AnimatedSprite" to="." method="_on_AnimatedSprite_frame_changed"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
+[connection signal="area_entered" from="Gas/GasArea" to="." method="_on_GasArea_area_entered"]
+[connection signal="animation_finished" from="Parasite" to="." method="_on_Parasite_animation_finished"]
+[connection signal="animation_finished" from="Glow/AnimationPlayer" to="." method="_on_TransformAnimationPlayer_animation_finished"]
+[connection signal="timeout" from="CaptureTimer" to="." method="_on_CaptureTimer_timeout"]
+[connection signal="timeout" from="ClimaxTimer" to="." method="_on_ClimaxTimer_timeout"]
+[connection signal="timeout" from="GasTimer" to="." method="_on_GasTimer_timeout"]
+[connection signal="timeout" from="OpeningWaitTimer" to="." method="_on_OpeningWaitTimer_timeout"]
+[connection signal="timeout" from="PassiveTimer" to="." method="_on_PassiveTimer_timeout"]
+[connection signal="timeout" from="DimensionalTimer" to="." method="_on_DimensionalTimer_timeout"]
+[connection signal="timeout" from="PassiveCaptureTimer" to="." method="_on_PassiveCaptureTimer_timeout"]
+[connection signal="timeout" from="CooldownTimer" to="." method="_on_CooldownTimer_timeout"]

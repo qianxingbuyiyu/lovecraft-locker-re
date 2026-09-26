@@ -1,0 +1,1719 @@
+[gd_scene load_steps=86 format=2]
+
+[ext_resource path="res://scenes/DialoguePanel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/LockerPopup.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/DevCamera.gd" type="Script" id=3]
+[ext_resource path="res://assets/cyril_assets/UI/satisfaction_meter_empty.png" type="Texture" id=4]
+[ext_resource path="res://assets/ui/alerted_ui.png" type="Texture" id=5]
+[ext_resource path="res://assets/cyril_assets/UI/settings.png" type="Texture" id=6]
+[ext_resource path="res://assets/cyril_assets/UI/settings_pressed.png" type="Texture" id=7]
+[ext_resource path="res://assets/cyril_assets/UI/satisfaction_meter_full.png" type="Texture" id=8]
+[ext_resource path="res://assets/cutscenes/endings/gameover1.png" type="Texture" id=9]
+[ext_resource path="res://assets/cutscenes/endings/gamewin1.png" type="Texture" id=10]
+[ext_resource path="res://assets/cutscenes/endings/gamewin2.png" type="Texture" id=11]
+[ext_resource path="res://assets/ui/time_progress_empty.png" type="Texture" id=12]
+[ext_resource path="res://assets/ui/time_progress_full.png" type="Texture" id=13]
+[ext_resource path="res://assets/ui/pause.png" type="Texture" id=14]
+[ext_resource path="res://assets/game/abilities/default.png" type="Texture" id=15]
+[ext_resource path="res://assets/game/abilities/plus_icon.png" type="Texture" id=16]
+[ext_resource path="res://assets/game/abilities/passive_ability.png" type="Texture" id=17]
+[ext_resource path="res://assets/game/abilities/gas_ability.png" type="Texture" id=18]
+[ext_resource path="res://assets/game/abilities/close_icon.png" type="Texture" id=19]
+[ext_resource path="res://assets/game/abilities/ability_pts.png" type="Texture" id=20]
+[ext_resource path="res://scenes/WebControls.tscn" type="PackedScene" id=21]
+[ext_resource path="res://ui/Tutorial2.tscn" type="PackedScene" id=22]
+[ext_resource path="res://assets/game/abilities/delete.png" type="Texture" id=23]
+[ext_resource path="res://assets/game/abilities/unlock.png" type="Texture" id=24]
+[ext_resource path="res://assets/game/abilities/smart.png" type="Texture" id=25]
+[ext_resource path="res://assets/game/abilities/dimensional_ability.png" type="Texture" id=26]
+[ext_resource path="res://assets/game/abilities/quick.png" type="Texture" id=27]
+
+[sub_resource type="DynamicFontData" id=19]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=56]
+size = 23
+font_data = SubResource( 19 )
+
+[sub_resource type="StyleBoxFlat" id=55]
+bg_color = Color( 0, 0, 0, 0.792157 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.294118, 0.121569, 0.180392, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="Animation" id=14]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -614, -330 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "intro"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.35, 0.39, 0.43, 0.47, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -614, 100 ), Vector2( -614, -330 ), Vector2( -614, -321 ), Vector2( -614, -330 ), Vector2( -614, -321 ), Vector2( -614, -330 ) ]
+}
+
+[sub_resource type="DynamicFontData" id=112]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=15]
+size = 20
+outline_size = 3
+outline_color = Color( 0.2, 0, 0.0666667, 1 )
+extra_spacing_char = 5
+font_data = SubResource( 112 )
+
+[sub_resource type="DynamicFont" id=115]
+outline_size = 2
+outline_color = Color( 0.2, 0, 0.0666667, 1 )
+extra_spacing_char = 5
+font_data = SubResource( 112 )
+
+[sub_resource type="StyleBoxFlat" id=116]
+bg_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.294118, 0.121569, 0.180392, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFontData" id=111]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=12]
+size = 49
+font_data = SubResource( 111 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.054902, 0.054902, 0.054902, 0.956863 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.913725, 0.913725, 0.913725, 1 )
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 9
+
+[sub_resource type="DynamicFont" id=3]
+size = 21
+font_data = SubResource( 111 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = SubResource( 111 )
+
+[sub_resource type="Animation" id=11]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -594, 11 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "intro"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.36, 0.4, 0.43, 0.46, 0.49 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1198, 11 ), Vector2( -594, 11 ), Vector2( -603, 11 ), Vector2( -594, 11 ), Vector2( -603, 11 ), Vector2( -594, 11 ) ]
+}
+
+[sub_resource type="DynamicFontData" id=58]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=20]
+size = 19
+font_data = SubResource( 58 )
+
+[sub_resource type="StyleBoxFlat" id=38]
+bg_color = Color( 0.270588, 0.270588, 0.270588, 0.792157 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 0.694118 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0, 0, 0, 0.792157 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 0.694118 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=39]
+size = 17
+font_data = SubResource( 19 )
+
+[sub_resource type="StyleBoxFlat" id=37]
+bg_color = Color( 0, 0, 0, 0.792157 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 0.298039, 0.839216, 0.694118 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=53]
+size = 30
+font_data = SubResource( 19 )
+
+[sub_resource type="StyleBoxFlat" id=54]
+bg_color = Color( 0, 0, 0, 0.792157 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 0.298039, 0.839216, 0.694118 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=99]
+bg_color = Color( 0.0392157, 0.0392157, 0.0392157, 0.909804 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id=114]
+bg_color = Color( 0.0392157, 0.0392157, 0.0392157, 0.909804 )
+border_width_left = 1
+border_width_top = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="Animation" id=98]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -1068, -171 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Close:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=97]
+resource_name = "intro"
+length = 0.25
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -585, -1 ), Vector2( -432, -158 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Close:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=113]
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1.8, 1.8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -16, -144 ), Vector2( -107, -208 ) ]
+}
+
+[sub_resource type="DynamicFontData" id=85]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=86]
+outline_size = 2
+outline_color = Color( 0.329412, 0.0980392, 0.168627, 1 )
+font_data = SubResource( 85 )
+
+[sub_resource type="StyleBoxFlat" id=110]
+bg_color = Color( 0.0392157, 0.0392157, 0.0392157, 0.733333 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.956863, 0.419608, 0.596078, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id=90]
+
+[sub_resource type="StyleBoxFlat" id=91]
+bg_color = Color( 0.0392157, 0.0392157, 0.0392157, 0.733333 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id=103]
+bg_color = Color( 0.0392157, 0.0392157, 0.0392157, 0.733333 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+expand_margin_left = 2.0
+expand_margin_right = 5.0
+expand_margin_top = 2.0
+
+[sub_resource type="Animation" id=102]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -750, -1 ) ]
+}
+
+[sub_resource type="Animation" id=101]
+resource_name = "intro"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -750, -1 ), Vector2( -585, -1 ) ]
+}
+
+[sub_resource type="DynamicFontData" id=57]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=32]
+size = 69
+outline_size = 6
+outline_color = Color( 0.121569, 0, 0.0470588, 1 )
+extra_spacing_char = 5
+font_data = SubResource( 57 )
+
+[sub_resource type="Animation" id=34]
+length = 0.001
+
+[sub_resource type="Animation" id=33]
+resource_name = "intro"
+length = 2.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.55, 1.89, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1e-05 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1e-05 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.55, 1.91, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -634, -52 ), Vector2( -638, -103 ), Vector2( -638, -103 ), Vector2( -634, -52 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.12, 2.39, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true, false ]
+}
+
+[sub_resource type="DynamicFont" id=16]
+size = 80
+outline_size = 3
+outline_color = Color( 0.2, 0, 0.0666667, 1 )
+extra_spacing_char = 5
+font_data = SubResource( 111 )
+
+[sub_resource type="DynamicFont" id=36]
+size = 34
+outline_size = 4
+outline_color = Color( 0.0705882, 0.0705882, 0.0705882, 1 )
+extra_spacing_char = 5
+font_data = SubResource( 111 )
+
+[sub_resource type="StyleBoxEmpty" id=29]
+
+[sub_resource type="DynamicFont" id=24]
+size = 32
+outline_size = 2
+outline_color = Color( 0.2, 0, 0.0666667, 1 )
+extra_spacing_char = 5
+font_data = SubResource( 111 )
+
+[sub_resource type="StyleBoxEmpty" id=25]
+
+[sub_resource type="StyleBoxEmpty" id=26]
+
+[sub_resource type="StyleBoxEmpty" id=27]
+
+[sub_resource type="StyleBoxEmpty" id=28]
+
+[sub_resource type="Animation" id=23]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Borders/Top:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -11, -139 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Borders/Top:rect_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1277, 352 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../Borders/Bottom:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -12, 208 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../Borders/Bottom:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1277, 432 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../GameEndingSimple:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -646, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../GameEndingSimple:rect_scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1e-05 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../..:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../..:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("..:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../../Borders/ColorRect3:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../../Borders/Bottom/GameOver:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../../Borders/Bottom/GameOver:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../../Borders/GameOver:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../../Borders/GameOver:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("../../Borders/Top/Unlocks:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../../Borders/Top/Unlocks:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "intro"
+length = 4.0
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Borders/Top:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.86, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -11, -139 ), Vector2( -11, -139 ), Vector2( -11, -139 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Borders/Top:rect_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.87, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1277, 356 ), Vector2( 1277, 356 ), Vector2( 1277, 125 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../Borders/Bottom:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.84, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -12, 217 ), Vector2( -12, 217 ), Vector2( -12, 470 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../Borders/Bottom:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.0100001, 0.85, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1277, 416 ), Vector2( 1277, 416 ), Vector2( 1277, 170 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../GameEndingSimple:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.71, 2.89, 3.88 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -646, 0 ), Vector2( -646, 0 ), Vector2( -646, 0 ), Vector2( -646, -100 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../GameEndingSimple:rect_scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.71, 2.89, 3.88 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1e-05 ), Vector2( 1, 1e-05 ), Vector2( 1, 1e-05 ), Vector2( 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../..:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.06 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../..:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.07, 0.67 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("..:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../../Borders/ColorRect3:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.04, 0.84 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../../Borders/Bottom/GameOver:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 2.36 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../../Borders/Bottom/GameOver:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0.01, 2.42, 3.57 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../../Borders/GameOver:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 1.78 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../../Borders/GameOver:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 1.84, 2.63 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("../../Borders/Top/Unlocks:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 2.4, 3.29, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../../Borders/Top/Unlocks:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 0.32, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+
+[sub_resource type="DynamicFontData" id=35]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=30]
+size = 64
+outline_size = 2
+outline_color = Color( 0.2, 0, 0.0666667, 1 )
+extra_spacing_char = 5
+font_data = SubResource( 35 )
+
+[node name="DevCamera" type="Camera2D"]
+pause_mode = 2
+position = Vector2( 748, 338 )
+z_index = 3
+current = true
+zoom = Vector2( 1.2, 1.2 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 14.0 ]
+}
+
+[node name="FPS" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 560.0
+margin_top = -358.0
+margin_right = 625.0
+margin_bottom = -344.0
+rect_scale = Vector2( 0.8, 0.8 )
+text = "50 FPS"
+align = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Level" type="Label" parent="."]
+margin_left = 502.0
+margin_top = -243.0
+margin_right = 604.0
+margin_bottom = -209.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 56 )
+custom_styles/normal = SubResource( 55 )
+align = 1
+valign = 1
+
+[node name="Panel" parent="." instance=ExtResource( 1 )]
+position = Vector2( -614, -330 )
+scale = Vector2( 1.2, 1.2 )
+
+[node name="Avatar" parent="Panel" index="1"]
+frame = 9
+
+[node name="PanelAnim" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 14 )
+anims/intro = SubResource( 13 )
+
+[node name="Timer" type="Timer" parent="PanelAnim"]
+wait_time = 10.0
+one_shot = true
+
+[node name="Alerted" type="TextureRect" parent="."]
+margin_left = 507.0
+margin_top = -347.0
+margin_right = 597.0
+margin_bottom = -256.0
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Alerted"]
+margin_left = -10.0
+margin_top = 68.0
+margin_right = 104.0
+margin_bottom = 112.0
+custom_colors/font_color = Color( 1, 0.454902, 0.639216, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "100/100"
+align = 1
+valign = 1
+
+[node name="Alerts" type="Control" parent="."]
+margin_left = 228.0
+margin_top = -343.0
+margin_right = 268.0
+margin_bottom = -303.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_left = -855.0
+margin_top = -597.0
+margin_right = 508.0
+margin_bottom = 303.0
+rect_scale = Vector2( 1.2, 1.2 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="SatisfactionLabel" type="Label" parent="."]
+margin_left = 504.0
+margin_top = -209.0
+margin_right = 603.0
+margin_bottom = -185.0
+custom_colors/font_color = Color( 1, 0.454902, 0.639216, 1 )
+custom_fonts/font = SubResource( 115 )
+custom_styles/normal = SubResource( 116 )
+text = "100/100"
+align = 1
+valign = 1
+
+[node name="Satisfaction" type="TextureProgress" parent="."]
+margin_left = 527.0
+margin_top = 158.0
+margin_right = 785.0
+margin_bottom = 192.0
+rect_rotation = -90.0
+rect_scale = Vector2( 1.33, 1.5 )
+value = 10.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 8 )
+
+[node name="ShowTutorial" type="Button" parent="."]
+visible = false
+margin_left = -617.0
+margin_top = 183.0
+margin_right = -557.0
+margin_bottom = 242.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 4 )
+text = ">"
+
+[node name="Tutorial" type="Panel" parent="."]
+visible = false
+margin_left = -594.0
+margin_top = 11.0
+margin_right = -135.0
+margin_bottom = 180.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Help" type="RichTextLabel" parent="Tutorial"]
+margin_left = 12.0
+margin_top = 10.0
+margin_right = 448.0
+margin_bottom = 123.0
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+bbcode_text = "Your first quest is to find one of the girls that summoned you."
+text = "Your first quest is to find one of the girls that summoned you."
+
+[node name="Next" type="Button" parent="Tutorial"]
+margin_left = 396.0
+margin_top = 112.5
+margin_right = 456.0
+margin_bottom = 171.5
+custom_fonts/font = SubResource( 5 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 4 )
+text = ">"
+
+[node name="Prev" type="Button" parent="Tutorial"]
+margin_top = 113.5
+margin_right = 60.0
+margin_bottom = 172.5
+custom_fonts/font = SubResource( 5 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 4 )
+text = "<"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Tutorial"]
+autoplay = "intro"
+anims/RESET = SubResource( 11 )
+anims/intro = SubResource( 10 )
+
+[node name="SettingsButton" type="TextureButton" parent="."]
+visible = false
+margin_left = -609.0
+margin_top = -355.0
+margin_right = -534.0
+margin_bottom = -282.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+
+[node name="Labels" type="Control" parent="."]
+margin_left = 479.0
+margin_top = -61.0
+margin_right = 519.0
+margin_bottom = -21.0
+
+[node name="Labels2" type="Control" parent="."]
+margin_left = -532.0
+margin_top = 187.0
+margin_right = -492.0
+margin_bottom = 227.0
+
+[node name="Labels3" type="Control" parent="."]
+margin_left = 473.0
+margin_top = -307.0
+margin_right = 513.0
+margin_bottom = -267.0
+
+[node name="MainMenu" type="Button" parent="."]
+margin_left = -593.0
+margin_top = -346.0
+margin_right = -433.0
+margin_bottom = -301.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 20 )
+custom_styles/hover = SubResource( 38 )
+custom_styles/pressed = SubResource( 38 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/disabled = SubResource( 21 )
+custom_styles/normal = SubResource( 21 )
+text = "MAIN MENU"
+
+[node name="Pause" type="TextureButton" parent="."]
+margin_left = -427.0
+margin_top = -349.0
+margin_right = -357.0
+margin_bottom = -279.0
+rect_scale = Vector2( 0.7, 0.7 )
+focus_mode = 0
+texture_normal = ExtResource( 14 )
+
+[node name="Game" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureProgress" type="TextureProgress" parent="Game"]
+margin_left = -592.0
+margin_top = -254.0
+margin_right = -503.0
+margin_bottom = -214.0
+rect_scale = Vector2( 1.75, 1.75 )
+texture_under = ExtResource( 12 )
+texture_progress = ExtResource( 13 )
+
+[node name="Level" type="Label" parent="Game"]
+visible = false
+margin_left = -593.0
+margin_top = -296.0
+margin_right = -488.0
+margin_bottom = -268.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 39 )
+custom_styles/normal = SubResource( 37 )
+text = "Level 1"
+align = 1
+valign = 1
+
+[node name="Day" type="Label" parent="Game"]
+margin_left = -592.0
+margin_top = -297.0
+margin_right = -436.0
+margin_bottom = -256.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 53 )
+custom_styles/normal = SubResource( 54 )
+text = "Day 1"
+align = 1
+valign = 1
+
+[node name="WebControls" parent="." instance=ExtResource( 21 )]
+modulate = Color( 1, 1, 1, 0.529412 )
+margin_left = -429.0
+margin_top = -278.0
+margin_right = -429.0
+margin_bottom = -278.0
+
+[node name="Howtoplay" type="Button" parent="."]
+margin_left = -590.0
+margin_top = -232.0
+margin_right = -430.0
+margin_bottom = -187.0
+rect_scale = Vector2( 0.8, 0.8 )
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 20 )
+custom_styles/hover = SubResource( 38 )
+custom_styles/pressed = SubResource( 38 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/disabled = SubResource( 21 )
+custom_styles/normal = SubResource( 21 )
+text = "HOW TO PLAY"
+
+[node name="Abilities" type="Panel" parent="."]
+margin_left = -750.0
+margin_top = -1.0
+margin_right = -534.0
+margin_bottom = 198.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+custom_styles/panel = SubResource( 99 )
+
+[node name="Panel" type="Panel" parent="Abilities"]
+margin_left = -117.0
+margin_right = -4.0
+margin_bottom = 102.0
+custom_styles/panel = SubResource( 114 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Abilities"]
+anims/RESET = SubResource( 98 )
+anims/intro = SubResource( 97 )
+anims/intro2 = SubResource( 113 )
+
+[node name="Default" type="Control" parent="Abilities"]
+margin_left = 1.0
+margin_top = 144.5
+margin_right = 41.0
+margin_bottom = 184.5
+
+[node name="Icon" type="TextureRect" parent="Abilities/Default"]
+margin_left = 6.77777
+margin_top = 3.6111
+margin_right = 61.7778
+margin_bottom = 58.6111
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 15 )
+
+[node name="Button" type="Button" parent="Abilities/Default"]
+margin_left = 59.0
+margin_top = 16.0
+margin_right = 101.0
+margin_bottom = 41.0
+focus_mode = 0
+custom_fonts/font = SubResource( 86 )
+custom_styles/hover = SubResource( 110 )
+custom_styles/pressed = SubResource( 110 )
+custom_styles/focus = SubResource( 110 )
+custom_styles/disabled = SubResource( 90 )
+custom_styles/normal = SubResource( 91 )
+text = "2"
+icon = ExtResource( 16 )
+
+[node name="Smart" type="Control" parent="Abilities"]
+margin_left = 0.555574
+margin_top = 45.5556
+margin_right = 40.5556
+margin_bottom = 85.5555
+
+[node name="Icon" type="TextureRect" parent="Abilities/Smart"]
+margin_left = 6.77777
+margin_top = 3.6111
+margin_right = 61.7778
+margin_bottom = 58.6111
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 25 )
+
+[node name="Button" type="Button" parent="Abilities/Smart"]
+margin_left = 59.0
+margin_top = 16.0
+margin_right = 101.0
+margin_bottom = 41.0
+focus_mode = 0
+custom_fonts/font = SubResource( 86 )
+custom_styles/hover = SubResource( 110 )
+custom_styles/pressed = SubResource( 110 )
+custom_styles/focus = SubResource( 110 )
+custom_styles/disabled = SubResource( 90 )
+custom_styles/normal = SubResource( 91 )
+text = "2"
+icon = ExtResource( 16 )
+
+[node name="Passive" type="Control" parent="Abilities"]
+margin_left = 1.0
+margin_top = 96.5
+margin_right = 41.0
+margin_bottom = 136.5
+
+[node name="Icon" type="TextureRect" parent="Abilities/Passive"]
+margin_left = 6.77777
+margin_top = 3.61111
+margin_right = 61.7778
+margin_bottom = 58.6111
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 17 )
+
+[node name="Button" type="Button" parent="Abilities/Passive"]
+margin_left = 59.0
+margin_top = 16.0
+margin_right = 101.0
+margin_bottom = 41.0
+focus_mode = 0
+custom_fonts/font = SubResource( 86 )
+custom_styles/hover = SubResource( 110 )
+custom_styles/pressed = SubResource( 110 )
+custom_styles/focus = SubResource( 110 )
+custom_styles/disabled = SubResource( 90 )
+custom_styles/normal = SubResource( 91 )
+text = "2"
+icon = ExtResource( 16 )
+
+[node name="Gas" type="Control" parent="Abilities"]
+margin_left = 103.889
+margin_top = 45.5
+margin_right = 143.889
+margin_bottom = 85.5
+
+[node name="Icon" type="TextureRect" parent="Abilities/Gas"]
+margin_left = 6.77777
+margin_top = 3.61111
+margin_right = 61.7778
+margin_bottom = 58.6111
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+
+[node name="Button" type="Button" parent="Abilities/Gas"]
+margin_left = 59.0
+margin_top = 16.0
+margin_right = 101.0
+margin_bottom = 41.0
+focus_mode = 0
+custom_fonts/font = SubResource( 86 )
+custom_styles/hover = SubResource( 110 )
+custom_styles/pressed = SubResource( 110 )
+custom_styles/focus = SubResource( 110 )
+custom_styles/disabled = SubResource( 90 )
+custom_styles/normal = SubResource( 91 )
+text = "2"
+icon = ExtResource( 16 )
+
+[node name="Quick" type="Control" parent="Abilities"]
+margin_left = 1.0
+margin_top = -3.33333
+margin_right = 41.0
+margin_bottom = 36.6667
+
+[node name="Icon" type="TextureRect" parent="Abilities/Quick"]
+margin_left = 6.77777
+margin_top = 3.61111
+margin_right = 61.7778
+margin_bottom = 58.6111
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 27 )
+
+[node name="Button" type="Button" parent="Abilities/Quick"]
+margin_left = 59.0
+margin_top = 16.0
+margin_right = 101.0
+margin_bottom = 41.0
+focus_mode = 0
+custom_fonts/font = SubResource( 86 )
+custom_styles/hover = SubResource( 110 )
+custom_styles/pressed = SubResource( 110 )
+custom_styles/focus = SubResource( 110 )
+custom_styles/disabled = SubResource( 90 )
+custom_styles/normal = SubResource( 91 )
+text = "2"
+icon = ExtResource( 16 )
+
+[node name="Dimensional" type="Control" parent="Abilities"]
+margin_left = 103.889
+margin_top = -2.5
+margin_right = 143.889
+margin_bottom = 37.5
+
+[node name="Icon" type="TextureRect" parent="Abilities/Dimensional"]
+margin_left = 6.77777
+margin_top = 3.61111
+margin_right = 61.7778
+margin_bottom = 58.6111
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 26 )
+
+[node name="Button" type="Button" parent="Abilities/Dimensional"]
+margin_left = 59.0
+margin_top = 16.0
+margin_right = 101.0
+margin_bottom = 41.0
+focus_mode = 0
+custom_fonts/font = SubResource( 86 )
+custom_styles/hover = SubResource( 110 )
+custom_styles/pressed = SubResource( 110 )
+custom_styles/focus = SubResource( 110 )
+custom_styles/disabled = SubResource( 90 )
+custom_styles/normal = SubResource( 91 )
+text = "2"
+icon = ExtResource( 16 )
+
+[node name="Delete" type="Control" parent="Abilities"]
+margin_left = -113.889
+margin_top = 1.11111
+margin_right = -73.8889
+margin_bottom = 41.1111
+
+[node name="Icon" type="TextureRect" parent="Abilities/Delete"]
+margin_left = 6.11111
+margin_top = 7.22222
+margin_right = 61.1111
+margin_bottom = 62.2222
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+
+[node name="Button" type="Button" parent="Abilities/Delete"]
+margin_left = 59.0
+margin_top = 16.0
+margin_right = 101.0
+margin_bottom = 41.0
+focus_mode = 0
+custom_fonts/font = SubResource( 86 )
+custom_styles/hover = SubResource( 110 )
+custom_styles/pressed = SubResource( 110 )
+custom_styles/focus = SubResource( 110 )
+custom_styles/disabled = SubResource( 90 )
+custom_styles/normal = SubResource( 91 )
+text = "2"
+icon = ExtResource( 16 )
+
+[node name="Unlock" type="Control" parent="Abilities"]
+margin_left = -113.333
+margin_top = 46.1111
+margin_right = -73.3333
+margin_bottom = 86.1111
+
+[node name="Icon" type="TextureRect" parent="Abilities/Unlock"]
+margin_left = 5.55554
+margin_top = 6.1111
+margin_right = 60.5555
+margin_bottom = 61.1111
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 24 )
+
+[node name="Button" type="Button" parent="Abilities/Unlock"]
+margin_left = 59.0
+margin_top = 16.0
+margin_right = 101.0
+margin_bottom = 41.0
+focus_mode = 0
+custom_fonts/font = SubResource( 86 )
+custom_styles/hover = SubResource( 110 )
+custom_styles/pressed = SubResource( 110 )
+custom_styles/focus = SubResource( 110 )
+custom_styles/disabled = SubResource( 90 )
+custom_styles/normal = SubResource( 91 )
+text = "2"
+icon = ExtResource( 16 )
+
+[node name="Close" type="TextureButton" parent="Abilities"]
+visible = false
+margin_left = 211.111
+margin_top = -16.6667
+margin_right = 228.111
+margin_bottom = 2.33333
+rect_scale = Vector2( 1.3, 1.3 )
+focus_mode = 0
+texture_normal = ExtResource( 19 )
+
+[node name="Points" type="Label" parent="Abilities"]
+margin_top = -25.5
+margin_right = 59.0
+margin_bottom = -1.5
+mouse_filter = 1
+custom_fonts/font = SubResource( 86 )
+custom_styles/normal = SubResource( 103 )
+text = "0"
+align = 2
+
+[node name="Icon" type="TextureRect" parent="Abilities/Points"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 19.0
+margin_bottom = 21.0
+texture = ExtResource( 20 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Abilities"]
+autoplay = "intro"
+anims/RESET = SubResource( 102 )
+anims/intro = SubResource( 101 )
+
+[node name="LevelPanel" type="ColorRect" parent="."]
+visible = false
+margin_left = -634.0
+margin_top = -52.0
+margin_right = 667.0
+margin_bottom = 47.0
+rect_scale = Vector2( 1, 1e-05 )
+color = Color( 0, 0, 0, 0.768627 )
+
+[node name="Level" type="Label" parent="LevelPanel"]
+margin_left = 28.0
+margin_top = -2.0
+margin_right = 1250.0
+margin_bottom = 98.0
+custom_colors/font_color = Color( 1, 0.454902, 0.639216, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "LEVEL 0"
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelPanel"]
+anims/RESET = SubResource( 34 )
+anims/intro = SubResource( 33 )
+
+[node name="LockerPopup" parent="." instance=ExtResource( 2 )]
+pause_mode = 2
+
+[node name="Ending" type="Control" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_top = -2.0
+margin_bottom = -2.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Scenes" type="Control" parent="Ending"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Bad1" type="TextureRect" parent="Ending/Scenes"]
+visible = false
+margin_left = -625.0
+margin_top = -255.0
+margin_right = 633.0
+margin_bottom = 246.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="Good1" type="TextureRect" parent="Ending/Scenes"]
+margin_left = -629.0
+margin_top = -366.0
+margin_right = 683.0
+margin_bottom = 369.0
+texture = ExtResource( 10 )
+expand = true
+
+[node name="Good2" type="TextureRect" parent="Ending/Scenes"]
+visible = false
+margin_left = -629.0
+margin_top = -366.0
+margin_right = 683.0
+margin_bottom = 369.0
+texture = ExtResource( 11 )
+expand = true
+
+[node name="GameEndingSimple" type="ColorRect" parent="Ending"]
+visible = false
+margin_left = -646.0
+margin_right = 662.0
+margin_bottom = 203.0
+rect_scale = Vector2( 1, 1e-05 )
+color = Color( 0, 0, 0, 0.858824 )
+
+[node name="Label" type="Label" parent="Ending/GameEndingSimple"]
+margin_left = 297.0
+margin_top = 34.0
+margin_right = 999.0
+margin_bottom = 166.0
+custom_colors/font_color = Color( 1, 0.454902, 0.639216, 1 )
+custom_fonts/font = SubResource( 16 )
+text = "GAME OVER"
+align = 1
+valign = 1
+
+[node name="Borders" type="Control" parent="Ending"]
+margin_left = -621.0
+margin_top = -235.0
+margin_right = -581.0
+margin_bottom = -195.0
+
+[node name="Top" type="ColorRect" parent="Ending/Borders"]
+margin_left = -11.0
+margin_top = -139.0
+margin_right = 1266.0
+margin_bottom = 213.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Unlocks" type="Label" parent="Ending/Borders/Top"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 50.0
+margin_top = 414.0
+margin_right = 1229.0
+margin_bottom = 588.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 36 )
+custom_styles/normal = SubResource( 29 )
+text = "New animation unlocked!"
+align = 2
+valign = 2
+autowrap = true
+
+[node name="Bottom" type="ColorRect" parent="Ending/Borders"]
+margin_left = -12.0
+margin_top = 208.0
+margin_right = 1265.0
+margin_bottom = 640.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="GameOver" type="Button" parent="Ending/Borders/Bottom"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 295.0
+margin_top = -15.0
+margin_right = 997.0
+margin_bottom = 125.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 24 )
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 26 )
+custom_styles/focus = SubResource( 27 )
+custom_styles/disabled = SubResource( 28 )
+custom_styles/normal = SubResource( 29 )
+text = "Click here to continue..."
+
+[node name="ColorRect3" type="ColorRect" parent="Ending/Borders"]
+visible = false
+margin_left = -11.0
+margin_top = -139.0
+margin_right = 1266.0
+margin_bottom = 596.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Anim" type="AnimationPlayer" parent="Ending/Borders"]
+root_node = NodePath("../../Scenes/Bad1")
+playback_speed = 0.8
+anims/RESET = SubResource( 23 )
+anims/intro = SubResource( 22 )
+
+[node name="GameOver" type="Label" parent="Ending/Borders"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 5.0
+margin_top = -136.0
+margin_right = 1247.0
+margin_bottom = -4.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 30 )
+text = "END OF DAY 3"
+align = 1
+valign = 1
+
+[node name="EndTimer" type="Timer" parent="Ending"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Earning" type="Control" parent="."]
+margin_left = -585.0
+margin_top = -235.0
+margin_right = -545.0
+margin_bottom = -195.0
+
+[node name="Tutorial2" parent="." instance=ExtResource( 22 )]
+
+[connection signal="timeout" from="PanelAnim/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="ShowTutorial" to="." method="_on_ShowTutorial_pressed"]
+[connection signal="pressed" from="Tutorial/Next" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="Tutorial/Prev" to="." method="_on_Prev_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_MainMenu_pressed"]
+[connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
+[connection signal="pressed" from="Howtoplay" to="." method="_on_Howtoplay_pressed"]
+[connection signal="pressed" from="Abilities/Default/Button" to="." method="_on_DefaultSkill_pressed"]
+[connection signal="pressed" from="Abilities/Smart/Button" to="." method="_on_Smartskill_pressed"]
+[connection signal="pressed" from="Abilities/Passive/Button" to="." method="_on_PassiveSkill_pressed"]
+[connection signal="pressed" from="Abilities/Gas/Button" to="." method="_on_GasSkill_pressed"]
+[connection signal="pressed" from="Abilities/Quick/Button" to="." method="_on_QuickSkill_pressed"]
+[connection signal="pressed" from="Abilities/Dimensional/Button" to="." method="_on_DimensionalSkill_pressed"]
+[connection signal="pressed" from="Abilities/Delete/Button" to="." method="_on_DeleteSkill_pressed"]
+[connection signal="pressed" from="Abilities/Unlock/Button" to="." method="_on_UnlockSkill_pressed"]
+[connection signal="pressed" from="Abilities/Close" to="." method="_on_Close_pressed"]
+[connection signal="locker_view" from="LockerPopup" to="." method="_on_LockerPopup_locker_view"]
+[connection signal="pressed" from="Ending/Borders/Bottom/GameOver" to="." method="_on_GameOver_pressed"]
+[connection signal="timeout" from="Ending/EndTimer" to="." method="_on_EndTimer_timeout"]
+[connection signal="pressed" from="Tutorial2/Close" to="." method="_tutorial_closed"]
+
+[editable path="Panel"]
+[editable path="WebControls"]
+[editable path="Tutorial2"]

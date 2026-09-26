@@ -1,0 +1,24 @@
+; Engine configuration file.
+config_version=4
+
+[application]
+
+config/name="Lovecraft Locker Re"
+run/main_scene="res://Intro.tscn"
+config/icon="res://icon.png"
+config/features=PackedStringArray("3.5", "Android")
+
+[autoload]
+
+Globals="*res://scripts/Globals.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[rendering]
+
+environment/defaults/default_clear_color=Color( 0, 0, 0, 1 )

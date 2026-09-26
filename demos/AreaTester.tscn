@@ -1,0 +1,1317 @@
+[gd_scene load_steps=44 format=2]
+
+[ext_resource path="res://objects/MainLocker.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/cyril_assets/Hallway/school_door.png" type="Texture" id=2]
+[ext_resource path="res://assets/cyril_assets/Hallway/plant_base.png" type="Texture" id=3]
+[ext_resource path="res://assets/cyril_assets/Hallway/bulletin.png" type="Texture" id=4]
+[ext_resource path="res://assets/cyril_assets/Hallway/background_hallway.png" type="Texture" id=5]
+[ext_resource path="res://assets/WaveNoise.tres" type="Texture" id=6]
+[ext_resource path="res://assets/euxi_assets/nurse_room/medicine cabinet.png" type="Texture" id=7]
+[ext_resource path="res://assets/euxi_assets/faculty room/teacher's chair.png" type="Texture" id=8]
+[ext_resource path="res://assets/euxi_assets/nurse_room/NR window.png" type="Texture" id=9]
+[ext_resource path="res://assets/euxi_assets/faculty room/teacher's table2.png" type="Texture" id=10]
+[ext_resource path="res://assets/euxi_assets/gym pool/door.png" type="Texture" id=11]
+[ext_resource path="res://assets/euxi_assets/faculty room/window.png" type="Texture" id=12]
+[ext_resource path="res://assets/euxi_assets/storage area/balls in basket.png" type="Texture" id=13]
+[ext_resource path="res://assets/euxi_assets/storage area/SA cabinet.png" type="Texture" id=14]
+[ext_resource path="res://assets/euxi_assets/storage area/hop.png" type="Texture" id=15]
+[ext_resource path="res://assets/euxi_assets/storage area/SA_door.png" type="Texture" id=16]
+[ext_resource path="res://assets/icon.png" type="Texture" id=17]
+[ext_resource path="res://assets/euxi_assets/gym pool/pool ladder.png" type="Texture" id=18]
+[ext_resource path="res://assets/euxi_assets/faculty room/trashcan.png" type="Texture" id=19]
+[ext_resource path="res://assets/euxi_assets/storage area/ladder.png" type="Texture" id=20]
+[ext_resource path="res://assets/game/backgrounds/gympool.png" type="Texture" id=21]
+[ext_resource path="res://assets/euxi_assets/gym pool/change room door.png" type="Texture" id=22]
+[ext_resource path="res://assets/game/backgrounds/faculty.png" type="Texture" id=23]
+[ext_resource path="res://assets/euxi_assets/faculty room/TO_door.png" type="Texture" id=24]
+[ext_resource path="res://assets/euxi_assets/faculty room/vending machine.png" type="Texture" id=25]
+[ext_resource path="res://assets/euxi_assets/faculty room/cabinet.png" type="Texture" id=26]
+[ext_resource path="res://assets/euxi_assets/faculty room/teacher x student.png" type="Texture" id=27]
+[ext_resource path="res://assets/euxi_assets/gym pool/pool.png" type="Texture" id=28]
+[ext_resource path="res://assets/euxi_assets/gym pool/chair.png" type="Texture" id=29]
+[ext_resource path="res://assets/euxi_assets/nurse_room/NR bed.png" type="Texture" id=30]
+[ext_resource path="res://assets/euxi_assets/nurse_room/skeleton.png" type="Texture" id=31]
+[ext_resource path="res://assets/euxi_assets/nurse_room/NR plant.png" type="Texture" id=32]
+[ext_resource path="res://assets/euxi_assets/nurse_room/NR bulletin.png" type="Texture" id=33]
+[ext_resource path="res://assets/euxi_assets/nurse_room/NR_door.png" type="Texture" id=34]
+[ext_resource path="res://assets/game/backgrounds/nurseroom.png" type="Texture" id=35]
+[ext_resource path="res://assets/euxi_assets/library/bookshelf 2.png" type="Texture" id=36]
+[ext_resource path="res://assets/euxi_assets/library/bookshelf 1.png" type="Texture" id=37]
+[ext_resource path="res://assets/game/backgrounds/library.png" type="Texture" id=38]
+[ext_resource path="res://assets/euxi_assets/library/door.png" type="Texture" id=39]
+[ext_resource path="res://assets/euxi_assets/library/lamp.png" type="Texture" id=40]
+[ext_resource path="res://assets/euxi_assets/library/tables&chairs.png" type="Texture" id=41]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+uniform vec2 scale;
+uniform float y_zoom;
+uniform vec4 water_color : hint_color;
+uniform sampler2D noise;
+uniform vec2 distortion_scale;
+uniform float intensity;
+uniform float speed;
+
+uniform float wave_amplitude;
+uniform float wave_speed;
+uniform float wave_period;
+
+
+void fragment(){
+
+	float distortion = texture(noise, UV*scale*distortion_scale + TIME * speed).x;
+	distortion -= 0.5;
+
+	float uv_height = SCREEN_PIXEL_SIZE.y / TEXTURE_PIXEL_SIZE.y;
+	vec2 reflected_screenuv = vec2(SCREEN_UV.x -distortion * intensity * y_zoom, SCREEN_UV.y + uv_height * UV.y * scale.y * y_zoom * 3.0);
+	vec4 reflection = texture(SCREEN_TEXTURE, reflected_screenuv);
+	COLOR.rgb = mix(reflection.rgb, water_color.rgb, water_color.a);
+
+	float waves = UV.y * scale.y + sin(UV.x * scale.x / wave_period - TIME*wave_speed)*cos(0.2*UV.x*scale.x/wave_period + TIME - wave_speed) * wave_amplitude - wave_amplitude;
+	COLOR.a = smoothstep(0.1, 0.13, waves);
+//	COLOR.rgb = mix(refrection.rgb, water_color.rgb, water_color.a);
+
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/scale = Vector2( 300, 3.687 )
+shader_param/y_zoom = 0.841
+shader_param/water_color = Color( 0.109804, 0.713726, 0.898039, 0.894118 )
+shader_param/distortion_scale = Vector2( 0.05, 0.3 )
+shader_param/intensity = 0.07
+shader_param/speed = 0.05
+shader_param/wave_amplitude = 0.08
+shader_param/wave_speed = 3.0
+shader_param/wave_period = 0.4
+shader_param/noise = ExtResource( 6 )
+
+[node name="AreaTester" type="Node"]
+
+[node name="Hallway" type="Node2D" parent="."]
+visible = false
+
+[node name="Background" type="Node2D" parent="Hallway"]
+
+[node name="1" type="Sprite" parent="Hallway/Background"]
+position = Vector2( -447, 267 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 5 )
+
+[node name="2" type="Sprite" parent="Hallway/Background"]
+position = Vector2( 1668, 267 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 5 )
+
+[node name="BackgroundObjects" type="Node2D" parent="Hallway"]
+position = Vector2( 15, -113 )
+
+[node name="Classroom" type="Sprite" parent="Hallway/BackgroundObjects"]
+position = Vector2( 608, 299 )
+texture = ExtResource( 2 )
+
+[node name="Classroom2" type="Sprite" parent="Hallway/BackgroundObjects/Classroom"]
+modulate = Color( 1, 1, 1, 0.117647 )
+show_behind_parent = true
+position = Vector2( -3, 386 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 2 )
+
+[node name="Plant" type="Sprite" parent="Hallway/BackgroundObjects"]
+position = Vector2( -406, 349 )
+texture = ExtResource( 3 )
+
+[node name="Reflection" type="Sprite" parent="Hallway/BackgroundObjects/Plant"]
+modulate = Color( 1, 1, 1, 0.117647 )
+show_behind_parent = true
+position = Vector2( 0, 284 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 3 )
+
+[node name="Plant2" type="Sprite" parent="Hallway/BackgroundObjects"]
+position = Vector2( 1605, 355 )
+texture = ExtResource( 3 )
+
+[node name="Reflection" type="Sprite" parent="Hallway/BackgroundObjects/Plant2"]
+modulate = Color( 1, 1, 1, 0.117647 )
+show_behind_parent = true
+position = Vector2( 0, 284 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 3 )
+
+[node name="ShadowTest" type="Sprite" parent="Hallway/BackgroundObjects/Plant2"]
+visible = false
+modulate = Color( 0, 0, 0, 0.286275 )
+show_behind_parent = true
+position = Vector2( -5.34058e-05, 183 )
+scale = Vector2( 1.06504, -0.277211 )
+texture = ExtResource( 3 )
+
+[node name="Bulletin" type="Sprite" parent="Hallway/BackgroundObjects"]
+position = Vector2( -1338, 267 )
+texture = ExtResource( 4 )
+
+[node name="Reflection" type="Sprite" parent="Hallway/BackgroundObjects/Bulletin"]
+modulate = Color( 1, 1, 1, 0.117647 )
+show_behind_parent = true
+position = Vector2( -2, 427 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 4 )
+
+[node name="Bulletin2" type="Sprite" parent="Hallway/BackgroundObjects"]
+position = Vector2( 2569, 263 )
+texture = ExtResource( 4 )
+
+[node name="Reflection" type="Sprite" parent="Hallway/BackgroundObjects/Bulletin2"]
+modulate = Color( 1, 1, 1, 0.117647 )
+show_behind_parent = true
+position = Vector2( -2, 427 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 4 )
+
+[node name="Plant3" type="Sprite" parent="Hallway/BackgroundObjects"]
+position = Vector2( -1502, 353 )
+texture = ExtResource( 3 )
+
+[node name="Reflection" type="Sprite" parent="Hallway/BackgroundObjects/Plant3"]
+modulate = Color( 1, 1, 1, 0.117647 )
+show_behind_parent = true
+position = Vector2( 0, 284 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 3 )
+
+[node name="Plant4" type="Sprite" parent="Hallway/BackgroundObjects"]
+position = Vector2( 2730, 351 )
+texture = ExtResource( 3 )
+
+[node name="Reflection" type="Sprite" parent="Hallway/BackgroundObjects/Plant4"]
+modulate = Color( 1, 1, 1, 0.117647 )
+show_behind_parent = true
+position = Vector2( 0, 284 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 3 )
+
+[node name="Lockers" type="Node2D" parent="Hallway"]
+position = Vector2( 19, -129 )
+
+[node name="Locker1" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -976, 305 )
+locker_id = 1101
+day = 1
+
+[node name="Locker2" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -857, 305 )
+locker_id = 1102
+
+[node name="Locker3" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -738, 305 )
+locker_id = 1103
+
+[node name="Locker4" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -619, 305 )
+locker_id = 1104
+
+[node name="Locker5" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -203, 305 )
+locker_id = 1105
+day = 3
+
+[node name="Locker6" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -84, 305 )
+locker_id = 1106
+day = 3
+
+[node name="Locker7" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 35, 305 )
+locker_id = 1107
+day = 3
+
+[node name="Locker8" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 154, 305 )
+locker_id = 1108
+day = 3
+
+[node name="Locker9" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 1045, 305 )
+locker_id = 1109
+
+[node name="Locker10" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 1164, 305 )
+locker_id = 1110
+
+[node name="Locker11" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 1283, 305 )
+locker_id = 1111
+
+[node name="Locker12" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 1402, 305 )
+locker_id = 1112
+
+[node name="Locker13" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 1818, 305 )
+locker_id = 1113
+
+[node name="Locker14" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 1937, 305 )
+locker_id = 1114
+
+[node name="Locker15" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 2056, 305 )
+locker_id = 1115
+day = 1
+
+[node name="Locker16" parent="Hallway/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 2175, 305 )
+locker_id = 1116
+
+[node name="NurseRoom" type="Node2D" parent="."]
+visible = false
+
+[node name="Background" type="Node2D" parent="NurseRoom"]
+
+[node name="1" type="Sprite" parent="NurseRoom/Background"]
+position = Vector2( 300, 267 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 35 )
+
+[node name="2" type="Sprite" parent="NurseRoom/Background"]
+position = Vector2( 887, 267 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 35 )
+
+[node name="BackgroundObjects" type="Node2D" parent="NurseRoom"]
+position = Vector2( 15, -113 )
+
+[node name="Cabinet" type="Sprite" parent="NurseRoom/BackgroundObjects"]
+position = Vector2( -619, 359 )
+texture = ExtResource( 7 )
+
+[node name="Cabinet2" type="Sprite" parent="NurseRoom/BackgroundObjects/Cabinet"]
+modulate = Color( 1, 1, 1, 0.117647 )
+position = Vector2( 0, 267 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 7 )
+
+[node name="Cabinet2" type="Sprite" parent="NurseRoom/BackgroundObjects"]
+position = Vector2( 1575, 361 )
+texture = ExtResource( 7 )
+
+[node name="Cabinet2" type="Sprite" parent="NurseRoom/BackgroundObjects/Cabinet2"]
+modulate = Color( 1, 1, 1, 0.117647 )
+position = Vector2( 0, 267 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 7 )
+
+[node name="Bulletin" type="Sprite" parent="NurseRoom/BackgroundObjects"]
+position = Vector2( 577, 270 )
+texture = ExtResource( 33 )
+
+[node name="Bulletin2" type="Sprite" parent="NurseRoom/BackgroundObjects/Bulletin"]
+modulate = Color( 1, 1, 1, 0.117647 )
+position = Vector2( 0, 420 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 33 )
+
+[node name="Window" type="Sprite" parent="NurseRoom/BackgroundObjects"]
+position = Vector2( -346, 248 )
+texture = ExtResource( 9 )
+
+[node name="Window4" type="Sprite" parent="NurseRoom/BackgroundObjects/Window"]
+modulate = Color( 1, 1, 1, 0.117647 )
+position = Vector2( 0, 448 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 9 )
+
+[node name="Window2" type="Sprite" parent="NurseRoom/BackgroundObjects"]
+position = Vector2( 1854, 248 )
+texture = ExtResource( 9 )
+
+[node name="Window3" type="Sprite" parent="NurseRoom/BackgroundObjects/Window2"]
+modulate = Color( 1, 1, 1, 0.117647 )
+position = Vector2( 0, 458 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 9 )
+
+[node name="Door" type="Sprite" parent="NurseRoom/BackgroundObjects"]
+position = Vector2( 932, 298 )
+texture = ExtResource( 34 )
+
+[node name="Door2" type="Sprite" parent="NurseRoom/BackgroundObjects/Door"]
+modulate = Color( 1, 1, 1, 0.117647 )
+position = Vector2( 0, 388 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 34 )
+
+[node name="Skeleton" type="Sprite" parent="NurseRoom/BackgroundObjects"]
+position = Vector2( 322, 318 )
+texture = ExtResource( 31 )
+
+[node name="Skeleton2" type="Sprite" parent="NurseRoom/BackgroundObjects/Skeleton"]
+modulate = Color( 1, 1, 1, 0.117647 )
+position = Vector2( 0, 347 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 31 )
+
+[node name="Plant" type="Sprite" parent="NurseRoom/BackgroundObjects"]
+position = Vector2( 1464, 355 )
+texture = ExtResource( 32 )
+
+[node name="Plant3" type="Sprite" parent="NurseRoom/BackgroundObjects/Plant"]
+modulate = Color( 1, 1, 1, 0.117647 )
+position = Vector2( 0, 280 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 32 )
+
+[node name="Plant2" type="Sprite" parent="NurseRoom/BackgroundObjects"]
+position = Vector2( -809, 355 )
+texture = ExtResource( 32 )
+
+[node name="Plant4" type="Sprite" parent="NurseRoom/BackgroundObjects/Plant2"]
+modulate = Color( 1, 1, 1, 0.117647 )
+position = Vector2( 0, 278 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 32 )
+
+[node name="Lockers" type="Node2D" parent="NurseRoom"]
+position = Vector2( 19, -129 )
+
+[node name="Locker0" parent="NurseRoom/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -93, 337 )
+locker_id = 1200
+
+[node name="Locker1" parent="NurseRoom/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 26, 337 )
+locker_id = 1200
+
+[node name="Locker2" parent="NurseRoom/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 146, 337 )
+locker_id = 1200
+
+[node name="Locker3" parent="NurseRoom/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 1213, 337 )
+locker_id = 1200
+
+[node name="Locker4" parent="NurseRoom/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 1333, 337 )
+locker_id = 1200
+
+[node name="FrontObjects" type="Node2D" parent="NurseRoom"]
+position = Vector2( -110, 208 )
+z_index = 1
+
+[node name="Bed3" type="Sprite" parent="NurseRoom/FrontObjects"]
+position = Vector2( -580, 443.5 )
+texture = ExtResource( 30 )
+
+[node name="Bed4" type="Sprite" parent="NurseRoom/FrontObjects"]
+position = Vector2( -154, 443.5 )
+texture = ExtResource( 30 )
+
+[node name="Bed5" type="Sprite" parent="NurseRoom/FrontObjects"]
+position = Vector2( 325, 443.5 )
+texture = ExtResource( 30 )
+
+[node name="Bed6" type="Sprite" parent="NurseRoom/FrontObjects"]
+position = Vector2( 815, 440 )
+texture = ExtResource( 30 )
+
+[node name="Bed7" type="Sprite" parent="NurseRoom/FrontObjects"]
+position = Vector2( 1294, 443.5 )
+texture = ExtResource( 30 )
+
+[node name="Bed8" type="Sprite" parent="NurseRoom/FrontObjects"]
+position = Vector2( 1804, 443.5 )
+texture = ExtResource( 30 )
+
+[node name="GymPool" type="Node2D" parent="."]
+visible = false
+position = Vector2( 67, 50 )
+
+[node name="Background" type="Node2D" parent="GymPool"]
+
+[node name="1" type="Sprite" parent="GymPool/Background"]
+position = Vector2( -866.5, 267 )
+scale = Vector2( 6.69463, 1.07491 )
+texture = ExtResource( 21 )
+
+[node name="Side" type="Node2D" parent="GymPool/Background"]
+
+[node name="3" type="Sprite" parent="GymPool/Background/Side"]
+position = Vector2( -6559.67, 606.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 28 )
+
+[node name="6" type="Sprite" parent="GymPool/Background/Side"]
+position = Vector2( -7967.34, 606.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 28 )
+
+[node name="4" type="Sprite" parent="GymPool/Background/Side"]
+position = Vector2( -5268.68, 605.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 28 )
+
+[node name="5" type="Sprite" parent="GymPool/Background/Side"]
+position = Vector2( -3979.68, 605.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 28 )
+
+[node name="7" type="Sprite" parent="GymPool/Background/Side"]
+position = Vector2( -1162.67, 606.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 28 )
+
+[node name="8" type="Sprite" parent="GymPool/Background/Side"]
+position = Vector2( -2570.34, 606.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 28 )
+
+[node name="9" type="Sprite" parent="GymPool/Background/Side"]
+position = Vector2( 128.322, 605.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 28 )
+
+[node name="10" type="Sprite" parent="GymPool/Background/Side"]
+position = Vector2( 1417.32, 605.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 28 )
+
+[node name="11" type="Sprite" parent="GymPool/Background/Side"]
+position = Vector2( 4236.33, 606.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 28 )
+
+[node name="12" type="Sprite" parent="GymPool/Background/Side"]
+position = Vector2( 2828.66, 606.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 28 )
+
+[node name="13" type="Sprite" parent="GymPool/Background/Side"]
+position = Vector2( 5527.32, 605.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 28 )
+
+[node name="14" type="Sprite" parent="GymPool/Background/Side"]
+position = Vector2( 6816.32, 605.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 28 )
+
+[node name="BackgroundObjects" type="Node2D" parent="GymPool"]
+position = Vector2( 15, -113 )
+
+[node name="Sprite2" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( 17, 291 )
+texture = ExtResource( 22 )
+
+[node name="Sprite11" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( -4387, 291 )
+texture = ExtResource( 22 )
+
+[node name="Sprite12" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( -7639, 291 )
+texture = ExtResource( 22 )
+
+[node name="Sprite13" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( 4934, 302 )
+texture = ExtResource( 16 )
+
+[node name="Sprite3" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( 1520, 302 )
+texture = ExtResource( 11 )
+
+[node name="Sprite14" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( -3168, 302 )
+texture = ExtResource( 11 )
+
+[node name="Sprite15" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( 6064, 302 )
+texture = ExtResource( 11 )
+
+[node name="Sprite4" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( 349, 444 )
+texture = ExtResource( 29 )
+
+[node name="Sprite7" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( 3184, 444 )
+texture = ExtResource( 29 )
+
+[node name="Sprite8" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( -2658, 444 )
+texture = ExtResource( 29 )
+
+[node name="Sprite9" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( -5509, 444 )
+texture = ExtResource( 29 )
+
+[node name="Sprite10" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( -6626, 443 )
+texture = ExtResource( 29 )
+
+[node name="Sprite5" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( -850, 406 )
+texture = ExtResource( 13 )
+
+[node name="Sprite16" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( -1176, 430 )
+texture = ExtResource( 15 )
+
+[node name="NrPlant" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( -3462, 353 )
+texture = ExtResource( 32 )
+
+[node name="NrPlant4" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( 5766, 353 )
+texture = ExtResource( 32 )
+
+[node name="NrPlant5" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( 6850, 353 )
+texture = ExtResource( 32 )
+
+[node name="NrPlant6" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( 6520, 353 )
+texture = ExtResource( 14 )
+
+[node name="NrPlant7" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( 3170, 364 )
+texture = ExtResource( 14 )
+
+[node name="NrPlant2" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( -4187, 353 )
+texture = ExtResource( 32 )
+
+[node name="NrPlant3" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( -8437, 349 )
+texture = ExtResource( 32 )
+
+[node name="Cabinet" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( -8071, 361 )
+texture = ExtResource( 14 )
+
+[node name="Cabinet2" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( -4638, 361 )
+texture = ExtResource( 20 )
+
+[node name="Cabinet3" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( -1281, 356 )
+texture = ExtResource( 20 )
+
+[node name="BallsInBasket" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( 4659, 406 )
+texture = ExtResource( 13 )
+
+[node name="Sprite6" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( 2073, 446 )
+texture = ExtResource( 29 )
+
+[node name="Bulletin" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( 354, 261 )
+texture = ExtResource( 4 )
+
+[node name="Plant2" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( 1782, 349 )
+texture = ExtResource( 3 )
+
+[node name="Plant3" type="Sprite" parent="GymPool/BackgroundObjects"]
+position = Vector2( 637, 355 )
+texture = ExtResource( 3 )
+
+[node name="Lockers" type="Node2D" parent="GymPool"]
+position = Vector2( 19, -129 )
+
+[node name="Locker0" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -7347, 335 )
+locker_id = 1300
+
+[node name="Locker1" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -7226, 335 )
+locker_id = 1301
+
+[node name="Locker2" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -7108, 335 )
+locker_id = 1302
+
+[node name="Locker3" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -6988, 335 )
+locker_id = 1303
+
+[node name="Locker4" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -6261, 335 )
+locker_id = 1304
+
+[node name="Locker5" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -6140, 335 )
+locker_id = 1305
+
+[node name="Locker6" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -6022, 335 )
+locker_id = 1306
+
+[node name="Locker7" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -5902, 335 )
+locker_id = 1307
+
+[node name="Locker8" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -5144, 335 )
+locker_id = 1308
+
+[node name="Locker9" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -5023, 335 )
+locker_id = 1309
+
+[node name="Locker10" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -4905, 335 )
+locker_id = 1310
+
+[node name="Locker11" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -4785, 335 )
+locker_id = 1311
+
+[node name="Locker12" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -3987, 335 )
+locker_id = 1312
+
+[node name="Locker13" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -3866, 335 )
+locker_id = 1313
+
+[node name="Locker14" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -3748, 335 )
+locker_id = 1314
+
+[node name="Locker15" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -3628, 335 )
+locker_id = 1315
+
+[node name="Locker16" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -2264, 335 )
+locker_id = 1316
+
+[node name="Locker17" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -2143, 335 )
+locker_id = 1317
+
+[node name="Locker18" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -2025, 335 )
+locker_id = 1318
+
+[node name="Locker19" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -1905, 335 )
+locker_id = 1319
+
+[node name="Locker20" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -1791, 335 )
+locker_id = 1320
+
+[node name="Locker21" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -1670, 335 )
+locker_id = 1321
+
+[node name="Locker22" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -1552, 335 )
+locker_id = 1322
+
+[node name="Locker23" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -1432, 335 )
+locker_id = 1323
+
+[node name="Locker24" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -604, 335 )
+locker_id = 1324
+
+[node name="Locker25" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -483, 335 )
+locker_id = 1325
+
+[node name="Locker26" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -365, 335 )
+locker_id = 1326
+
+[node name="Locker27" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -245, 335 )
+locker_id = 1327
+
+[node name="Locker28" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 790, 335 )
+locker_id = 1328
+
+[node name="Locker29" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 911, 335 )
+locker_id = 1329
+
+[node name="Locker30" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 1029, 335 )
+locker_id = 1330
+
+[node name="Locker31" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 1149, 335 )
+locker_id = 1331
+
+[node name="Locker32" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 2410, 335 )
+locker_id = 1332
+
+[node name="Locker33" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 2531, 335 )
+locker_id = 1333
+
+[node name="Locker34" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 2649, 335 )
+locker_id = 1334
+
+[node name="Locker35" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 2769, 335 )
+locker_id = 1335
+
+[node name="Locker36" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 3566, 335 )
+locker_id = 1336
+
+[node name="Locker37" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 3687, 335 )
+locker_id = 1337
+
+[node name="Locker38" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 3805, 335 )
+locker_id = 1338
+
+[node name="Locker39" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 3925, 335 )
+locker_id = 1339
+
+[node name="Locker40" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 4041, 335 )
+locker_id = 1340
+
+[node name="Locker41" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 4162, 335 )
+locker_id = 1341
+
+[node name="Locker42" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 4280, 335 )
+locker_id = 1342
+
+[node name="Locker43" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 4400, 335 )
+locker_id = 1343
+
+[node name="Locker44" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 5218, 335 )
+locker_id = 1344
+
+[node name="Locker45" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 5339, 335 )
+locker_id = 1345
+
+[node name="Locker46" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 5457, 335 )
+locker_id = 1346
+
+[node name="Locker47" parent="GymPool/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 5577, 335 )
+locker_id = 1347
+
+[node name="HallwayStart" type="Position2D" parent="GymPool"]
+position = Vector2( -9151, 405 )
+
+[node name="HallwayEnd" type="Position2D" parent="GymPool"]
+position = Vector2( 7565, 405 )
+
+[node name="Water" type="Sprite" parent="GymPool"]
+modulate = Color( 1, 1, 1, 0.662745 )
+self_modulate = Color( 1, 1, 1, 0.964706 )
+material = SubResource( 2 )
+position = Vector2( -864, 791 )
+scale = Vector2( 245.469, 7.79475 )
+z_index = 2
+texture = ExtResource( 17 )
+
+[node name="Sprite" type="Sprite" parent="GymPool/Water"]
+show_behind_parent = true
+position = Vector2( 4.0494, -32.8426 )
+scale = Vector2( 0.00407384, 0.128291 )
+texture = ExtResource( 18 )
+
+[node name="Sprite2" type="Sprite" parent="GymPool/Water"]
+show_behind_parent = true
+position = Vector2( 14.7146, -32.8426 )
+scale = Vector2( 0.00407384, 0.128291 )
+texture = ExtResource( 18 )
+
+[node name="Sprite3" type="Sprite" parent="GymPool/Water"]
+show_behind_parent = true
+position = Vector2( 24.1987, -32.8426 )
+scale = Vector2( 0.00407384, 0.128291 )
+texture = ExtResource( 18 )
+
+[node name="Sprite4" type="Sprite" parent="GymPool/Water"]
+show_behind_parent = true
+position = Vector2( -4.95386, -32.8426 )
+scale = Vector2( 0.00407384, 0.128291 )
+texture = ExtResource( 18 )
+
+[node name="Sprite5" type="Sprite" parent="GymPool/Water"]
+show_behind_parent = true
+position = Vector2( -16.6499, -32.8426 )
+scale = Vector2( 0.00407384, 0.128291 )
+texture = ExtResource( 18 )
+
+[node name="Sprite6" type="Sprite" parent="GymPool/Water"]
+show_behind_parent = true
+position = Vector2( -29.1279, -32.8426 )
+scale = Vector2( 0.00407384, 0.128291 )
+texture = ExtResource( 18 )
+
+[node name="FacultyRoom" type="Node2D" parent="."]
+visible = false
+position = Vector2( 67, 50 )
+
+[node name="Background" type="Node2D" parent="FacultyRoom"]
+
+[node name="1" type="Sprite" parent="FacultyRoom/Background"]
+position = Vector2( 300, 267 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 23 )
+
+[node name="2" type="Sprite" parent="FacultyRoom/Background"]
+position = Vector2( 1117, 267 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 23 )
+
+[node name="BackgroundObjects" type="Node2D" parent="FacultyRoom"]
+position = Vector2( 15, -113 )
+
+[node name="Cabinet1" type="Sprite" parent="FacultyRoom/BackgroundObjects"]
+position = Vector2( 2219, 347 )
+texture = ExtResource( 26 )
+
+[node name="Cabinet4" type="Sprite" parent="FacultyRoom/BackgroundObjects/Cabinet1"]
+self_modulate = Color( 1, 1, 1, 0.184314 )
+position = Vector2( 0, 286 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 26 )
+
+[node name="Cabinet2" type="Sprite" parent="FacultyRoom/BackgroundObjects"]
+position = Vector2( -848, 347 )
+texture = ExtResource( 26 )
+
+[node name="Cabinet4" type="Sprite" parent="FacultyRoom/BackgroundObjects/Cabinet2"]
+self_modulate = Color( 1, 1, 1, 0.184314 )
+position = Vector2( 0, 286 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 26 )
+
+[node name="Cabinet3" type="Sprite" parent="FacultyRoom/BackgroundObjects"]
+position = Vector2( 404, 347 )
+texture = ExtResource( 26 )
+
+[node name="Cabinet4" type="Sprite" parent="FacultyRoom/BackgroundObjects/Cabinet3"]
+self_modulate = Color( 1, 1, 1, 0.184314 )
+position = Vector2( 0, 289 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 26 )
+
+[node name="Window1" type="Sprite" parent="FacultyRoom/BackgroundObjects"]
+position = Vector2( 1831, 93 )
+texture = ExtResource( 12 )
+
+[node name="Window3" type="Sprite" parent="FacultyRoom/BackgroundObjects/Window1"]
+self_modulate = Color( 1, 1, 1, 0.184314 )
+position = Vector2( 0, 676 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 12 )
+
+[node name="Window2" type="Sprite" parent="FacultyRoom/BackgroundObjects"]
+position = Vector2( -489, 93 )
+texture = ExtResource( 12 )
+
+[node name="Window3" type="Sprite" parent="FacultyRoom/BackgroundObjects/Window2"]
+self_modulate = Color( 1, 1, 1, 0.184314 )
+position = Vector2( 0, 673 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 12 )
+
+[node name="Door1" type="Sprite" parent="FacultyRoom/BackgroundObjects"]
+position = Vector2( 1057, 305 )
+texture = ExtResource( 24 )
+
+[node name="Door2" type="Sprite" parent="FacultyRoom/BackgroundObjects/Door1"]
+self_modulate = Color( 1, 1, 1, 0.184314 )
+position = Vector2( 0, 377 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 24 )
+
+[node name="Trashcan1" type="Sprite" parent="FacultyRoom/BackgroundObjects"]
+position = Vector2( 1958, 389 )
+texture = ExtResource( 19 )
+
+[node name="Trashcan3" type="Sprite" parent="FacultyRoom/BackgroundObjects/Trashcan1"]
+self_modulate = Color( 1, 1, 1, 0.184314 )
+position = Vector2( 0, 209 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 19 )
+
+[node name="Trashcan2" type="Sprite" parent="FacultyRoom/BackgroundObjects"]
+position = Vector2( -594, 389 )
+texture = ExtResource( 19 )
+
+[node name="Trashcan3" type="Sprite" parent="FacultyRoom/BackgroundObjects/Trashcan2"]
+self_modulate = Color( 1, 1, 1, 0.184314 )
+position = Vector2( 0, 211 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 19 )
+
+[node name="Plant1" type="Sprite" parent="FacultyRoom/BackgroundObjects"]
+position = Vector2( -390, 353 )
+texture = ExtResource( 3 )
+
+[node name="Plant2" type="Sprite" parent="FacultyRoom/BackgroundObjects/Plant1"]
+self_modulate = Color( 1, 1, 1, 0.184314 )
+show_behind_parent = true
+position = Vector2( 0, 255 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 3 )
+
+[node name="VendingMachine" type="Sprite" parent="FacultyRoom/BackgroundObjects"]
+position = Vector2( 1756, 382 )
+texture = ExtResource( 25 )
+
+[node name="VendingMachine2" type="Sprite" parent="FacultyRoom/BackgroundObjects/VendingMachine"]
+self_modulate = Color( 1, 1, 1, 0.184314 )
+position = Vector2( 0, 223 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 25 )
+
+[node name="Lockers" type="Node2D" parent="FacultyRoom"]
+position = Vector2( 19, -129 )
+
+[node name="Locker0" parent="FacultyRoom/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -216, 335 )
+locker_id = 1400
+
+[node name="Locker1" parent="FacultyRoom/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -98, 335 )
+locker_id = 1401
+
+[node name="Locker2" parent="FacultyRoom/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 21, 335 )
+locker_id = 1402
+
+[node name="Locker3" parent="FacultyRoom/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 138, 335 )
+locker_id = 1403
+
+[node name="Locker4" parent="FacultyRoom/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 662, 335 )
+locker_id = 1404
+
+[node name="Locker5" parent="FacultyRoom/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 781, 335 )
+locker_id = 1405
+
+[node name="Locker6" parent="FacultyRoom/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 1317, 335 )
+locker_id = 1406
+
+[node name="Locker7" parent="FacultyRoom/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 1436, 335 )
+locker_id = 1407
+
+[node name="Locker8" parent="FacultyRoom/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 1550, 335 )
+locker_id = 1408
+
+[node name="FrontObjects" type="Node2D" parent="FacultyRoom"]
+position = Vector2( -74, 188 )
+z_index = 1
+
+[node name="Table1" type="Sprite" parent="FacultyRoom/FrontObjects"]
+position = Vector2( -522, 404 )
+texture = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="FacultyRoom/FrontObjects/Table1"]
+position = Vector2( -197, 13 )
+
+[node name="Chair1" type="Sprite" parent="FacultyRoom/FrontObjects/Table1"]
+position = Vector2( -254, 94 )
+texture = ExtResource( 8 )
+
+[node name="Table2" type="Sprite" parent="FacultyRoom/FrontObjects"]
+position = Vector2( 33, 404 )
+texture = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="FacultyRoom/FrontObjects/Table2"]
+position = Vector2( -195, 7 )
+
+[node name="Chair1" type="Sprite" parent="FacultyRoom/FrontObjects/Table2"]
+position = Vector2( -254, 94 )
+texture = ExtResource( 8 )
+
+[node name="Table3" type="Sprite" parent="FacultyRoom/FrontObjects"]
+position = Vector2( 603, 404 )
+texture = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="FacultyRoom/FrontObjects/Table3"]
+position = Vector2( -152, 13 )
+
+[node name="Chair1" type="Sprite" parent="FacultyRoom/FrontObjects/Table3"]
+position = Vector2( -254, 94 )
+texture = ExtResource( 8 )
+
+[node name="Table4" type="Sprite" parent="FacultyRoom/FrontObjects"]
+position = Vector2( 1235, 404 )
+texture = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="FacultyRoom/FrontObjects/Table4"]
+position = Vector2( -172, 10 )
+
+[node name="Chair1" type="Sprite" parent="FacultyRoom/FrontObjects/Table4"]
+position = Vector2( -254, 94 )
+texture = ExtResource( 8 )
+
+[node name="Table5" type="Sprite" parent="FacultyRoom/FrontObjects"]
+position = Vector2( 1851, 404 )
+texture = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="FacultyRoom/FrontObjects/Table5"]
+position = Vector2( -174, 10 )
+texture = ExtResource( 27 )
+
+[node name="Chair1" type="Sprite" parent="FacultyRoom/FrontObjects/Table5"]
+position = Vector2( -254, 94 )
+texture = ExtResource( 8 )
+
+[node name="Table6" type="Sprite" parent="FacultyRoom/FrontObjects"]
+position = Vector2( 2441, 404 )
+texture = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="FacultyRoom/FrontObjects/Table6"]
+position = Vector2( -184, 15 )
+
+[node name="Chair1" type="Sprite" parent="FacultyRoom/FrontObjects/Table6"]
+position = Vector2( -254, 94 )
+texture = ExtResource( 8 )
+
+[node name="Library" type="Node2D" parent="."]
+position = Vector2( 67, 50 )
+
+[node name="Background" type="Node2D" parent="Library"]
+
+[node name="1" type="Sprite" parent="Library/Background"]
+position = Vector2( -1347, 267 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 38 )
+
+[node name="2" type="Sprite" parent="Library/Background"]
+position = Vector2( 1120, 267 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 38 )
+
+[node name="BackgroundObjects" type="Node2D" parent="Library"]
+position = Vector2( 15, -113 )
+
+[node name="Door" type="Sprite" parent="Library/BackgroundObjects"]
+position = Vector2( 555, 244 )
+texture = ExtResource( 39 )
+
+[node name="Door2" type="Sprite" parent="Library/BackgroundObjects/Door"]
+modulate = Color( 1, 1, 1, 0.117647 )
+position = Vector2( 0, 505 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 39 )
+
+[node name="Lamp1" type="Sprite" parent="Library/BackgroundObjects"]
+position = Vector2( 768, 162 )
+texture = ExtResource( 40 )
+
+[node name="Reflect" type="Sprite" parent="Library/BackgroundObjects/Lamp1"]
+self_modulate = Color( 1, 1, 1, 0.203922 )
+position = Vector2( 0, 651 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 40 )
+
+[node name="Lamp2" type="Sprite" parent="Library/BackgroundObjects"]
+position = Vector2( 336, 162 )
+texture = ExtResource( 40 )
+
+[node name="Reflect" type="Sprite" parent="Library/BackgroundObjects/Lamp2"]
+self_modulate = Color( 1, 1, 1, 0.203922 )
+position = Vector2( 0, 651 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 40 )
+
+[node name="Skeleton" type="Sprite" parent="Library/BackgroundObjects"]
+position = Vector2( -1508.5, 318 )
+texture = ExtResource( 31 )
+
+[node name="Skeleton2" type="Sprite" parent="Library/BackgroundObjects/Skeleton"]
+modulate = Color( 1, 1, 1, 0.117647 )
+position = Vector2( 0, 347 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 31 )
+
+[node name="Skeleton2" type="Sprite" parent="Library/BackgroundObjects"]
+position = Vector2( 849.5, 318 )
+texture = ExtResource( 31 )
+
+[node name="Skeleton2" type="Sprite" parent="Library/BackgroundObjects/Skeleton2"]
+modulate = Color( 1, 1, 1, 0.117647 )
+position = Vector2( 0, 347 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 31 )
+
+[node name="Bookshelf1" type="Sprite" parent="Library/BackgroundObjects"]
+position = Vector2( -2431, 300 )
+texture = ExtResource( 37 )
+
+[node name="Shadow" type="Sprite" parent="Library/BackgroundObjects/Bookshelf1"]
+self_modulate = Color( 1, 1, 1, 0.294118 )
+position = Vector2( 0, 393 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 37 )
+
+[node name="Bookshelf2" type="Sprite" parent="Library/BackgroundObjects"]
+position = Vector2( -558, 300 )
+texture = ExtResource( 37 )
+
+[node name="Shadow" type="Sprite" parent="Library/BackgroundObjects/Bookshelf2"]
+self_modulate = Color( 1, 1, 1, 0.294118 )
+position = Vector2( 0, 393 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 37 )
+
+[node name="Bookshelf3" type="Sprite" parent="Library/BackgroundObjects"]
+position = Vector2( 1252, 300 )
+texture = ExtResource( 37 )
+
+[node name="Shadow" type="Sprite" parent="Library/BackgroundObjects/Bookshelf3"]
+self_modulate = Color( 1, 1, 1, 0.294118 )
+position = Vector2( 0, 393 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 37 )
+
+[node name="Bookshelf4" type="Sprite" parent="Library/BackgroundObjects"]
+position = Vector2( 2340, 300 )
+texture = ExtResource( 37 )
+
+[node name="Shadow" type="Sprite" parent="Library/BackgroundObjects/Bookshelf4"]
+self_modulate = Color( 1, 1, 1, 0.294118 )
+position = Vector2( 0, 393 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 37 )
+
+[node name="Lockers" type="Node2D" parent="Library"]
+position = Vector2( 19, -129 )
+
+[node name="Locker0" parent="Library/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -2033, 335 )
+locker_id = 1500
+
+[node name="Locker1" parent="Library/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -1915, 335 )
+locker_id = 1500
+
+[node name="Locker2" parent="Library/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -1797, 335 )
+locker_id = 1500
+
+[node name="Locker3" parent="Library/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -1678, 335 )
+locker_id = 1500
+
+[node name="Locker4" parent="Library/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -1326, 335 )
+locker_id = 1500
+
+[node name="Locker5" parent="Library/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -1208, 335 )
+locker_id = 1500
+
+[node name="Locker6" parent="Library/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -1090, 335 )
+locker_id = 1500
+
+[node name="Locker7" parent="Library/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -971, 335 )
+locker_id = 1500
+
+[node name="Locker8" parent="Library/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -144, 335 )
+locker_id = 1500
+
+[node name="Locker9" parent="Library/Lockers" instance=ExtResource( 1 )]
+position = Vector2( -26, 335 )
+locker_id = 1500
+
+[node name="Locker10" parent="Library/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 92, 335 )
+locker_id = 1500
+
+[node name="Locker11" parent="Library/Lockers" instance=ExtResource( 1 )]
+position = Vector2( 211, 335 )
+locker_id = 1500
+
+[node name="HallwayStart" type="Position2D" parent="Library"]
+position = Vector2( -2781, 405 )
+
+[node name="HallwayEnd" type="Position2D" parent="Library"]
+position = Vector2( 2541, 405 )
+
+[node name="Routes" type="Node2D" parent="Library"]
+z_index = 1
+
+[node name="FrontObjects" type="Node2D" parent="Library"]
+position = Vector2( -110, 208 )
+z_index = 1
+
+[node name="Shelf1" type="Sprite" parent="Library/FrontObjects"]
+position = Vector2( -574, 407 )
+texture = ExtResource( 36 )
+
+[node name="Shelf2" type="Sprite" parent="Library/FrontObjects"]
+position = Vector2( -1014, 456 )
+texture = ExtResource( 41 )
+
+[node name="Shelf3" type="Sprite" parent="Library/FrontObjects"]
+position = Vector2( -1427, 407 )
+texture = ExtResource( 36 )
+
+[node name="Shelf4" type="Sprite" parent="Library/FrontObjects"]
+position = Vector2( -1867, 407 )
+texture = ExtResource( 36 )
+
+[node name="Shelf9" type="Sprite" parent="Library/FrontObjects"]
+position = Vector2( -2294, 407 )
+texture = ExtResource( 36 )
+
+[node name="Shelf5" type="Sprite" parent="Library/FrontObjects"]
+position = Vector2( 1163, 456 )
+texture = ExtResource( 41 )
+
+[node name="Shelf6" type="Sprite" parent="Library/FrontObjects"]
+position = Vector2( 723, 407 )
+texture = ExtResource( 36 )
+
+[node name="Shelf7" type="Sprite" parent="Library/FrontObjects"]
+position = Vector2( 310, 407 )
+texture = ExtResource( 36 )
+
+[node name="Shelf8" type="Sprite" parent="Library/FrontObjects"]
+position = Vector2( -130, 407 )
+texture = ExtResource( 36 )
+
+[node name="Shelf10" type="Sprite" parent="Library/FrontObjects"]
+position = Vector2( 2452, 407 )
+texture = ExtResource( 36 )
+
+[node name="Shelf11" type="Sprite" parent="Library/FrontObjects"]
+position = Vector2( 2039, 407 )
+texture = ExtResource( 36 )
+
+[node name="Shelf12" type="Sprite" parent="Library/FrontObjects"]
+position = Vector2( 1599, 407 )
+texture = ExtResource( 36 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 753, 390 )
+current = true
+zoom = Vector2( 1.2, 1.2 )

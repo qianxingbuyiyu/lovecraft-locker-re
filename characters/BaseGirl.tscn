@@ -1,0 +1,417 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://characters/BaseGirl.gd" type="Script" id=6]
+[ext_resource path="res://assets/cyril_assets/Hallway/captured_tentacle.png" type="Texture" id=7]
+[ext_resource path="res://assets/cyril_assets/body/glasses.png" type="Texture" id=13]
+[ext_resource path="res://assets/cyril_assets/shadow.png" type="Texture" id=31]
+[ext_resource path="res://assets/cyril_assets/face/body head back.png" type="Texture" id=34]
+[ext_resource path="res://assets/cyril_assets/blush.png" type="Texture" id=44]
+[ext_resource path="res://scenes/HeartParticles.tscn" type="PackedScene" id=89]
+[ext_resource path="res://assets/sound/noloops/moan19.mp3" type="AudioStream" id=96]
+[ext_resource path="res://assets/sound/footstep.mp3" type="AudioStream" id=98]
+[ext_resource path="res://assets/game/targeted.png" type="Texture" id=336]
+[ext_resource path="res://assets/euxi_assets/blank sprites/shocked1.png" type="Texture" id=365]
+[ext_resource path="res://assets/euxi_assets/blank sprites/walking3.png" type="Texture" id=366]
+[ext_resource path="res://assets/euxi_assets/blank sprites/shocked2.png" type="Texture" id=367]
+[ext_resource path="res://assets/euxi_assets/blank sprites/shocked3.png" type="Texture" id=368]
+[ext_resource path="res://assets/euxi_assets/blank sprites/walking2.png" type="Texture" id=369]
+[ext_resource path="res://assets/euxi_assets/blank sprites/walking4.png" type="Texture" id=370]
+[ext_resource path="res://assets/euxi_assets/blank sprites/walking1.png" type="Texture" id=371]
+[ext_resource path="res://assets/euxi_assets/blank sprites/SHOCK_BASE.png" type="Texture" id=372]
+[ext_resource path="res://assets/cyril_assets/face/confused_overlay.png" type="Texture" id=435]
+
+[sub_resource type="Animation" id=33]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.987603, 1 ) ]
+}
+
+[sub_resource type="Animation" id=34]
+resource_name = "init"
+length = 0.4
+loop = true
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.987603, 1 ), Vector2( 0.768595, 1 ), Vector2( 0.987603, 1 ) ]
+}
+
+[sub_resource type="Animation" id=46]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=45]
+resource_name = "idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 365 ), ExtResource( 367 ), ExtResource( 368 ) ],
+"loop": true,
+"name": "blank_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 372 ) ],
+"loop": true,
+"name": "blank_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 371 ), ExtResource( 369 ), ExtResource( 366 ), ExtResource( 370 ) ],
+"loop": true,
+"name": "blank_walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=54]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=50]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=48]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=53]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=49]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=38]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=39]
+resource_name = "struggling"
+length = 0.5
+loop = true
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.24, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 3.35616, -3.96812, 3.35616 ]
+}
+
+[sub_resource type="Animation" id=40]
+resource_name = "walking"
+loop = true
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.49, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -8.0, 8.0, -8.0 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=41]
+radius = 37.2828
+height = 32.8366
+
+[sub_resource type="RectangleShape2D" id=42]
+extents = Vector2( 133.156, 124.266 )
+
+[sub_resource type="Animation" id=43]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=44]
+resource_name = "fadein"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="BaseGirl" type="Area2D"]
+position = Vector2( -8, 0 )
+script = ExtResource( 6 )
+character_type = ""
+
+[node name="Shadow" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.337255 )
+position = Vector2( 4, 21 )
+scale = Vector2( 0.987603, 1 )
+texture = ExtResource( 31 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Shadow"]
+autoplay = "init"
+playback_speed = 0.5
+anims/RESET = SubResource( 33 )
+anims/init = SubResource( 34 )
+
+[node name="Glow" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0.415686 )
+position = Vector2( 5, -100 )
+texture = ExtResource( 336 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Glow"]
+autoplay = "idle"
+anims/RESET = SubResource( 46 )
+anims/idle = SubResource( 45 )
+
+[node name="Reflection" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.137255 )
+position = Vector2( 7, 120.875 )
+scale = Vector2( 1, -0.75 )
+frames = SubResource( 6 )
+animation = "blank_walk"
+frame = 1
+playing = true
+
+[node name="Reflection_face" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.137255 )
+position = Vector2( 6, 155.625 )
+scale = Vector2( 1, -0.5 )
+frames = SubResource( 54 )
+playing = true
+flip_h = true
+
+[node name="Glasses" type="Sprite" parent="Reflection_face"]
+visible = false
+position = Vector2( -4, 5 )
+texture = ExtResource( 13 )
+
+[node name="Reflection_hair" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.137255 )
+position = Vector2( 6, 148 )
+scale = Vector2( 1, -0.75 )
+frames = SubResource( 50 )
+
+[node name="BackHair" type="AnimatedSprite" parent="."]
+position = Vector2( 8, -144 )
+frames = SubResource( 48 )
+
+[node name="CaughtHead" type="Sprite" parent="."]
+position = Vector2( 6, -105 )
+texture = ExtResource( 34 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 10, -105 )
+frames = SubResource( 6 )
+animation = "blank_walk"
+frame = 3
+playing = true
+
+[node name="Confused" type="Sprite" parent="."]
+visible = false
+position = Vector2( 9.5, -178.75 )
+scale = Vector2( 1.03676, 1.01327 )
+texture = ExtResource( 435 )
+
+[node name="Blush" type="Sprite" parent="."]
+visible = false
+position = Vector2( 6, -105 )
+texture = ExtResource( 44 )
+
+[node name="Face" type="AnimatedSprite" parent="."]
+position = Vector2( 13, -170 )
+frames = SubResource( 53 )
+playing = true
+
+[node name="Glasses" type="Sprite" parent="Face"]
+visible = false
+position = Vector2( -4, 5 )
+texture = ExtResource( 13 )
+
+[node name="Hair" type="AnimatedSprite" parent="."]
+position = Vector2( 10, -140 )
+frames = SubResource( 49 )
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 38 )
+anims/struggling = SubResource( 39 )
+anims/walking = SubResource( 40 )
+
+[node name="Tentacle" type="Sprite" parent="."]
+visible = false
+position = Vector2( 10, -82 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 6, -86 )
+shape = SubResource( 41 )
+
+[node name="ShockRadius" type="Area2D" parent="."]
+monitorable = false
+
+[node name="right" type="CollisionShape2D" parent="ShockRadius"]
+position = Vector2( 141.844, -114.734 )
+shape = SubResource( 42 )
+
+[node name="left" type="CollisionShape2D" parent="ShockRadius"]
+position = Vector2( -130, -115 )
+shape = SubResource( 42 )
+disabled = true
+
+[node name="ShockTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="CuriousTimer" type="Timer" parent="."]
+wait_time = 1.8
+one_shot = true
+
+[node name="StartleTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="FaceChanger" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Awareness" type="Timer" parent="."]
+wait_time = 0.25
+autostart = true
+
+[node name="ClimaxExpire" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[node name="RandomTimer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="Particles" parent="." instance=ExtResource( 89 )]
+visible = false
+position = Vector2( 0, -96 )
+
+[node name="HornyParticles" parent="." instance=ExtResource( 89 )]
+visible = false
+position = Vector2( 0, -96 )
+color = Color( 1, 0.286275, 0.286275, 1 )
+
+[node name="Caught" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 96 )
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 98 )
+volume_db = -8.0
+max_distance = 1000.0
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 43 )
+anims/fadein = SubResource( 44 )
+
+[node name="GrabberPos" type="Position2D" parent="."]
+position = Vector2( 18, -97 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="area_entered" from="ShockRadius" to="." method="_on_ShockRadius_area_entered"]
+[connection signal="area_exited" from="ShockRadius" to="." method="_on_ShockRadius_area_exited"]
+[connection signal="timeout" from="ShockTimer" to="." method="_on_ShockTimer_timeout"]
+[connection signal="timeout" from="CuriousTimer" to="." method="_on_CuriousTimer_timeout"]
+[connection signal="timeout" from="StartleTimer" to="." method="_on_StartleTimer_timeout"]
+[connection signal="timeout" from="FaceChanger" to="." method="_on_FaceChanger_timeout"]
+[connection signal="timeout" from="Awareness" to="." method="_on_Awareness_timeout"]
+[connection signal="timeout" from="ClimaxExpire" to="." method="_on_ClimaxExpire_timeout"]
+[connection signal="timeout" from="RandomTimer" to="." method="_on_RandomTimer_timeout"]

@@ -1,0 +1,937 @@
+[gd_scene load_steps=135 format=2]
+
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/page_13.png" type="Texture" id=1]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/demonmaid/demonmaid_eye_peak2.png" type="Texture" id=2]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/demonmaid/demonmaid_eye1.png" type="Texture" id=3]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/black/blank_eye_peak1.png" type="Texture" id=4]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/tohru/tohru_eye.png" type="Texture" id=5]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/eye_closed_soft.png" type="Texture" id=6]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/demonmaid/demonmaid_eye_peak1.png" type="Texture" id=7]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/wizard/wizard_eye_peak1.png" type="Texture" id=8]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/wizard/wizard_eye1.png" type="Texture" id=9]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/tohru/tohru_eye_peak1.png" type="Texture" id=10]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/tohru/tohru_eye_peak2.png" type="Texture" id=11]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/black/blank_eye_peak2.png" type="Texture" id=12]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/black/blank_eye1.png" type="Texture" id=13]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/white/blank_eye1.png" type="Texture" id=14]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/white/blank_eye_peak1.png" type="Texture" id=15]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blue/blank_eye1.png" type="Texture" id=16]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blue/blank_eye_peak2.png" type="Texture" id=17]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/brown/blank_eye_peak2.png" type="Texture" id=18]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/rainbow/blank_eye_peak2.png" type="Texture" id=19]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/yellow/blank_eye_peak2.png" type="Texture" id=20]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/yor/blank_eye1.png" type="Texture" id=21]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/yor/blank_eye_peak2.png" type="Texture" id=22]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/rainbow/blank_eye_peak1.png" type="Texture" id=23]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/white/blank_eye_peak2.png" type="Texture" id=24]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/yor/blank_eye_peak1.png" type="Texture" id=25]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blue/blank_eye_peak1.png" type="Texture" id=26]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/brown/blank_eye_peak1.png" type="Texture" id=27]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/yellow/blank_eye1.png" type="Texture" id=28]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/yellow/blank_eye_peak1.png" type="Texture" id=29]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/rainbow/blank_eye1.png" type="Texture" id=30]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/brown/blank_eye1.png" type="Texture" id=31]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/wizard/wizard_eye_peak2.png" type="Texture" id=32]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/green/blank_eye_peak1.png" type="Texture" id=33]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/green/blank_eye_peak2.png" type="Texture" id=34]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/green/blank_eye1.png" type="Texture" id=35]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/esper/esper_eye_peak2.png" type="Texture" id=36]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/esper/esper_eye1.png" type="Texture" id=37]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/esper/esper_eye_peak1.png" type="Texture" id=38]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/pink/pink_eye_peak1.png" type="Texture" id=39]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/pink/pink_eye_peak2.png" type="Texture" id=40]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/pink/pink_eye1.png" type="Texture" id=41]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/hybrid/hybrid_eye_peak1.png" type="Texture" id=42]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/hybrid/hybrid_eye_peak2.png" type="Texture" id=43]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/hybrid/hybrid_eye1.png" type="Texture" id=44]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/darkangel/darkangel_eye1.png" type="Texture" id=45]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/darkangel/darkangel_eye_peak1.png" type="Texture" id=46]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/darkangel/darkangel_eye_peak2.png" type="Texture" id=47]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/wizard/blank_eye_ecstatic.png" type="Texture" id=48]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/wizard/blank_eye_horror.png" type="Texture" id=49]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/wizard/blank_eye_suprised.png" type="Texture" id=50]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/wizard/blank_eye_one.png" type="Texture" id=51]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blush.png" type="Texture" id=52]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/tohru/tohru_blush.png" type="Texture" id=53]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/black/blank_eye_ecstatic.png" type="Texture" id=54]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/black/blank_eye_horror.png" type="Texture" id=55]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/black/blank_eye_one.png" type="Texture" id=56]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/yor/blank_eye_horror.png" type="Texture" id=57]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/black/blank_eye_suprised.png" type="Texture" id=58]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/yor/blank_eye_suprised.png" type="Texture" id=59]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/yor/blank_eye_ecstatic.png" type="Texture" id=60]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/yor/blank_eye_one.png" type="Texture" id=61]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blue/blank_eye_one.png" type="Texture" id=62]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/demonmaid/blank_eye_suprised.png" type="Texture" id=63]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/demonmaid/blank_eye_one.png" type="Texture" id=64]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/demonmaid/blank_eye_ecstatic.png" type="Texture" id=65]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/demonmaid/blank_eye_horror.png" type="Texture" id=66]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/darkangel/blank_eye_suprised.png" type="Texture" id=67]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/tohru/blank_eye_one.png" type="Texture" id=68]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/tohru/blank_eye_suprised.png" type="Texture" id=69]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/pink/blank_eye_one.png" type="Texture" id=70]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/brown/blank_eye_one.png" type="Texture" id=71]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blue/blank_eye_ecstatic.png" type="Texture" id=72]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/darkangel/blank_eye_horror.png" type="Texture" id=73]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blue/blank_eye_suprised.png" type="Texture" id=74]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blue/blank_eye_horror.png" type="Texture" id=75]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/pink/blank_eye_ecstatic.png" type="Texture" id=76]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/brown/blank_eye_ecstatic.png" type="Texture" id=77]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/pink/blank_eye_horror.png" type="Texture" id=78]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/brown/blank_eye_suprised.png" type="Texture" id=79]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/tohru/blank_eye_ecstatic.png" type="Texture" id=80]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/pink/blank_eye_suprised.png" type="Texture" id=81]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/darkangel/blank_eye_ecstatic.png" type="Texture" id=82]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/tohru/blank_eye_horror.png" type="Texture" id=83]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/brown/blank_eye_horror.png" type="Texture" id=84]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/darkangel/blank_eye_one.png" type="Texture" id=85]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/hybrid/blank_eye_ecstatic.png" type="Texture" id=86]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/hybrid/blank_eye_suprised.png" type="Texture" id=87]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/esper/blank_eye_one.png" type="Texture" id=88]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/esper/blank_eye_horror.png" type="Texture" id=89]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/esper/blank_eye_suprised.png" type="Texture" id=90]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/green/blank_eye_horror.png" type="Texture" id=91]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/green/blank_eye_one.png" type="Texture" id=92]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/hybrid/blank_eye_horror.png" type="Texture" id=93]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/green/blank_eye_suprised.png" type="Texture" id=94]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/esper/blank_eye_ecstatic.png" type="Texture" id=95]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/green/blank_eye_ecstatic.png" type="Texture" id=96]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/hybrid/blank_eye_one.png" type="Texture" id=97]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/white/blank_eye_suprised.png" type="Texture" id=98]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/yellow/blank_eye_one.png" type="Texture" id=99]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/rainbow/blank_eye_one.png" type="Texture" id=100]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/yellow/blank_eye_suprised.png" type="Texture" id=101]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/white/blank_eye_ecstatic.png" type="Texture" id=102]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/rainbow/blank_eye_horror.png" type="Texture" id=103]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/rainbow/blank_eye_suprised.png" type="Texture" id=104]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/rainbow/blank_eye_ecstatic.png" type="Texture" id=105]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/yellow/blank_eye_ecstatic.png" type="Texture" id=106]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/yellow/blank_eye_horror.png" type="Texture" id=107]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/white/blank_eye_horror.png" type="Texture" id=108]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/white/blank_eye_one.png" type="Texture" id=109]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/eye_hard_close.png" type="Texture" id=110]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/kunoichi/new/blank_eye_one.png" type="Texture" id=111]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/kunoichi/new/blank_eye_ecstatic.png" type="Texture" id=112]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/kunoichi/blank_eye_peak2.png" type="Texture" id=113]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/kunoichi/new/blank_eye_horror.png" type="Texture" id=114]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/kunoichi/blank_eye1.png" type="Texture" id=115]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/kunoichi/new/blank_eye_suprised.png" type="Texture" id=116]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/kunoichi/blank_eye_peak1.png" type="Texture" id=117]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/knowledgeangel/new/blank_eye_one.png" type="Texture" id=118]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/knowledgeangel/new/blank_eye_suprised.png" type="Texture" id=119]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/knowledgeangel/blank_eye_peak1.png" type="Texture" id=120]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/knowledgeangel/new/blank_eye_horror.png" type="Texture" id=121]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/knowledgeangel/blank_eye_peak2.png" type="Texture" id=122]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/knowledgeangel/new/blank_eye_ecstatic.png" type="Texture" id=123]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/knowledgeangel/blank_eye1.png" type="Texture" id=124]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blood/blank_eye_peak2.png" type="Texture" id=125]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blood/blank_eye_peak1.png" type="Texture" id=126]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blood/new/blank_eye_suprised.png" type="Texture" id=127]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blood/new/blank_eye_one.png" type="Texture" id=128]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blood/new/blank_eye_ecstatic.png" type="Texture" id=129]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blood/new/blank_eye_horror.png" type="Texture" id=130]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/blood/blank_eye1.png" type="Texture" id=131]
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "archwizard_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 48 ) ],
+"loop": true,
+"name": "archwizard_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 49 ) ],
+"loop": true,
+"name": "archwizard_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 51 ) ],
+"loop": true,
+"name": "archwizard_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "archwizard_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ) ],
+"loop": true,
+"name": "archwizard_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 50 ) ],
+"loop": true,
+"name": "archwizard_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "assassin_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 60 ) ],
+"loop": true,
+"name": "assassin_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 57 ) ],
+"loop": true,
+"name": "assassin_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 61 ) ],
+"loop": true,
+"name": "assassin_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "assassin_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "assassin_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 59 ) ],
+"loop": true,
+"name": "assassin_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "black_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 54 ) ],
+"loop": true,
+"name": "black_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 55 ) ],
+"loop": true,
+"name": "black_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 56 ) ],
+"loop": true,
+"name": "black_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "black_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "black_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 58 ) ],
+"loop": true,
+"name": "black_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 131 ) ],
+"loop": true,
+"name": "blooddevil_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 129 ) ],
+"loop": true,
+"name": "blooddevil_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 130 ) ],
+"loop": true,
+"name": "blooddevil_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 128 ) ],
+"loop": true,
+"name": "blooddevil_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 126 ) ],
+"loop": true,
+"name": "blooddevil_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 125 ) ],
+"loop": true,
+"name": "blooddevil_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 127 ) ],
+"loop": true,
+"name": "blooddevil_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": true,
+"name": "blue_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 72 ) ],
+"loop": true,
+"name": "blue_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 75 ) ],
+"loop": true,
+"name": "blue_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 62 ) ],
+"loop": true,
+"name": "blue_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ) ],
+"loop": true,
+"name": "blue_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "blue_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 74 ) ],
+"loop": true,
+"name": "blue_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ) ],
+"loop": true,
+"name": "brown_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 77 ) ],
+"loop": true,
+"name": "brown_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 84 ) ],
+"loop": true,
+"name": "brown_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 71 ) ],
+"loop": true,
+"name": "brown_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "brown_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "brown_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 79 ) ],
+"loop": true,
+"name": "brown_surprised",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "climax1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "climax2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 45 ) ],
+"loop": true,
+"name": "darkangel_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 82 ) ],
+"loop": true,
+"name": "darkangel_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 73 ) ],
+"loop": true,
+"name": "darkangel_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 85 ) ],
+"loop": true,
+"name": "darkangel_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 46 ) ],
+"loop": true,
+"name": "darkangel_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 47 ) ],
+"loop": true,
+"name": "darkangel_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 67 ) ],
+"loop": true,
+"name": "darkangel_surprised",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "demonmaid_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 65 ) ],
+"loop": true,
+"name": "demonmaid_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 66 ) ],
+"loop": true,
+"name": "demonmaid_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 64 ) ],
+"loop": true,
+"name": "demonmaid_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "demonmaid_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "demonmaid_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 63 ) ],
+"loop": true,
+"name": "demonmaid_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 41 ) ],
+"loop": true,
+"name": "demonqueen_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 76 ) ],
+"loop": true,
+"name": "demonqueen_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 78 ) ],
+"loop": true,
+"name": "demonqueen_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 70 ) ],
+"loop": true,
+"name": "demonqueen_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 39 ) ],
+"loop": true,
+"name": "demonqueen_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 40 ) ],
+"loop": true,
+"name": "demonqueen_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 81 ) ],
+"loop": true,
+"name": "demonqueen_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "disasterdemon_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 48 ) ],
+"loop": true,
+"name": "disasterdemon_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 49 ) ],
+"loop": true,
+"name": "disasterdemon_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 51 ) ],
+"loop": true,
+"name": "disasterdemon_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "disasterdemon_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ) ],
+"loop": true,
+"name": "disasterdemon_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 50 ) ],
+"loop": true,
+"name": "disasterdemon_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "dragonmaid_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 80 ) ],
+"loop": true,
+"name": "dragonmaid_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 83 ) ],
+"loop": true,
+"name": "dragonmaid_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 68 ) ],
+"loop": true,
+"name": "dragonmaid_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "dragonmaid_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "dragonmaid_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 69 ) ],
+"loop": true,
+"name": "dragonmaid_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ) ],
+"loop": true,
+"name": "esper_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 95 ) ],
+"loop": true,
+"name": "esper_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 89 ) ],
+"loop": true,
+"name": "esper_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 88 ) ],
+"loop": true,
+"name": "esper_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 38 ) ],
+"loop": true,
+"name": "esper_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ) ],
+"loop": true,
+"name": "esper_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 90 ) ],
+"loop": true,
+"name": "esper_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ) ],
+"loop": true,
+"name": "green_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 96 ) ],
+"loop": true,
+"name": "green_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 91 ) ],
+"loop": true,
+"name": "green_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 92 ) ],
+"loop": true,
+"name": "green_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ) ],
+"loop": true,
+"name": "green_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 34 ) ],
+"loop": true,
+"name": "green_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 94 ) ],
+"loop": true,
+"name": "green_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 110 ) ],
+"loop": true,
+"name": "hardclose",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 44 ) ],
+"loop": true,
+"name": "hybrid_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 86 ) ],
+"loop": true,
+"name": "hybrid_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 93 ) ],
+"loop": true,
+"name": "hybrid_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 97 ) ],
+"loop": true,
+"name": "hybrid_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 42 ) ],
+"loop": true,
+"name": "hybrid_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 43 ) ],
+"loop": true,
+"name": "hybrid_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 87 ) ],
+"loop": true,
+"name": "hybrid_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 124 ) ],
+"loop": true,
+"name": "knowledgeangel_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 123 ) ],
+"loop": true,
+"name": "knowledgeangel_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 121 ) ],
+"loop": true,
+"name": "knowledgeangel_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 118 ) ],
+"loop": true,
+"name": "knowledgeangel_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 120 ) ],
+"loop": true,
+"name": "knowledgeangel_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 122 ) ],
+"loop": true,
+"name": "knowledgeangel_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 119 ) ],
+"loop": true,
+"name": "knowledgeangel_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 115 ) ],
+"loop": true,
+"name": "kunoichi_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 112 ) ],
+"loop": true,
+"name": "kunoichi_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 114 ) ],
+"loop": true,
+"name": "kunoichi_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 111 ) ],
+"loop": true,
+"name": "kunoichi_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 117 ) ],
+"loop": true,
+"name": "kunoichi_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 113 ) ],
+"loop": true,
+"name": "kunoichi_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 116 ) ],
+"loop": true,
+"name": "kunoichi_surprised",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "peak1",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ) ],
+"loop": true,
+"name": "rainbow_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 105 ) ],
+"loop": true,
+"name": "rainbow_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 103 ) ],
+"loop": true,
+"name": "rainbow_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 100 ) ],
+"loop": true,
+"name": "rainbow_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "rainbow_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "rainbow_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 104 ) ],
+"loop": true,
+"name": "rainbow_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "softclosed",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "tohru_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "white_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 102 ) ],
+"loop": true,
+"name": "white_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 108 ) ],
+"loop": true,
+"name": "white_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 109 ) ],
+"loop": true,
+"name": "white_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "white_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ) ],
+"loop": true,
+"name": "white_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 98 ) ],
+"loop": true,
+"name": "white_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "wolfgoddess_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 48 ) ],
+"loop": true,
+"name": "wolfgoddess_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 49 ) ],
+"loop": true,
+"name": "wolfgoddess_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 51 ) ],
+"loop": true,
+"name": "wolfgoddess_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "wolfgoddess_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ) ],
+"loop": true,
+"name": "wolfgoddess_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 50 ) ],
+"loop": true,
+"name": "wolfgoddess_surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ) ],
+"loop": true,
+"name": "yellow_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 106 ) ],
+"loop": true,
+"name": "yellow_ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 107 ) ],
+"loop": true,
+"name": "yellow_horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 99 ) ],
+"loop": true,
+"name": "yellow_one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ) ],
+"loop": true,
+"name": "yellow_peak1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "yellow_peak2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 101 ) ],
+"loop": true,
+"name": "yellow_surprised",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "yor",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=12]
+resource_name = "New Anim"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.499766, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.886359 ), Vector2( 1, 0.930048 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[node name="Eyes" type="AnimatedSprite"]
+position = Vector2( -2.38419e-07, 15 )
+rotation = 0.000304192
+frames = SubResource( 11 )
+animation = "black_default"
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 12 )
+anims/RESET = SubResource( 13 )
+
+[node name="Blush1" type="Sprite" parent="."]
+visible = false
+show_behind_parent = true
+position = Vector2( 5.00304, 4.20108 )
+texture = ExtResource( 52 )
+
+[node name="Blush2" type="Sprite" parent="."]
+visible = false
+show_behind_parent = true
+position = Vector2( 4.00464, 8.20152 )
+scale = Vector2( 1.21925, 1 )
+texture = ExtResource( 53 )

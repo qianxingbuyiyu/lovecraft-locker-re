@@ -1,0 +1,115 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/mouth1_opened.png" type="Texture" id=1]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/default2.png" type="Texture" id=2]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/mouth2.png" type="Texture" id=3]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/mouth3.png" type="Texture" id=4]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/mouth1.png" type="Texture" id=5]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/default_distressed.png" type="Texture" id=6]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/mouth_tougue.png" type="Texture" id=7]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/climaxing.png" type="Texture" id=8]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/mouth_ecstatic.png" type="Texture" id=9]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/mouth_horror.png" type="Texture" id=10]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/mouth_one.png" type="Texture" id=11]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/mouth_surprised.png" type="Texture" id=12]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_face/hard_close_mouth.png" type="Texture" id=13]
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "climax0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "climax1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "ecstatic",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "hardclose",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "horror",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "one",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "surprised",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "tongue",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "zigzag",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=15]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.800832 ), Vector2( 1, 1 ) ]
+}
+
+[node name="Mouth" type="AnimatedSprite"]
+position = Vector2( -3.62919, 50.2158 )
+frames = SubResource( 14 )
+animation = "hardclose"
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+anims/RESET = SubResource( 15 )
+anims/idle = SubResource( 16 )

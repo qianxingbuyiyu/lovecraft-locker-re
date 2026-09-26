@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[node name="HAIR_BACK" type="Node2D"]
+show_behind_parent = true
+position = Vector2( 6, -213 )
+rotation = 0.10821

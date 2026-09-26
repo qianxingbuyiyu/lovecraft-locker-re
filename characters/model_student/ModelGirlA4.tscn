@@ -1,0 +1,486 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://characters/parts/TentacleVagina1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/parts/HAIR_BACK.tscn" type="PackedScene" id=2]
+[ext_resource path="res://characters/parts/Eyes.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/parts/Mouth.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/parts/HAIR_FRONT.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/parts/boobs/naked_small.tscn" type="PackedScene" id=6]
+[ext_resource path="res://characters/parts/_ATTIRE_TENTACLE.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/main torso_v2_boobless.png" type="Texture" id=8]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/2arm2.png" type="Texture" id=9]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/head.png" type="Texture" id=10]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_tentacles/behind_tentacle_big.png" type="Texture" id=11]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_clothes/uniform/full_arm_uniform_side.png" type="Texture" id=12]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/leg.png" type="Texture" id=13]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_tentacles/leg_tentacle_2.png" type="Texture" id=14]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/thigh_trimmed.png" type="Texture" id=16]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_tentacles/arm_tentacle_solo.png" type="Texture" id=17]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_clothes/uniform/uniform_skirt.png" type="Texture" id=18]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/2arm1_upright.png" type="Texture" id=20]
+[ext_resource path="res://characters/parts/TentacleMouthV1.tscn" type="PackedScene" id=21]
+
+[sub_resource type="Animation" id=21]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 10 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Head:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 6.25971 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HAIR_BACK:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 6.3 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ArmRight:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -92.1097 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ArmLeft:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 91.219 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ArmRight/Sprite:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -36.1657 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ArmLeft/Sprite:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 43.1178 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ThighRight:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2.1 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("ThighLeft:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2.14483 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("ThighRight/Leg:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("ThighLeft/Leg2:rotation_degrees")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -0.00873451 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("HAIR_BACK:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -1.8873, -211.077 ) ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "idle"
+length = 1.1
+loop = true
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.25, 0.82 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 10 ), Vector2( 0, -10 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Head:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.25, 0.94 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 6.25971, -0.798906 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HAIR_BACK:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.25, 0.94 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 6.3, -0.8 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HAIR_BACK:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.25, 0.94 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -5.01464, -210.608 ), Vector2( -12.8383, -208.344 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ArmRight:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.25, 0.94 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -92.1097, -96.3004 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ArmLeft:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.25, 0.93 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 91.219, 95.6926 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ArmRight/Sprite:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.25, 0.94 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -36.1657, -25.6364 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ArmLeft/Sprite:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.25, 0.93 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 43.1178, 31.6551 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("ThighRight:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.25, 0.92 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 2.1, 10.1 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("ThighLeft:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.25, 0.93 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -5.15336, -10.1 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("ThighRight/Leg:rotation_degrees")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0.25, 0.92 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -9.80714 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("ThighLeft/Leg2:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0.25, 0.92 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.76107, 10.2843 ]
+}
+
+[node name="ModelGirlA4" type="Sprite"]
+position = Vector2( 0, 10 )
+rotation = 0.181251
+texture = ExtResource( 8 )
+
+[node name="TentacleBehind" type="Node2D" parent="."]
+show_behind_parent = true
+
+[node name="Tenta1" type="Sprite" parent="TentacleBehind"]
+position = Vector2( 209.586, -211.347 )
+rotation = -3.98793
+texture = ExtResource( 11 )
+offset = Vector2( -200, -190 )
+flip_h = true
+
+[node name="Tenta4" type="Sprite" parent="TentacleBehind"]
+position = Vector2( -199.195, -206.374 )
+rotation = -2.29511
+texture = ExtResource( 11 )
+offset = Vector2( 200, -190 )
+
+[node name="HAIR_BACK" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1.8873, -211.077 )
+rotation = 0.109956
+
+[node name="_ATTIRE_TENTACLE" parent="." instance=ExtResource( 7 )]
+
+[node name="naked_small" parent="_ATTIRE_TENTACLE" instance=ExtResource( 6 )]
+frame = 15
+
+[node name="ArmRight" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 56.1899, -91.6662 )
+rotation = -1.60762
+texture = ExtResource( 20 )
+offset = Vector2( 20, 60 )
+flip_h = true
+
+[node name="_ATTIRE" type="Sprite" parent="ArmRight"]
+visible = false
+position = Vector2( 9.64115, 15.2331 )
+rotation = 0.0193971
+texture = ExtResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="ArmRight"]
+position = Vector2( 37.6523, 115.66 )
+rotation = -0.631211
+texture = ExtResource( 9 )
+offset = Vector2( 40, 75 )
+flip_h = true
+
+[node name="Sprite" type="Sprite" parent="ArmRight/Sprite"]
+position = Vector2( 38.7021, 76.5255 )
+texture = ExtResource( 17 )
+
+[node name="ArmLeft" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( -56.3429, -90.5012 )
+rotation = 1.59207
+texture = ExtResource( 20 )
+offset = Vector2( -20, 60 )
+
+[node name="Sprite" type="Sprite" parent="ArmLeft"]
+position = Vector2( -36.5855, 113.74 )
+rotation = 0.752548
+texture = ExtResource( 9 )
+offset = Vector2( -40, 75 )
+
+[node name="Sprite2" type="Sprite" parent="ArmLeft/Sprite"]
+position = Vector2( -39.2253, 79.2344 )
+texture = ExtResource( 17 )
+flip_h = true
+
+[node name="_ATTIRE" type="Sprite" parent="ArmLeft"]
+visible = false
+position = Vector2( -11.8546, 20.1114 )
+texture = ExtResource( 12 )
+flip_h = true
+
+[node name="TentacleVagina1" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3, 232 )
+frame = 8
+
+[node name="VageneAnim" parent="TentacleVagina1" index="4"]
+frame = 10
+
+[node name="_ATTIRE_BOTTOM" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, 59 )
+texture = ExtResource( 18 )
+
+[node name="Head" type="Sprite" parent="."]
+position = Vector2( 3, -137 )
+rotation = 0.109253
+texture = ExtResource( 10 )
+offset = Vector2( 0, -70 )
+
+[node name="Mouth" parent="Head" instance=ExtResource( 4 )]
+position = Vector2( -3.4033, -18.3835 )
+animation = "default2"
+
+[node name="TentacleMouthV1" parent="Head" instance=ExtResource( 21 )]
+visible = false
+frame = 7
+
+[node name="Eyes" parent="Head" instance=ExtResource( 3 )]
+position = Vector2( -8.41328, -49.7667 )
+
+[node name="HAIR_FRONT" parent="Head" instance=ExtResource( 5 )]
+
+[node name="ThighRight" type="Sprite" parent="."]
+position = Vector2( 44, 74 )
+rotation = 0.0366519
+texture = ExtResource( 16 )
+offset = Vector2( 40, -50 )
+
+[node name="Leg" type="Sprite" parent="ThighRight"]
+position = Vector2( 88.6982, -103.623 )
+texture = ExtResource( 13 )
+offset = Vector2( 60, 80 )
+
+[node name="Tentacle" type="Sprite" parent="ThighRight/Leg"]
+position = Vector2( 81.4683, 106.339 )
+texture = ExtResource( 14 )
+
+[node name="Tenta2" type="Sprite" parent="ThighRight/Leg"]
+show_behind_parent = true
+position = Vector2( 141.181, 205.268 )
+rotation = 2.91351
+texture = ExtResource( 11 )
+offset = Vector2( -200, 190 )
+flip_h = true
+flip_v = true
+
+[node name="ThighLeft" type="Sprite" parent="."]
+position = Vector2( -42, 74 )
+rotation = 0.0374343
+texture = ExtResource( 16 )
+offset = Vector2( -40, -50 )
+flip_h = true
+
+[node name="Leg2" type="Sprite" parent="ThighLeft"]
+position = Vector2( -88.5963, -104.77 )
+rotation = -0.000152446
+texture = ExtResource( 13 )
+offset = Vector2( -60, 80 )
+flip_h = true
+
+[node name="Tentacle2" type="Sprite" parent="ThighLeft/Leg2"]
+position = Vector2( -81.9008, 107.057 )
+texture = ExtResource( 14 )
+flip_h = true
+
+[node name="Tenta3" type="Sprite" parent="ThighLeft/Leg2"]
+show_behind_parent = true
+position = Vector2( -143.789, 206.515 )
+rotation = -3.25248
+texture = ExtResource( 11 )
+offset = Vector2( 200, 190 )
+flip_v = true
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+anims/RESET = SubResource( 21 )
+anims/idle = SubResource( 22 )
+
+[editable path="TentacleVagina1"]

@@ -1,0 +1,38 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/Cutscene_Main.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Cutscene1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Cutscene2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Cutscene3.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Cutscene4.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Cutscene0.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/cutscenes/cutscene_2/shocked_explamation.png" type="Texture" id=7]
+[ext_resource path="res://scenes/Cutscene2b.tscn" type="PackedScene" id=8]
+
+[node name="Cutscene_Main1" instance=ExtResource( 1 )]
+
+[node name="ShockedExplamation" type="Sprite" parent="." index="0"]
+position = Vector2( 633, 295 )
+texture = ExtResource( 7 )
+
+[node name="Cutscene0" parent="." index="1" instance=ExtResource( 6 )]
+
+[node name="Cutscene1" parent="." index="2" instance=ExtResource( 2 )]
+visible = false
+
+[node name="Cutscene2" parent="." index="3" instance=ExtResource( 3 )]
+visible = false
+
+[node name="Cutscene2b" parent="." index="4" instance=ExtResource( 8 )]
+visible = false
+
+[node name="Cutscene3" parent="." index="5" instance=ExtResource( 4 )]
+
+[node name="Cutscene4" parent="." index="6" instance=ExtResource( 5 )]
+visible = false
+
+[node name="Camera2D" type="Camera2D" parent="." index="7"]
+position = Vector2( 512, 300 )
+
+[node name="Avatar" parent="Panel" index="1"]
+frame = 6

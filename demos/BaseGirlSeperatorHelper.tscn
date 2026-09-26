@@ -1,0 +1,706 @@
+[gd_scene load_steps=243 format=2]
+
+[ext_resource path="res://assets/euxi_assets/swordmage_sprites/SM_walk 2.png" type="Texture" id=1]
+[ext_resource path="res://assets/euxi_assets/swordmage_sprites/SM_shock 4.png" type="Texture" id=2]
+[ext_resource path="res://assets/euxi_assets/swordmage_sprites/SM_shock 2.png" type="Texture" id=3]
+[ext_resource path="res://assets/euxi_assets/swordmage_sprites/SM_walk 1.png" type="Texture" id=4]
+[ext_resource path="res://assets/euxi_assets/swordmage_sprites/SM_shock 3.png" type="Texture" id=5]
+[ext_resource path="res://assets/euxi_assets/swordmage_sprites/SM_shock 1.png" type="Texture" id=6]
+[ext_resource path="res://assets/euxi_assets/swordmage_sprites/SM_walk 4.png" type="Texture" id=7]
+[ext_resource path="res://assets/euxi_assets/swordmage_sprites/SM_walk 3.png" type="Texture" id=8]
+[ext_resource path="res://assets/cyril_assets/body/teacher_walking1.png" type="Texture" id=9]
+[ext_resource path="res://assets/cyril_assets/body/teacher_walking4.png" type="Texture" id=10]
+[ext_resource path="res://assets/cyril_assets/body/teacher_shocked1.png" type="Texture" id=11]
+[ext_resource path="res://assets/cyril_assets/body/teacher_shocked2.png" type="Texture" id=12]
+[ext_resource path="res://assets/cyril_assets/body/walkingbigboob1.png" type="Texture" id=13]
+[ext_resource path="res://assets/cyril_assets/body/walkingbigboob3.png" type="Texture" id=14]
+[ext_resource path="res://assets/cyril_assets/body/bigboobshocked3.png" type="Texture" id=15]
+[ext_resource path="res://assets/cyril_assets/body/walking3.png" type="Texture" id=16]
+[ext_resource path="res://assets/cyril_assets/body/teacher_walking2.png" type="Texture" id=17]
+[ext_resource path="res://assets/cyril_assets/body/teacher_shocked3.png" type="Texture" id=18]
+[ext_resource path="res://assets/cyril_assets/body/walkingbigboob2.png" type="Texture" id=19]
+[ext_resource path="res://assets/cyril_assets/body/walking1.png" type="Texture" id=20]
+[ext_resource path="res://assets/cyril_assets/body/walking2.png" type="Texture" id=21]
+[ext_resource path="res://assets/cyril_assets/body/walking4.png" type="Texture" id=22]
+[ext_resource path="res://assets/cyril_assets/body/teacher_walking3.png" type="Texture" id=23]
+[ext_resource path="res://assets/cyril_assets/body/teacher_shock.png" type="Texture" id=24]
+[ext_resource path="res://assets/cyril_assets/body/shocked2.png" type="Texture" id=25]
+[ext_resource path="res://assets/cyril_assets/body/shocked3.png" type="Texture" id=26]
+[ext_resource path="res://assets/cyril_assets/body/shocked1.png" type="Texture" id=27]
+[ext_resource path="res://assets/cyril_assets/body/walkingbigboob_shocked.png" type="Texture" id=28]
+[ext_resource path="res://assets/cyril_assets/body/shock.png" type="Texture" id=29]
+[ext_resource path="res://assets/cyril_assets/body/bigboobshocked2.png" type="Texture" id=30]
+[ext_resource path="res://assets/cyril_assets/body/walkingbigboob4.png" type="Texture" id=31]
+[ext_resource path="res://assets/cyril_assets/body/bigboobshocked1.png" type="Texture" id=32]
+[ext_resource path="res://assets/cyril_assets/body/tohru_walking3.png" type="Texture" id=33]
+[ext_resource path="res://assets/cyril_assets/body/tohru_shocked2.png" type="Texture" id=34]
+[ext_resource path="res://assets/cyril_assets/body/yor_walking2.png" type="Texture" id=35]
+[ext_resource path="res://assets/cyril_assets/body/tohru_walking1.png" type="Texture" id=36]
+[ext_resource path="res://assets/cyril_assets/body/tohru_shocked1.png" type="Texture" id=37]
+[ext_resource path="res://assets/cyril_assets/body/tohru_shocked3.png" type="Texture" id=38]
+[ext_resource path="res://assets/cyril_assets/body/yor_shocked2.png" type="Texture" id=39]
+[ext_resource path="res://assets/cyril_assets/body/tohru_walking4.png" type="Texture" id=40]
+[ext_resource path="res://assets/cyril_assets/body/yor_shocked1.png" type="Texture" id=41]
+[ext_resource path="res://assets/cyril_assets/body/yor_walking3.png" type="Texture" id=42]
+[ext_resource path="res://assets/cyril_assets/body/yor_walking1.png" type="Texture" id=43]
+[ext_resource path="res://assets/cyril_assets/body/yor_walking4.png" type="Texture" id=44]
+[ext_resource path="res://assets/cyril_assets/body/yor_shocked3.png" type="Texture" id=45]
+[ext_resource path="res://assets/cyril_assets/body/yor_shocked.png" type="Texture" id=46]
+[ext_resource path="res://assets/cyril_assets/body/tohru_walking2.png" type="Texture" id=47]
+[ext_resource path="res://assets/cyril_assets/body/tohru_shocked.png" type="Texture" id=48]
+[ext_resource path="res://assets/euxi_assets/demonmaid_sprite/DM_shocked2.png" type="Texture" id=49]
+[ext_resource path="res://assets/euxi_assets/wolf_sprites/WG_walking 1.png" type="Texture" id=50]
+[ext_resource path="res://assets/euxi_assets/demonmaid_sprite/DM_shocked1.png" type="Texture" id=51]
+[ext_resource path="res://assets/euxi_assets/wolf_sprites/WG_walking 3.png" type="Texture" id=52]
+[ext_resource path="res://assets/euxi_assets/archwizard_sprites/WZ_walking3.png" type="Texture" id=53]
+[ext_resource path="res://assets/euxi_assets/wolf_sprites/WG_shocked 1.png" type="Texture" id=54]
+[ext_resource path="res://assets/euxi_assets/archwizard_sprites/WZ_walking4.png" type="Texture" id=55]
+[ext_resource path="res://assets/euxi_assets/demonmaid_sprite/DM_walking1.png" type="Texture" id=56]
+[ext_resource path="res://assets/euxi_assets/demonmaid_sprite/DM_walking2.png" type="Texture" id=57]
+[ext_resource path="res://assets/euxi_assets/archwizard_sprites/WZ_shocked4.png" type="Texture" id=58]
+[ext_resource path="res://assets/euxi_assets/archwizard_sprites/WZ_walking1.png" type="Texture" id=59]
+[ext_resource path="res://assets/euxi_assets/archwizard_sprites/WZ_walking2.png" type="Texture" id=60]
+[ext_resource path="res://assets/euxi_assets/wolf_sprites/WG_walking 4.png" type="Texture" id=61]
+[ext_resource path="res://assets/euxi_assets/wolf_sprites/WG_walking 2.png" type="Texture" id=62]
+[ext_resource path="res://assets/euxi_assets/demonmaid_sprite/DM_shocked4.png" type="Texture" id=63]
+[ext_resource path="res://assets/euxi_assets/wolf_sprites/WG_shocked 3.png" type="Texture" id=64]
+[ext_resource path="res://assets/euxi_assets/wolf_sprites/WG_shocked 4.png" type="Texture" id=65]
+[ext_resource path="res://assets/euxi_assets/wolf_sprites/WG_shocked 2.png" type="Texture" id=66]
+[ext_resource path="res://assets/euxi_assets/archwizard_sprites/WZ_shocked1.png" type="Texture" id=67]
+[ext_resource path="res://assets/euxi_assets/demonmaid_sprite/DM_shocked3.png" type="Texture" id=68]
+[ext_resource path="res://assets/euxi_assets/demonmaid_sprite/DM_walking4.png" type="Texture" id=69]
+[ext_resource path="res://assets/euxi_assets/demonmaid_sprite/DM_walking3.png" type="Texture" id=70]
+[ext_resource path="res://assets/euxi_assets/archwizard_sprites/WZ_shocked3.png" type="Texture" id=71]
+[ext_resource path="res://assets/euxi_assets/archwizard_sprites/WZ_shocked2.png" type="Texture" id=72]
+[ext_resource path="res://assets/euxi_assets/patients/BIG BOOBS/PN_BB_shock 2.png" type="Texture" id=73]
+[ext_resource path="res://assets/euxi_assets/guard_sprites/GU_walking 2.png" type="Texture" id=74]
+[ext_resource path="res://assets/euxi_assets/esper_sprites/E_shocked2.png" type="Texture" id=75]
+[ext_resource path="res://assets/euxi_assets/patients/SMALL BOOBS/PN_SB_walk 3.png" type="Texture" id=76]
+[ext_resource path="res://assets/euxi_assets/naked/SMALL BOOBS/ND_SB_shock 2.png" type="Texture" id=77]
+[ext_resource path="res://assets/euxi_assets/nurse_sprites/NU_shocked 4.png" type="Texture" id=78]
+[ext_resource path="res://assets/euxi_assets/guard_sprites/GU_walking 3.png" type="Texture" id=79]
+[ext_resource path="res://assets/euxi_assets/nurse_sprites/NU_walking 1.png" type="Texture" id=80]
+[ext_resource path="res://assets/euxi_assets/nurse_sprites/NU_shocked 1.png" type="Texture" id=81]
+[ext_resource path="res://assets/euxi_assets/guard_sprites/GU_shocked 2.png" type="Texture" id=82]
+[ext_resource path="res://assets/euxi_assets/esper_sprites/E_shocked3.png" type="Texture" id=83]
+[ext_resource path="res://assets/euxi_assets/patients/BIG BOOBS/PN_BB_shock 3.png" type="Texture" id=84]
+[ext_resource path="res://assets/euxi_assets/patients/BIG BOOBS/PN_BB_walk 2.png" type="Texture" id=85]
+[ext_resource path="res://assets/euxi_assets/esper_sprites/E_walking1.png" type="Texture" id=86]
+[ext_resource path="res://assets/euxi_assets/patients/BIG BOOBS/PN_BB_walk 3.png" type="Texture" id=87]
+[ext_resource path="res://assets/euxi_assets/patients/SMALL BOOBS/PN_SB_walk 2.png" type="Texture" id=88]
+[ext_resource path="res://assets/euxi_assets/esper_sprites/E_shocked4.png" type="Texture" id=89]
+[ext_resource path="res://assets/euxi_assets/patients/BIG BOOBS/PN_BB_walk 4.png" type="Texture" id=90]
+[ext_resource path="res://assets/euxi_assets/nurse_sprites/NU_shocked 2.png" type="Texture" id=91]
+[ext_resource path="res://assets/euxi_assets/patients/SMALL BOOBS/PN_SB_shock 4.png" type="Texture" id=92]
+[ext_resource path="res://assets/euxi_assets/naked/BIG BOOBS/ND_BB_walk 3.png" type="Texture" id=93]
+[ext_resource path="res://assets/euxi_assets/naked/SMALL BOOBS/ND_SB_shock 3.png" type="Texture" id=94]
+[ext_resource path="res://assets/euxi_assets/guard_sprites/GU_shocked 3.png" type="Texture" id=95]
+[ext_resource path="res://assets/euxi_assets/esper_sprites/E_shocked1.png" type="Texture" id=96]
+[ext_resource path="res://assets/euxi_assets/esper_sprites/E_walking3.png" type="Texture" id=97]
+[ext_resource path="res://assets/euxi_assets/esper_sprites/E_walking2.png" type="Texture" id=98]
+[ext_resource path="res://assets/euxi_assets/patients/BIG BOOBS/PN_BB_shock 4.png" type="Texture" id=99]
+[ext_resource path="res://assets/euxi_assets/patients/SMALL BOOBS/PN_SB_walk 1.png" type="Texture" id=100]
+[ext_resource path="res://assets/euxi_assets/guard_sprites/GU_walking 4.png" type="Texture" id=101]
+[ext_resource path="res://assets/euxi_assets/nurse_sprites/NU_walking 3.png" type="Texture" id=102]
+[ext_resource path="res://assets/euxi_assets/patients/SMALL BOOBS/PN_SB_shock 3.png" type="Texture" id=103]
+[ext_resource path="res://assets/euxi_assets/guard_sprites/GU_walking 1.png" type="Texture" id=104]
+[ext_resource path="res://assets/euxi_assets/nurse_sprites/NU_walking 4.png" type="Texture" id=105]
+[ext_resource path="res://assets/euxi_assets/patients/BIG BOOBS/PN_BB_walk 1.png" type="Texture" id=106]
+[ext_resource path="res://assets/euxi_assets/esper_sprites/E_walking4.png" type="Texture" id=107]
+[ext_resource path="res://assets/euxi_assets/patients/SMALL BOOBS/PN_SB_walk 4.png" type="Texture" id=108]
+[ext_resource path="res://assets/euxi_assets/patients/BIG BOOBS/PN_BB_shock 1.png" type="Texture" id=109]
+[ext_resource path="res://assets/euxi_assets/patients/SMALL BOOBS/PN_SB_shock 2.png" type="Texture" id=110]
+[ext_resource path="res://assets/euxi_assets/patients/SMALL BOOBS/PN_SB_shock 1.png" type="Texture" id=111]
+[ext_resource path="res://assets/euxi_assets/nurse_sprites/NU_shocked 3.png" type="Texture" id=112]
+[ext_resource path="res://assets/euxi_assets/guard_sprites/GU_shocked 4.png" type="Texture" id=113]
+[ext_resource path="res://assets/euxi_assets/guard_sprites/GU_shocked 1.png" type="Texture" id=114]
+[ext_resource path="res://assets/euxi_assets/nurse_sprites/NU_walking 2.png" type="Texture" id=115]
+[ext_resource path="res://assets/euxi_assets/naked/SMALL BOOBS/ND_SB_walk 3.png" type="Texture" id=116]
+[ext_resource path="res://assets/euxi_assets/naked/BIG BOOBS/ND_BB_shock 3.png" type="Texture" id=117]
+[ext_resource path="res://assets/euxi_assets/naked/BIG BOOBS/ND_BB_shock 4.png" type="Texture" id=118]
+[ext_resource path="res://assets/euxi_assets/naked/BIG BOOBS/ND_BB_walk 1.png" type="Texture" id=119]
+[ext_resource path="res://assets/euxi_assets/naked/BIG BOOBS/ND_BB_shock 2.png" type="Texture" id=120]
+[ext_resource path="res://assets/euxi_assets/naked/SMALL BOOBS/ND_SB_walk 4.png" type="Texture" id=121]
+[ext_resource path="res://assets/euxi_assets/naked/BIG BOOBS/ND_BB_walk 2.png" type="Texture" id=122]
+[ext_resource path="res://assets/euxi_assets/naked/SMALL BOOBS/ND_SB_walk 1.png" type="Texture" id=123]
+[ext_resource path="res://assets/euxi_assets/naked/SMALL BOOBS/ND_SB_shock 4.png" type="Texture" id=124]
+[ext_resource path="res://assets/euxi_assets/naked/SMALL BOOBS/ND_SB_walk 2.png" type="Texture" id=125]
+[ext_resource path="res://assets/euxi_assets/naked/BIG BOOBS/ND_BB_walk 4.png" type="Texture" id=126]
+[ext_resource path="res://assets/euxi_assets/naked/SMALL BOOBS/ND_SB_shock 1.png" type="Texture" id=127]
+[ext_resource path="res://assets/euxi_assets/naked/BIG BOOBS/ND_BB_shock 1.png" type="Texture" id=128]
+[ext_resource path="res://assets/euxi_assets/magician_sprites/MG_shocked 2.png" type="Texture" id=129]
+[ext_resource path="res://assets/euxi_assets/kunoichi_sprites/KN_shock 4.png" type="Texture" id=130]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini red/GB1_shock 3.png" type="Texture" id=131]
+[ext_resource path="res://assets/euxi_assets/darkangel_sprites/DA_shock3 new.png" type="Texture" id=132]
+[ext_resource path="res://assets/euxi_assets/instructor_sprites/GI_walking 2.png" type="Texture" id=133]
+[ext_resource path="res://assets/euxi_assets/instructor_sprites/GI_shock 1.png" type="Texture" id=134]
+[ext_resource path="res://assets/euxi_assets/instructor_sprites/GI_shock 3.png" type="Texture" id=135]
+[ext_resource path="res://assets/euxi_assets/darkangel_sprites/DA_shock2 new.png" type="Texture" id=136]
+[ext_resource path="res://assets/euxi_assets/kunoichi_sprites/KN_walk 3.png" type="Texture" id=137]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini blue/GB2_shock 2.png" type="Texture" id=138]
+[ext_resource path="res://assets/euxi_assets/kunoichi_sprites/KN_walk 1.png" type="Texture" id=139]
+[ext_resource path="res://assets/euxi_assets/kunoichi_sprites/KN_walk 4.png" type="Texture" id=140]
+[ext_resource path="res://assets/euxi_assets/magician_sprites/MG_walking 4.png" type="Texture" id=141]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini red/GB1_walk 2.png" type="Texture" id=142]
+[ext_resource path="res://assets/euxi_assets/darkangel_sprites/DA_walking2 new.png" type="Texture" id=143]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini blue/GB2_walk 1.png" type="Texture" id=144]
+[ext_resource path="res://assets/euxi_assets/darkangel_sprites/DA_shock1 new.png" type="Texture" id=145]
+[ext_resource path="res://assets/euxi_assets/instructor_sprites/GI_walking 1.png" type="Texture" id=146]
+[ext_resource path="res://assets/euxi_assets/darkangel_sprites/DA_walking3 new.png" type="Texture" id=147]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini red/GB1_shock 4.png" type="Texture" id=148]
+[ext_resource path="res://assets/euxi_assets/darkangel_sprites/DA_walking4 new.png" type="Texture" id=149]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini red/GB1_shock 2.png" type="Texture" id=150]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini red/GB1_walk 4.png" type="Texture" id=151]
+[ext_resource path="res://assets/euxi_assets/instructor_sprites/GI_shock 4.png" type="Texture" id=152]
+[ext_resource path="res://assets/euxi_assets/kunoichi_sprites/KN_shock 1.png" type="Texture" id=153]
+[ext_resource path="res://assets/euxi_assets/instructor_sprites/GI_walking 3.png" type="Texture" id=154]
+[ext_resource path="res://assets/euxi_assets/kunoichi_sprites/KN_shock 2.png" type="Texture" id=155]
+[ext_resource path="res://assets/euxi_assets/darkangel_sprites/DA_shock4 new.png" type="Texture" id=156]
+[ext_resource path="res://assets/euxi_assets/kunoichi_sprites/KN_shock 3.png" type="Texture" id=157]
+[ext_resource path="res://assets/euxi_assets/kunoichi_sprites/KN_walk 2.png" type="Texture" id=158]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini red/GB1_walk 3.png" type="Texture" id=159]
+[ext_resource path="res://assets/euxi_assets/darkangel_sprites/DA_walking1 new.png" type="Texture" id=160]
+[ext_resource path="res://assets/euxi_assets/magician_sprites/MG_walking 3.png" type="Texture" id=161]
+[ext_resource path="res://assets/euxi_assets/magician_sprites/MG_shocked 1.png" type="Texture" id=162]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini blue/GB2_walk 2.png" type="Texture" id=163]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini blue/GB2_shock 1.png" type="Texture" id=164]
+[ext_resource path="res://assets/euxi_assets/instructor_sprites/GI_walking 4.png" type="Texture" id=165]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini red/GB1_shock 1.png" type="Texture" id=166]
+[ext_resource path="res://assets/euxi_assets/instructor_sprites/GI_shock 2.png" type="Texture" id=167]
+[ext_resource path="res://assets/euxi_assets/hybrid_assets/HB_shocked 4.png" type="Texture" id=168]
+[ext_resource path="res://assets/euxi_assets/hybrid_assets/HB_walking 4.png" type="Texture" id=169]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_walk 3_rip.png" type="Texture" id=170]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_shock 2.png" type="Texture" id=171]
+[ext_resource path="res://assets/euxi_assets/demoness_sprites/DE_shocked 1.png" type="Texture" id=172]
+[ext_resource path="res://assets/euxi_assets/blank sprites/shocked1.png" type="Texture" id=173]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_walk 2_rip.png" type="Texture" id=174]
+[ext_resource path="res://assets/euxi_assets/blank sprites/shocked2.png" type="Texture" id=175]
+[ext_resource path="res://assets/euxi_assets/demoness_sprites/DE_shocked 4.png" type="Texture" id=176]
+[ext_resource path="res://assets/euxi_assets/hybrid_assets/HB_walking 3.png" type="Texture" id=177]
+[ext_resource path="res://assets/euxi_assets/hybrid_assets/HB_shocked 3.png" type="Texture" id=178]
+[ext_resource path="res://assets/euxi_assets/hybrid_assets/HB_walking 1.png" type="Texture" id=179]
+[ext_resource path="res://assets/euxi_assets/demoness_sprites/DE_shocked 3.png" type="Texture" id=180]
+[ext_resource path="res://assets/euxi_assets/disasterdemon_sprites/DSD_shock 1.png" type="Texture" id=181]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_shock 3_rip.png" type="Texture" id=182]
+[ext_resource path="res://assets/euxi_assets/demoness_sprites/DE_walking 1.png" type="Texture" id=183]
+[ext_resource path="res://assets/euxi_assets/demoness_sprites/DE_walking 4.png" type="Texture" id=184]
+[ext_resource path="res://assets/euxi_assets/disasterdemon_sprites/DSD_shock 3.png" type="Texture" id=185]
+[ext_resource path="res://assets/euxi_assets/disasterdemon_sprites/DSD_walk 4.png" type="Texture" id=186]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_walk 3.png" type="Texture" id=187]
+[ext_resource path="res://assets/euxi_assets/disasterdemon_sprites/DSD_shock 2.png" type="Texture" id=188]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_shock 1_rip.png" type="Texture" id=189]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_shock 4.png" type="Texture" id=190]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_shock 1.png" type="Texture" id=191]
+[ext_resource path="res://assets/euxi_assets/blank sprites/shocked3.png" type="Texture" id=192]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_walk 1_rip.png" type="Texture" id=193]
+[ext_resource path="res://assets/euxi_assets/blank sprites/walking4.png" type="Texture" id=194]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_shock 2_rip.png" type="Texture" id=195]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_walk 2.png" type="Texture" id=196]
+[ext_resource path="res://assets/euxi_assets/demoness_sprites/DE_walking 2.png" type="Texture" id=197]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_shock 3.png" type="Texture" id=198]
+[ext_resource path="res://assets/euxi_assets/blank sprites/walking2.png" type="Texture" id=199]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_walk 4.png" type="Texture" id=200]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_walk 1.png" type="Texture" id=201]
+[ext_resource path="res://assets/euxi_assets/demoness_sprites/DE_shocked 2.png" type="Texture" id=202]
+[ext_resource path="res://assets/euxi_assets/blank sprites/walking1.png" type="Texture" id=203]
+[ext_resource path="res://assets/euxi_assets/demoness_sprites/DE_walking 3.png" type="Texture" id=204]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_walk 4_rip.png" type="Texture" id=205]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/SW_shock 4_rip.png" type="Texture" id=206]
+[ext_resource path="res://assets/euxi_assets/hybrid_assets/HB_shocked 1.png" type="Texture" id=207]
+[ext_resource path="res://assets/euxi_assets/hybrid_assets/HB_shocked 2.png" type="Texture" id=208]
+[ext_resource path="res://assets/euxi_assets/blank sprites/walking3.png" type="Texture" id=209]
+[ext_resource path="res://assets/euxi_assets/disasterdemon_sprites/DSD_shock 4.png" type="Texture" id=210]
+[ext_resource path="res://assets/euxi_assets/disasterdemon_sprites/DSD_walk 2.png" type="Texture" id=211]
+[ext_resource path="res://assets/euxi_assets/blank sprites/SHOCK_BASE.png" type="Texture" id=212]
+[ext_resource path="res://assets/euxi_assets/hybrid_assets/HB_walking 2.png" type="Texture" id=213]
+[ext_resource path="res://assets/euxi_assets/disasterdemon_sprites/DSD_walk 1.png" type="Texture" id=214]
+[ext_resource path="res://assets/euxi_assets/disasterdemon_sprites/DSD_walk 3.png" type="Texture" id=215]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini blue/GB2_walk 3.png" type="Texture" id=216]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini blue/GB2_walk 4.png" type="Texture" id=217]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini red/GB1_walk 1.png" type="Texture" id=218]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini blue/GB2_shock 4.png" type="Texture" id=219]
+[ext_resource path="res://assets/euxi_assets/gym_swimsuit/bikini blue/GB2_shock 3.png" type="Texture" id=220]
+[ext_resource path="res://assets/euxi_assets/magician_sprites/MG_walking 1.png" type="Texture" id=221]
+[ext_resource path="res://assets/euxi_assets/executioner_sprites/EX_shocked 3.png" type="Texture" id=222]
+[ext_resource path="res://assets/euxi_assets/executioner_sprites/EX_walking 1.png" type="Texture" id=223]
+[ext_resource path="res://assets/euxi_assets/slimegirl_sprites/SG_shock 3.png" type="Texture" id=224]
+[ext_resource path="res://assets/euxi_assets/executioner_sprites/EX_walking 2.png" type="Texture" id=225]
+[ext_resource path="res://assets/euxi_assets/executioner_sprites/EX_shocked 2.png" type="Texture" id=226]
+[ext_resource path="res://assets/euxi_assets/magician_sprites/MG_walking 2.png" type="Texture" id=227]
+[ext_resource path="res://assets/euxi_assets/slimegirl_sprites/SG_walk 2.png" type="Texture" id=228]
+[ext_resource path="res://assets/euxi_assets/slimegirl_sprites/SG_walk 4.png" type="Texture" id=229]
+[ext_resource path="res://assets/euxi_assets/magician_sprites/MG_shocked 3.png" type="Texture" id=230]
+[ext_resource path="res://assets/euxi_assets/slimegirl_sprites/SG_shock 1.png" type="Texture" id=231]
+[ext_resource path="res://assets/euxi_assets/executioner_sprites/EX_walking 4.png" type="Texture" id=232]
+[ext_resource path="res://assets/euxi_assets/executioner_sprites/EX_walking 3.png" type="Texture" id=233]
+[ext_resource path="res://assets/euxi_assets/slimegirl_sprites/SG_walk 3.png" type="Texture" id=234]
+[ext_resource path="res://assets/euxi_assets/slimegirl_sprites/SG_walk 1.png" type="Texture" id=235]
+[ext_resource path="res://assets/euxi_assets/executioner_sprites/EX_shocked 1.png" type="Texture" id=236]
+[ext_resource path="res://assets/euxi_assets/magician_sprites/MG_shocked 4.png" type="Texture" id=237]
+[ext_resource path="res://assets/euxi_assets/executioner_sprites/EX_shocked 4.png" type="Texture" id=238]
+[ext_resource path="res://assets/euxi_assets/slimegirl_sprites/SG_shock 4.png" type="Texture" id=239]
+[ext_resource path="res://assets/euxi_assets/slimegirl_sprites/SG_shock 2.png" type="Texture" id=240]
+[ext_resource path="res://demos/BaseGirlSeperatorHelper.gd" type="Script" id=241]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 67 ), ExtResource( 72 ), ExtResource( 71 ) ],
+"loop": true,
+"name": "archwizard_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 58 ) ],
+"loop": true,
+"name": "archwizard_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 59 ), ExtResource( 60 ), ExtResource( 53 ), ExtResource( 55 ) ],
+"loop": true,
+"name": "archwizard_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 41 ), ExtResource( 39 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "assassin_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 46 ) ],
+"loop": true,
+"name": "assassin_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 43 ), ExtResource( 35 ), ExtResource( 42 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "assassin_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 164 ), ExtResource( 138 ), ExtResource( 220 ) ],
+"loop": true,
+"name": "bikiniblue_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 219 ) ],
+"loop": true,
+"name": "bikiniblue_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 144 ), ExtResource( 163 ), ExtResource( 216 ), ExtResource( 217 ) ],
+"loop": true,
+"name": "bikiniblue_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 166 ), ExtResource( 150 ), ExtResource( 131 ) ],
+"loop": true,
+"name": "bikinired_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 148 ) ],
+"loop": true,
+"name": "bikinired_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 218 ), ExtResource( 142 ), ExtResource( 159 ), ExtResource( 151 ) ],
+"loop": true,
+"name": "bikinired_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 173 ), ExtResource( 175 ), ExtResource( 192 ) ],
+"loop": true,
+"name": "blank_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 212 ) ],
+"loop": true,
+"name": "blank_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 203 ), ExtResource( 199 ), ExtResource( 209 ), ExtResource( 194 ) ],
+"loop": true,
+"name": "blank_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 145 ), ExtResource( 136 ), ExtResource( 132 ) ],
+"loop": true,
+"name": "darkangel_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 156 ) ],
+"loop": true,
+"name": "darkangel_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 160 ), ExtResource( 143 ), ExtResource( 147 ), ExtResource( 149 ) ],
+"loop": true,
+"name": "darkangel_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 51 ), ExtResource( 49 ), ExtResource( 68 ) ],
+"loop": true,
+"name": "demonmaid_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 63 ) ],
+"loop": true,
+"name": "demonmaid_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 56 ), ExtResource( 57 ), ExtResource( 70 ), ExtResource( 69 ) ],
+"loop": true,
+"name": "demonmaid_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 172 ), ExtResource( 202 ), ExtResource( 180 ) ],
+"loop": true,
+"name": "demonqueen_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 176 ) ],
+"loop": true,
+"name": "demonqueen_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 183 ), ExtResource( 197 ), ExtResource( 204 ), ExtResource( 184 ) ],
+"loop": true,
+"name": "demonqueen_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 181 ), ExtResource( 188 ), ExtResource( 185 ) ],
+"loop": true,
+"name": "disasterdemon_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 210 ) ],
+"loop": true,
+"name": "disasterdemon_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 214 ), ExtResource( 211 ), ExtResource( 215 ), ExtResource( 186 ) ],
+"loop": true,
+"name": "disasterdemon_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 34 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "dragonmaid_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 48 ) ],
+"loop": true,
+"name": "dragonmaid_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 47 ), ExtResource( 33 ), ExtResource( 40 ) ],
+"loop": true,
+"name": "dragonmaid_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 96 ), ExtResource( 75 ), ExtResource( 83 ) ],
+"loop": true,
+"name": "esper_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 89 ) ],
+"loop": true,
+"name": "esper_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 86 ), ExtResource( 98 ), ExtResource( 97 ), ExtResource( 107 ) ],
+"loop": true,
+"name": "esper_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 236 ), ExtResource( 226 ), ExtResource( 222 ) ],
+"loop": true,
+"name": "executioner_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 238 ) ],
+"loop": true,
+"name": "executioner_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 223 ), ExtResource( 225 ), ExtResource( 233 ), ExtResource( 232 ) ],
+"loop": true,
+"name": "executioner_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 114 ), ExtResource( 82 ), ExtResource( 95 ) ],
+"loop": true,
+"name": "guard_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 113 ) ],
+"loop": true,
+"name": "guard_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 104 ), ExtResource( 74 ), ExtResource( 79 ), ExtResource( 101 ) ],
+"loop": true,
+"name": "guard_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 191 ), ExtResource( 171 ), ExtResource( 198 ) ],
+"loop": true,
+"name": "gym_swim_full_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 190 ) ],
+"loop": true,
+"name": "gym_swim_full_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 201 ), ExtResource( 196 ), ExtResource( 187 ), ExtResource( 200 ) ],
+"loop": true,
+"name": "gym_swim_full_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 189 ), ExtResource( 195 ), ExtResource( 182 ) ],
+"loop": true,
+"name": "gym_swim_rip_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 206 ) ],
+"loop": true,
+"name": "gym_swim_rip_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 193 ), ExtResource( 174 ), ExtResource( 170 ), ExtResource( 205 ) ],
+"loop": true,
+"name": "gym_swim_rip_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 207 ), ExtResource( 208 ), ExtResource( 178 ) ],
+"loop": true,
+"name": "hybrid_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 168 ) ],
+"loop": true,
+"name": "hybrid_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 179 ), ExtResource( 213 ), ExtResource( 177 ), ExtResource( 169 ) ],
+"loop": true,
+"name": "hybrid_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 134 ), ExtResource( 167 ), ExtResource( 135 ) ],
+"loop": true,
+"name": "instructor_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 152 ) ],
+"loop": true,
+"name": "instructor_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 146 ), ExtResource( 133 ), ExtResource( 154 ), ExtResource( 165 ) ],
+"loop": true,
+"name": "instructor_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 153 ), ExtResource( 155 ), ExtResource( 157 ) ],
+"loop": true,
+"name": "kunoichi_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 130 ) ],
+"loop": true,
+"name": "kunoichi_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 139 ), ExtResource( 158 ), ExtResource( 137 ), ExtResource( 140 ) ],
+"loop": true,
+"name": "kunoichi_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 162 ), ExtResource( 129 ), ExtResource( 230 ) ],
+"loop": true,
+"name": "magician_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 237 ) ],
+"loop": true,
+"name": "magician_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 221 ), ExtResource( 227 ), ExtResource( 161 ), ExtResource( 141 ) ],
+"loop": true,
+"name": "magician_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 128 ), ExtResource( 120 ), ExtResource( 117 ) ],
+"loop": true,
+"name": "naked_bigboob_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 118 ) ],
+"loop": true,
+"name": "naked_bigboob_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 119 ), ExtResource( 122 ), ExtResource( 93 ), ExtResource( 126 ) ],
+"loop": true,
+"name": "naked_bigboob_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 127 ), ExtResource( 77 ), ExtResource( 94 ) ],
+"loop": true,
+"name": "naked_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 124 ) ],
+"loop": true,
+"name": "naked_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 123 ), ExtResource( 125 ), ExtResource( 116 ), ExtResource( 121 ) ],
+"loop": true,
+"name": "naked_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 81 ), ExtResource( 91 ), ExtResource( 112 ) ],
+"loop": true,
+"name": "nurse_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 78 ) ],
+"loop": true,
+"name": "nurse_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 80 ), ExtResource( 115 ), ExtResource( 102 ), ExtResource( 105 ) ],
+"loop": true,
+"name": "nurse_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 109 ), ExtResource( 73 ), ExtResource( 84 ) ],
+"loop": true,
+"name": "patient_bigboob_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 99 ) ],
+"loop": true,
+"name": "patient_bigboob_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 106 ), ExtResource( 85 ), ExtResource( 87 ), ExtResource( 90 ) ],
+"loop": true,
+"name": "patient_bigboob_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 111 ), ExtResource( 110 ), ExtResource( 103 ) ],
+"loop": true,
+"name": "patient_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 92 ) ],
+"loop": true,
+"name": "patient_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 100 ), ExtResource( 88 ), ExtResource( 76 ), ExtResource( 108 ) ],
+"loop": true,
+"name": "patient_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 231 ), ExtResource( 240 ), ExtResource( 224 ) ],
+"loop": true,
+"name": "slimegirl_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 239 ) ],
+"loop": true,
+"name": "slimegirl_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 235 ), ExtResource( 228 ), ExtResource( 234 ), ExtResource( 229 ) ],
+"loop": true,
+"name": "slimegirl_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 30 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "student_bigboob_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ) ],
+"loop": true,
+"name": "student_bigboob_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 19 ), ExtResource( 14 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "student_bigboob_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "student_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ) ],
+"loop": true,
+"name": "student_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 16 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "student_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 3 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "swordmage_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "swordmage_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "swordmage_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "teacher1_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ) ],
+"loop": true,
+"name": "teacher1_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 17 ), ExtResource( 23 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "teacher1_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 54 ), ExtResource( 66 ), ExtResource( 64 ) ],
+"loop": true,
+"name": "wolfgoddess_caught",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 65 ) ],
+"loop": true,
+"name": "wolfgoddess_shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 62 ), ExtResource( 52 ), ExtResource( 61 ) ],
+"loop": true,
+"name": "wolfgoddess_walk",
+"speed": 5.0
+} ]
+
+[node name="BaseGirlSeperatorHelper" type="Node"]
+script = ExtResource( 241 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 10, -105 )
+frames = SubResource( 1 )
+animation = "swordmage_walk"
+frame = 2
+playing = true

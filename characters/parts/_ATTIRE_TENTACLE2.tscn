@@ -1,0 +1,37 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0030.png" type="Texture" id=1]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0024.png" type="Texture" id=2]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0039.png" type="Texture" id=3]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0051.png" type="Texture" id=4]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0006.png" type="Texture" id=5]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0054.png" type="Texture" id=6]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0057.png" type="Texture" id=7]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0000.png" type="Texture" id=8]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0060.png" type="Texture" id=9]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0003.png" type="Texture" id=10]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0045.png" type="Texture" id=11]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0009.png" type="Texture" id=12]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0015.png" type="Texture" id=13]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0018.png" type="Texture" id=14]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0048.png" type="Texture" id=15]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0027.png" type="Texture" id=16]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0033.png" type="Texture" id=17]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0021.png" type="Texture" id=18]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0036.png" type="Texture" id=19]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0042.png" type="Texture" id=20]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/type2/mainboobs_v1/mainboobs_v1_export0012.png" type="Texture" id=21]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 21 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 2 ), ExtResource( 16 ), ExtResource( 1 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 20 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "g1_naked_big",
+"speed": 24.0
+} ]
+
+[node name="_ATTIRE_TENTACLE2" type="AnimatedSprite"]
+frames = SubResource( 1 )
+animation = "g1_naked_big"
+frame = 19
+playing = true

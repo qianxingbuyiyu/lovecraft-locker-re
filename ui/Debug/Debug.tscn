@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ui/Debug/Debug.gd" type="Script" id=1]
+
+[node name="Debug" type="CanvasLayer"]
+script = ExtResource( 1 )
+left = false
+
+[node name="Labels" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Labels"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 984.0
+margin_bottom = 560.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0.360784 )
+
+[node name="Performance" type="Label" parent="Labels"]
+margin_left = 671.0
+margin_top = 12.0
+margin_right = 1015.0
+margin_bottom = 592.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "asdasd"
+align = 2
+autowrap = true
+clip_text = true

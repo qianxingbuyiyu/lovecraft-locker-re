@@ -1,0 +1,356 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://assets/cutscenes/cutscene_1/avatar_test2.png" type="Texture" id=1]
+[ext_resource path="res://assets/cutscenes/cutscene_1/avatar_test.png" type="Texture" id=2]
+[ext_resource path="res://assets/cutscenes/avatars/CHAR_2/1.png" type="Texture" id=3]
+[ext_resource path="res://assets/cutscenes/avatars/CHAR_3/2.png" type="Texture" id=4]
+[ext_resource path="res://assets/cutscenes/avatars/CHAR_1/2.png" type="Texture" id=5]
+[ext_resource path="res://assets/cutscenes/avatars/CHAR_3/1.png" type="Texture" id=6]
+[ext_resource path="res://assets/cutscenes/avatars/CHAR_1/1.png" type="Texture" id=7]
+[ext_resource path="res://assets/cutscenes/avatars/CHAR_2/2.png" type="Texture" id=8]
+[ext_resource path="res://assets/cutscenes/avatars/CHAR_0.png" type="Texture" id=9]
+[ext_resource path="res://assets/cutscenes/avatars/CHAR_0b.png" type="Texture" id=10]
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "demo_speaking",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "CHAR_2_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "CHAR_3_speaking",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "CHAR_3_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "CHAR_2_speaking",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "CHAR_1_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "PLAYER_default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "CHAR_1_speaking",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFontData" id=8]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=9]
+size = 19
+font_data = SubResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0, 0, 0, 0.694118 )
+border_width_left = 10
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 0.694118 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFontData" id=98]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = SubResource( 98 )
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+
+[sub_resource type="Animation" id=92]
+resource_name = "intro"
+length = 0.7
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.63 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 497 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.04, 0.63 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0.607843 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Avatar:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.04, 0.63 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1200, 503 ), Vector2( 935, 503 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Speaker:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.04, 0.63 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -200, 509 ), Vector2( 16, 509 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Dialogue:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.04, 0.63 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 173, 650 ), Vector2( 173, 515 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "typing"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Dialogue:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="DynamicFontData" id=93]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=86]
+size = 18
+font_data = SubResource( 93 )
+
+[sub_resource type="DynamicFont" id=87]
+size = 35
+font_data = SubResource( 93 )
+
+[sub_resource type="StyleBoxFlat" id=88]
+bg_color = Color( 0, 0, 0, 0.792157 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_right = 5.0
+
+[sub_resource type="Animation" id=89]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -325, 454 ) ]
+}
+
+[sub_resource type="Animation" id=90]
+resource_name = "anim"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.17, 0.26, 0.34, 0.41, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=91]
+resource_name = "intro"
+length = 0.7
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -349, 460 ), Vector2( 23, 450 ) ]
+}
+
+[sub_resource type="DynamicFontData" id=85]
+font_path = "res://assets/fonts/Prototype.ttf"
+
+[sub_resource type="DynamicFont" id=94]
+size = 18
+font_data = SubResource( 85 )
+
+[sub_resource type="DynamicFont" id=97]
+size = 33
+font_data = SubResource( 85 )
+
+[sub_resource type="StyleBoxFlat" id=96]
+bg_color = Color( 0, 0, 0, 0.792157 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_right = 5.0
+
+[node name="Panel" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 497.0
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 0.607843 )
+
+[node name="Avatar" type="AnimatedSprite" parent="."]
+position = Vector2( 935, 503 )
+frames = SubResource( 7 )
+animation = "PLAYER_default"
+frame = 1
+speed_scale = 2.0
+playing = true
+
+[node name="Speaker" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 509.0
+margin_right = 152.0
+margin_bottom = 543.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+text = "GIOVANNI"
+
+[node name="Dialogue" type="RichTextLabel" parent="."]
+margin_left = 173.0
+margin_top = 515.0
+margin_right = 844.0
+margin_bottom = 595.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec augue risus. Etiam sollicitudin gravi"
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+playback_speed = 1.5
+anims/RESET = SubResource( 12 )
+anims/intro = SubResource( 92 )
+anims/typing = SubResource( 13 )
+
+[node name="Balance" type="RichTextLabel" parent="."]
+margin_left = -325.0
+margin_top = 454.0
+margin_right = -65.0
+margin_bottom = 501.0
+rect_scale = Vector2( 0.8, 0.8 )
+rect_clip_content = false
+custom_fonts/mono_font = SubResource( 86 )
+custom_fonts/bold_italics_font = SubResource( 86 )
+custom_fonts/italics_font = SubResource( 86 )
+custom_fonts/bold_font = SubResource( 86 )
+custom_fonts/normal_font = SubResource( 87 )
+custom_styles/normal = SubResource( 88 )
+bbcode_enabled = true
+bbcode_text = " [img]res://assets/ui/heart_emoji_big.png[/img] 19,000,000"
+text = "  19,000,000"
+fit_content_height = true
+scroll_active = false
+
+[node name="Anim" type="AnimationPlayer" parent="Balance"]
+anims/RESET = SubResource( 89 )
+anims/anim = SubResource( 90 )
+anims/intro = SubResource( 91 )
+
+[node name="Accumulated" type="RichTextLabel" parent="Balance"]
+margin_top = -37.5
+margin_right = 219.0
+margin_bottom = 9.5
+rect_scale = Vector2( 0.8, 0.8 )
+rect_clip_content = false
+custom_fonts/mono_font = SubResource( 94 )
+custom_fonts/bold_italics_font = SubResource( 94 )
+custom_fonts/italics_font = SubResource( 94 )
+custom_fonts/bold_font = SubResource( 94 )
+custom_fonts/normal_font = SubResource( 97 )
+custom_styles/normal = SubResource( 96 )
+bbcode_enabled = true
+bbcode_text = " [color=#ff739e]+10[/color] [img]res://assets/ui/heart_emoji_big.png[/img]"
+text = " +10 "
+scroll_active = false

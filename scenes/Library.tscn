@@ -1,0 +1,237 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/SchoolArea.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/game/backgrounds/library.png" type="Texture" id=2]
+[ext_resource path="res://assets/euxi_assets/library/bookshelf 2.png" type="Texture" id=3]
+[ext_resource path="res://assets/euxi_assets/library/door.png" type="Texture" id=4]
+[ext_resource path="res://objects/MainLocker.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/euxi_assets/library/bookshelf 1.png" type="Texture" id=6]
+[ext_resource path="res://assets/euxi_assets/library/lamp.png" type="Texture" id=7]
+[ext_resource path="res://assets/euxi_assets/library/tables&chairs.png" type="Texture" id=8]
+[ext_resource path="res://assets/euxi_assets/nurse_room/skeleton.png" type="Texture" id=9]
+
+[node name="Library" instance=ExtResource( 1 )]
+row_size = 2
+MAX_GIRL_COUNT = 4
+
+[node name="1" type="Sprite" parent="Background" index="0"]
+position = Vector2( -1347, 267 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 2 )
+
+[node name="2" type="Sprite" parent="Background" index="1"]
+position = Vector2( 1120, 267 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 2 )
+
+[node name="Door" type="Sprite" parent="BackgroundObjects" index="0"]
+position = Vector2( 555, 244 )
+texture = ExtResource( 4 )
+
+[node name="Door2" type="Sprite" parent="BackgroundObjects/Door" index="0"]
+modulate = Color( 1, 1, 1, 0.117647 )
+position = Vector2( 0, 505 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 4 )
+
+[node name="Lamp1" type="Sprite" parent="BackgroundObjects" index="1"]
+position = Vector2( 768, 162 )
+texture = ExtResource( 7 )
+
+[node name="Reflect" type="Sprite" parent="BackgroundObjects/Lamp1" index="0"]
+self_modulate = Color( 1, 1, 1, 0.203922 )
+position = Vector2( 0, 651 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 7 )
+
+[node name="Lamp2" type="Sprite" parent="BackgroundObjects" index="2"]
+position = Vector2( 336, 162 )
+texture = ExtResource( 7 )
+
+[node name="Reflect" type="Sprite" parent="BackgroundObjects/Lamp2" index="0"]
+self_modulate = Color( 1, 1, 1, 0.203922 )
+position = Vector2( 0, 651 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton" type="Sprite" parent="BackgroundObjects" index="3"]
+position = Vector2( -1508.5, 318 )
+texture = ExtResource( 9 )
+
+[node name="Skeleton2" type="Sprite" parent="BackgroundObjects/Skeleton" index="0"]
+modulate = Color( 1, 1, 1, 0.117647 )
+position = Vector2( 0, 347 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 9 )
+
+[node name="Skeleton2" type="Sprite" parent="BackgroundObjects" index="4"]
+position = Vector2( 849.5, 318 )
+texture = ExtResource( 9 )
+
+[node name="Skeleton2" type="Sprite" parent="BackgroundObjects/Skeleton2" index="0"]
+modulate = Color( 1, 1, 1, 0.117647 )
+position = Vector2( 0, 347 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 9 )
+
+[node name="Bookshelf1" type="Sprite" parent="BackgroundObjects" index="5"]
+position = Vector2( -2431, 300 )
+texture = ExtResource( 6 )
+
+[node name="Shadow" type="Sprite" parent="BackgroundObjects/Bookshelf1" index="0"]
+self_modulate = Color( 1, 1, 1, 0.294118 )
+position = Vector2( 0, 393 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 6 )
+
+[node name="Bookshelf2" type="Sprite" parent="BackgroundObjects" index="6"]
+position = Vector2( -558, 300 )
+texture = ExtResource( 6 )
+
+[node name="Shadow" type="Sprite" parent="BackgroundObjects/Bookshelf2" index="0"]
+self_modulate = Color( 1, 1, 1, 0.294118 )
+position = Vector2( 0, 393 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 6 )
+
+[node name="Bookshelf3" type="Sprite" parent="BackgroundObjects" index="7"]
+position = Vector2( 1794, 300 )
+texture = ExtResource( 6 )
+
+[node name="Shadow" type="Sprite" parent="BackgroundObjects/Bookshelf3" index="0"]
+self_modulate = Color( 1, 1, 1, 0.294118 )
+position = Vector2( 0, 393 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 6 )
+
+[node name="Bookshelf4" type="Sprite" parent="BackgroundObjects" index="8"]
+position = Vector2( 2340, 300 )
+texture = ExtResource( 6 )
+
+[node name="Shadow" type="Sprite" parent="BackgroundObjects/Bookshelf4" index="0"]
+self_modulate = Color( 1, 1, 1, 0.294118 )
+position = Vector2( 0, 393 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 6 )
+
+[node name="Locker0" parent="Lockers" index="0" instance=ExtResource( 5 )]
+position = Vector2( -2033, 335 )
+locker_id = 1500
+
+[node name="Locker1" parent="Lockers" index="1" instance=ExtResource( 5 )]
+position = Vector2( -1915, 335 )
+locker_id = 1500
+
+[node name="Locker2" parent="Lockers" index="2" instance=ExtResource( 5 )]
+position = Vector2( -1797, 335 )
+locker_id = 1500
+
+[node name="Locker3" parent="Lockers" index="3" instance=ExtResource( 5 )]
+position = Vector2( -1678, 335 )
+locker_id = 1500
+
+[node name="Locker4" parent="Lockers" index="4" instance=ExtResource( 5 )]
+position = Vector2( -1326, 335 )
+locker_id = 1500
+
+[node name="Locker5" parent="Lockers" index="5" instance=ExtResource( 5 )]
+position = Vector2( -1208, 335 )
+locker_id = 1500
+
+[node name="Locker6" parent="Lockers" index="6" instance=ExtResource( 5 )]
+position = Vector2( -1090, 335 )
+locker_id = 1500
+
+[node name="Locker7" parent="Lockers" index="7" instance=ExtResource( 5 )]
+position = Vector2( -971, 335 )
+locker_id = 1500
+
+[node name="Locker8" parent="Lockers" index="8" instance=ExtResource( 5 )]
+position = Vector2( -144, 335 )
+locker_id = 1500
+
+[node name="Locker9" parent="Lockers" index="9" instance=ExtResource( 5 )]
+position = Vector2( -26, 335 )
+locker_id = 1500
+
+[node name="Locker10" parent="Lockers" index="10" instance=ExtResource( 5 )]
+position = Vector2( 92, 335 )
+locker_id = 1500
+
+[node name="Locker11" parent="Lockers" index="11" instance=ExtResource( 5 )]
+position = Vector2( 211, 335 )
+locker_id = 1500
+
+[node name="Locker12" parent="Lockers" index="12" instance=ExtResource( 5 )]
+position = Vector2( 1030, 335 )
+locker_id = 1500
+
+[node name="Locker13" parent="Lockers" index="13" instance=ExtResource( 5 )]
+position = Vector2( 1148, 335 )
+locker_id = 1500
+
+[node name="Locker14" parent="Lockers" index="14" instance=ExtResource( 5 )]
+position = Vector2( 1266, 335 )
+locker_id = 1500
+
+[node name="Locker15" parent="Lockers" index="15" instance=ExtResource( 5 )]
+position = Vector2( 1385, 335 )
+locker_id = 1500
+
+[node name="HallwayStart" parent="." index="3"]
+position = Vector2( -2781, 405 )
+
+[node name="HallwayEnd" parent="." index="4"]
+position = Vector2( 2541, 405 )
+
+[node name="FrontObjects" type="Node2D" parent="." index="6"]
+position = Vector2( -110, 208 )
+z_index = 1
+
+[node name="Shelf1" type="Sprite" parent="FrontObjects" index="0"]
+position = Vector2( -574, 407 )
+texture = ExtResource( 3 )
+
+[node name="Shelf2" type="Sprite" parent="FrontObjects" index="1"]
+position = Vector2( -1014, 456 )
+texture = ExtResource( 8 )
+
+[node name="Shelf3" type="Sprite" parent="FrontObjects" index="2"]
+position = Vector2( -1427, 407 )
+texture = ExtResource( 3 )
+
+[node name="Shelf4" type="Sprite" parent="FrontObjects" index="3"]
+position = Vector2( -1867, 407 )
+texture = ExtResource( 3 )
+
+[node name="Shelf9" type="Sprite" parent="FrontObjects" index="4"]
+position = Vector2( -2294, 407 )
+texture = ExtResource( 3 )
+
+[node name="Shelf5" type="Sprite" parent="FrontObjects" index="5"]
+position = Vector2( 1163, 456 )
+texture = ExtResource( 8 )
+
+[node name="Shelf6" type="Sprite" parent="FrontObjects" index="6"]
+position = Vector2( 723, 407 )
+texture = ExtResource( 3 )
+
+[node name="Shelf7" type="Sprite" parent="FrontObjects" index="7"]
+position = Vector2( 310, 407 )
+texture = ExtResource( 3 )
+
+[node name="Shelf8" type="Sprite" parent="FrontObjects" index="8"]
+position = Vector2( -130, 407 )
+texture = ExtResource( 3 )
+
+[node name="Shelf10" type="Sprite" parent="FrontObjects" index="9"]
+position = Vector2( 2452, 407 )
+texture = ExtResource( 3 )
+
+[node name="Shelf11" type="Sprite" parent="FrontObjects" index="10"]
+position = Vector2( 2039, 407 )
+texture = ExtResource( 3 )
+
+[node name="Shelf12" type="Sprite" parent="FrontObjects" index="11"]
+position = Vector2( 1599, 407 )
+texture = ExtResource( 3 )

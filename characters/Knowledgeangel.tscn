@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://characters/BaseGirl.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/euxi_assets/knowledgeangel_sprites/wings.png" type="Texture" id=2]
+[ext_resource path="res://assets/euxi_assets/knowledgeangel_sprites/halo2.png" type="Texture" id=3]
+
+[node name="Knowledgeangel" instance=ExtResource( 1 )]
+character_type = "knowledgeangel"
+
+[node name="Reflection" parent="." index="2"]
+frame = 0
+
+[node name="DragonTail" type="Sprite" parent="." index="7"]
+position = Vector2( 12, -83 )
+texture = ExtResource( 2 )
+
+[node name="AnimatedSprite" parent="." index="8"]
+frame = 2
+
+[node name="Ears" type="Sprite" parent="." index="31"]
+position = Vector2( 11, -198 )
+texture = ExtResource( 3 )

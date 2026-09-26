@@ -1,0 +1,4 @@
+[gd_scene format=2]
+
+[node name="HAIR_FRONT" type="Node2D"]
+position = Vector2( -2.44547, -31.9221 )

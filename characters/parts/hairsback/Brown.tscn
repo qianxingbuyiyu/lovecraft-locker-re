@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/cutscenes_nsfw/_main_hairs/brown/right.png" type="Texture" id=1]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_hairs/brown/left.png" type="Texture" id=2]
+
+[node name="Brown" type="Node2D"]
+visible = false
+show_behind_parent = true
+position = Vector2( -58.7242, 79.809 )
+rotation = 0.0579029
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Left" type="Sprite" parent="."]
+position = Vector2( 13.2777, -150.063 )
+rotation = 0.0537165
+texture = ExtResource( 2 )
+offset = Vector2( 0, 110 )
+
+[node name="Right" type="Sprite" parent="."]
+position = Vector2( 118.556, -145.608 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, 110 )

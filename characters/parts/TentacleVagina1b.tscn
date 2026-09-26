@@ -1,0 +1,296 @@
+[gd_scene load_steps=75 format=2]
+
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/belly_button.png" type="Texture" id=1]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_body/skin_patch.png" type="Texture" id=25]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0006.png" type="Texture" id=98]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0015.png" type="Texture" id=99]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0021.png" type="Texture" id=103]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0024.png" type="Texture" id=106]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0000.png" type="Texture" id=109]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0009.png" type="Texture" id=111]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0018.png" type="Texture" id=113]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0003.png" type="Texture" id=114]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0012.png" type="Texture" id=119]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0051.png" type="Texture" id=123]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0045.png" type="Texture" id=124]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0036.png" type="Texture" id=128]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0030.png" type="Texture" id=135]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0033.png" type="Texture" id=136]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0048.png" type="Texture" id=138]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0054.png" type="Texture" id=140]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0057.png" type="Texture" id=142]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0042.png" type="Texture" id=146]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0039.png" type="Texture" id=150]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0060.png" type="Texture" id=152]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2/triple_tentacle2_pussy_export0027.png" type="Texture" id=154]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0009.png" type="Texture" id=156]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0012.png" type="Texture" id=158]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0015.png" type="Texture" id=167]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0000.png" type="Texture" id=171]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0021.png" type="Texture" id=172]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0018.png" type="Texture" id=173]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0024.png" type="Texture" id=174]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0027.png" type="Texture" id=178]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0003.png" type="Texture" id=181]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0006.png" type="Texture" id=183]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0045.png" type="Texture" id=187]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0057.png" type="Texture" id=189]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0060.png" type="Texture" id=191]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0048.png" type="Texture" id=192]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0051.png" type="Texture" id=193]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0042.png" type="Texture" id=195]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0054.png" type="Texture" id=199]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0033.png" type="Texture" id=201]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0030.png" type="Texture" id=206]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0036.png" type="Texture" id=209]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/triple_tentacle_v2_cummed/triple_tentacle2_pussy_cummed_export0039.png" type="Texture" id=213]
+[ext_resource path="res://characters/parts/TentacleVagina1.gd" type="Script" id=216]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_tentacles/cum_under.png" type="Texture" id=218]
+[ext_resource path="res://assets/cutscenes_nsfw/_main_tentacles/cum_particle.png" type="Texture" id=219]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0000.png" type="Texture" id=220]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0003.png" type="Texture" id=223]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0006.png" type="Texture" id=226]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0015.png" type="Texture" id=228]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0024.png" type="Texture" id=233]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0030.png" type="Texture" id=234]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0039.png" type="Texture" id=244]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0042.png" type="Texture" id=245]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0057.png" type="Texture" id=251]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0033.png" type="Texture" id=257]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0045.png" type="Texture" id=258]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0027.png" type="Texture" id=260]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0051.png" type="Texture" id=263]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0054.png" type="Texture" id=265]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0060.png" type="Texture" id=267]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0021.png" type="Texture" id=269]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0036.png" type="Texture" id=272]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0012.png" type="Texture" id=273]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0048.png" type="Texture" id=275]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0009.png" type="Texture" id=276]
+[ext_resource path="res://assets/cutscenes_nsfw/AnimeEffects/EXPORTS/pussy_new1c/main2_girl1_pussy2_export0018.png" type="Texture" id=277]
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ ExtResource( 171 ), ExtResource( 181 ), ExtResource( 183 ), ExtResource( 156 ), ExtResource( 158 ), ExtResource( 167 ), ExtResource( 173 ), ExtResource( 172 ), ExtResource( 174 ), ExtResource( 178 ), ExtResource( 206 ), ExtResource( 201 ), ExtResource( 209 ), ExtResource( 213 ), ExtResource( 195 ), ExtResource( 187 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 199 ), ExtResource( 189 ), ExtResource( 191 ) ],
+"loop": true,
+"name": "cummed",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 171 ), ExtResource( 181 ), ExtResource( 183 ), ExtResource( 156 ), ExtResource( 158 ), ExtResource( 167 ), ExtResource( 173 ), ExtResource( 172 ), ExtResource( 174 ), ExtResource( 178 ), ExtResource( 206 ), ExtResource( 201 ), ExtResource( 209 ), ExtResource( 213 ), ExtResource( 195 ), ExtResource( 187 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 199 ), ExtResource( 189 ), ExtResource( 191 ) ],
+"loop": false,
+"name": "cumming",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 109 ), ExtResource( 114 ), ExtResource( 98 ), ExtResource( 111 ), ExtResource( 119 ), ExtResource( 99 ), ExtResource( 113 ), ExtResource( 103 ), ExtResource( 106 ), ExtResource( 154 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 128 ), ExtResource( 150 ), ExtResource( 146 ), ExtResource( 124 ), ExtResource( 138 ), ExtResource( 123 ), ExtResource( 140 ), ExtResource( 142 ), ExtResource( 152 ) ],
+"loop": true,
+"name": "default",
+"speed": 24.0
+} ]
+
+[sub_resource type="Animation" id=20]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Cum1:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Cum2:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "cum"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.17, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.410929, 0.410929 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.3197, -137.008 ), Vector2( 5.25012, -151.028 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Cum1:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.07, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Cum2:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.07, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+
+[sub_resource type="Curve" id=22]
+min_value = 0.3
+max_value = 2.0
+_data = [ Vector2( 0.362745, 0.989659 ), 0.0, 0.0, 0, 0, Vector2( 0.852941, 1.73148 ), -1.09047, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=21]
+offsets = PoolRealArray( 0, 4.58251e-27, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="SpriteFrames" id=18]
+animations = [ {
+"frames": [ ExtResource( 220 ), ExtResource( 223 ), ExtResource( 226 ), ExtResource( 276 ), ExtResource( 273 ), ExtResource( 228 ), ExtResource( 277 ), ExtResource( 269 ), ExtResource( 233 ), ExtResource( 260 ), ExtResource( 234 ), ExtResource( 257 ), ExtResource( 272 ), ExtResource( 244 ), ExtResource( 245 ), ExtResource( 258 ), ExtResource( 275 ), ExtResource( 263 ), ExtResource( 265 ), ExtResource( 251 ), ExtResource( 267 ) ],
+"loop": true,
+"name": "default",
+"speed": 21.0
+} ]
+
+[node name="TentacleVagina1" type="AnimatedSprite"]
+position = Vector2( 493, 321 )
+rotation = 0.00496553
+frames = SubResource( 17 )
+frame = 5
+playing = true
+script = ExtResource( 216 )
+
+[node name="Cum" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+show_behind_parent = true
+position = Vector2( 5.25012, -151.028 )
+rotation = -0.03824
+texture = ExtResource( 218 )
+
+[node name="Anim" type="AnimationPlayer" parent="Cum"]
+anims/RESET = SubResource( 20 )
+anims/cum = SubResource( 19 )
+
+[node name="Cum1" type="CPUParticles2D" parent="."]
+show_behind_parent = true
+position = Vector2( 5.44562, -161.526 )
+rotation = 0.487231
+z_index = 1
+emitting = false
+amount = 2
+lifetime = 2.0
+one_shot = true
+texture = ExtResource( 219 )
+flag_align_y = true
+direction = Vector2( 0, 0 )
+gravity = Vector2( 0, 60 )
+initial_velocity = 73.4
+angular_velocity_random = 0.04
+angle_random = 1.0
+scale_amount_curve = SubResource( 22 )
+color_ramp = SubResource( 21 )
+
+[node name="Cum2" type="CPUParticles2D" parent="."]
+show_behind_parent = true
+position = Vector2( 3.43073, -164.516 )
+rotation = -3.19998
+z_index = 1
+emitting = false
+amount = 2
+lifetime = 2.0
+one_shot = true
+texture = ExtResource( 219 )
+flag_align_y = true
+direction = Vector2( 0, 0 )
+gravity = Vector2( 0, -60 )
+initial_velocity = 73.4
+angular_velocity_random = 0.04
+angle_random = 1.0
+scale_amount_curve = SubResource( 22 )
+color_ramp = SubResource( 21 )
+
+[node name="Vagene1" type="Sprite" parent="."]
+position = Vector2( 3.34441, -203.852 )
+rotation = -0.03824
+scale = Vector2( 0.995564, 1.44916 )
+texture = ExtResource( 25 )
+
+[node name="VageneAnim" type="AnimatedSprite" parent="."]
+position = Vector2( 5.43076, -164.527 )
+frames = SubResource( 18 )
+frame = 1
+playing = true
+
+[node name="BellyButton" type="Sprite" parent="."]
+position = Vector2( 1.91248, -219.012 )
+texture = ExtResource( 1 )
+
+[connection signal="animation_finished" from="." to="." method="_on_TentacleVagina1_animation_finished"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://characters/BaseGirl.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/euxi_assets/disasterdemon_sprites/dragon_tail_side.png" type="Texture" id=2]
+
+[node name="Disasterdemon" instance=ExtResource( 1 )]
+speed = 3
+character_type = "disasterdemon"
+
+[node name="DragonTail" type="Sprite" parent="." index="0"]
+position = Vector2( -8, -66 )
+texture = ExtResource( 2 )
+
+[node name="Reflection" parent="." index="3"]
+frame = 2
+
+[node name="AnimatedSprite" parent="." index="8"]
+frame = 0

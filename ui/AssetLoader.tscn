@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://characters/parts/TentacleVagina1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/parts/TentacleVagina2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/parts/TentacleVagina1b.tscn" type="PackedScene" id=6]
+[ext_resource path="res://characters/parts/TentacleVagina2b.tscn" type="PackedScene" id=7]
+
+[node name="AssetLoader" type="Node"]
+
+[node name="TentacleVagina1" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 490.607, 268.168 )
+frame = 3
+
+[node name="TentacleVagina2" parent="." instance=ExtResource( 5 )]
+visible = false
+frame = 3
+
+[node name="TentacleVagina3" parent="." instance=ExtResource( 6 )]
+visible = false
+frame = 9
+
+[node name="TentacleVagina4" parent="." instance=ExtResource( 7 )]
+visible = false
+frame = 3

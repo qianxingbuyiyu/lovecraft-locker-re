@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://demos/LewdSceneMockup.gd" type="Script" id=4]
+
+[node name="LewdSceneMockup" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Chars2" type="Node2D" parent="."]
+
+[node name="Node2D" type="Node2D" parent="Chars2"]
+
+[node name="Chars3" type="Node2D" parent="."]
+position = Vector2( 275, 179 )

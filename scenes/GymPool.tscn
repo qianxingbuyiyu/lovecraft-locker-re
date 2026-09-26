@@ -1,0 +1,526 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://scenes/SchoolArea.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/game/backgrounds/gympool.png" type="Texture" id=2]
+[ext_resource path="res://assets/WaveNoise.tres" type="Texture" id=3]
+[ext_resource path="res://assets/icon.png" type="Texture" id=4]
+[ext_resource path="res://assets/euxi_assets/gym pool/pool.png" type="Texture" id=5]
+[ext_resource path="res://assets/euxi_assets/gym pool/pool ladder.png" type="Texture" id=6]
+[ext_resource path="res://assets/euxi_assets/gym pool/change room door.png" type="Texture" id=7]
+[ext_resource path="res://assets/euxi_assets/gym pool/door.png" type="Texture" id=8]
+[ext_resource path="res://assets/euxi_assets/gym pool/chair.png" type="Texture" id=9]
+[ext_resource path="res://objects/MainLocker.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/euxi_assets/nurse_room/NR plant.png" type="Texture" id=11]
+[ext_resource path="res://assets/euxi_assets/storage area/SA cabinet.png" type="Texture" id=12]
+[ext_resource path="res://assets/euxi_assets/storage area/ladder.png" type="Texture" id=13]
+[ext_resource path="res://assets/euxi_assets/storage area/balls in basket.png" type="Texture" id=14]
+[ext_resource path="res://assets/euxi_assets/storage area/hop.png" type="Texture" id=15]
+[ext_resource path="res://assets/euxi_assets/storage area/SA_door.png" type="Texture" id=16]
+[ext_resource path="res://assets/cyril_assets/Hallway/bulletin.png" type="Texture" id=17]
+[ext_resource path="res://assets/cyril_assets/Hallway/plant_base.png" type="Texture" id=18]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+uniform vec2 scale;
+uniform float y_zoom;
+uniform vec4 water_color : hint_color;
+uniform sampler2D noise;
+uniform vec2 distortion_scale;
+uniform float intensity;
+uniform float speed;
+
+uniform float wave_amplitude;
+uniform float wave_speed;
+uniform float wave_period;
+
+
+void fragment(){
+
+	float distortion = texture(noise, UV*scale*distortion_scale + TIME * speed).x;
+	distortion -= 0.5;
+
+	float uv_height = SCREEN_PIXEL_SIZE.y / TEXTURE_PIXEL_SIZE.y;
+	vec2 reflected_screenuv = vec2(SCREEN_UV.x -distortion * intensity * y_zoom, SCREEN_UV.y + uv_height * UV.y * scale.y * y_zoom * 3.0);
+	vec4 reflection = texture(SCREEN_TEXTURE, reflected_screenuv);
+	COLOR.rgb = mix(reflection.rgb, water_color.rgb, water_color.a);
+
+	float waves = UV.y * scale.y + sin(UV.x * scale.x / wave_period - TIME*wave_speed)*cos(0.2*UV.x*scale.x/wave_period + TIME - wave_speed) * wave_amplitude - wave_amplitude;
+	COLOR.a = smoothstep(0.1, 0.13, waves);
+//	COLOR.rgb = mix(refrection.rgb, water_color.rgb, water_color.a);
+
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/scale = Vector2( 300, 3.687 )
+shader_param/y_zoom = 0.841
+shader_param/water_color = Color( 0.109804, 0.713726, 0.898039, 0.894118 )
+shader_param/distortion_scale = Vector2( 0.05, 0.3 )
+shader_param/intensity = 0.07
+shader_param/speed = 0.05
+shader_param/wave_amplitude = 0.08
+shader_param/wave_speed = 3.0
+shader_param/wave_period = 0.4
+shader_param/noise = ExtResource( 3 )
+
+[node name="GymPool" instance=ExtResource( 1 )]
+__meta__ = {
+"_edit_vertical_guides_": [ -3082.0 ]
+}
+row_size = 2
+MAX_GIRL_COUNT = 40
+
+[node name="1" type="Sprite" parent="Background" index="0"]
+position = Vector2( -113, 267 )
+scale = Vector2( 5.61584, 1.07491 )
+texture = ExtResource( 2 )
+
+[node name="BackgroundObjects" parent="." index="1"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="BackgroundObjects" index="0"]
+position = Vector2( 17, 291 )
+texture = ExtResource( 7 )
+
+[node name="Sprite11" type="Sprite" parent="BackgroundObjects" index="1"]
+position = Vector2( -4387, 291 )
+texture = ExtResource( 7 )
+
+[node name="Sprite13" type="Sprite" parent="BackgroundObjects" index="2"]
+position = Vector2( 4934, 302 )
+texture = ExtResource( 16 )
+
+[node name="Sprite3" type="Sprite" parent="BackgroundObjects" index="3"]
+position = Vector2( 1520, 302 )
+texture = ExtResource( 8 )
+
+[node name="Sprite14" type="Sprite" parent="BackgroundObjects" index="4"]
+position = Vector2( -3168, 302 )
+texture = ExtResource( 8 )
+
+[node name="Sprite4" type="Sprite" parent="BackgroundObjects" index="5"]
+position = Vector2( 349, 444 )
+texture = ExtResource( 9 )
+
+[node name="Sprite7" type="Sprite" parent="BackgroundObjects" index="6"]
+position = Vector2( 3184, 444 )
+texture = ExtResource( 9 )
+
+[node name="Sprite8" type="Sprite" parent="BackgroundObjects" index="7"]
+position = Vector2( -2705, 444 )
+texture = ExtResource( 9 )
+
+[node name="Sprite5" type="Sprite" parent="BackgroundObjects" index="8"]
+position = Vector2( -850, 406 )
+texture = ExtResource( 14 )
+
+[node name="Sprite16" type="Sprite" parent="BackgroundObjects" index="9"]
+position = Vector2( -1176, 430 )
+texture = ExtResource( 15 )
+
+[node name="NrPlant" type="Sprite" parent="BackgroundObjects" index="10"]
+position = Vector2( -3462, 353 )
+texture = ExtResource( 11 )
+
+[node name="NrPlant7" type="Sprite" parent="BackgroundObjects" index="11"]
+position = Vector2( 3170, 364 )
+texture = ExtResource( 12 )
+
+[node name="NrPlant2" type="Sprite" parent="BackgroundObjects" index="12"]
+position = Vector2( -4187, 353 )
+texture = ExtResource( 11 )
+
+[node name="Cabinet" type="Sprite" parent="BackgroundObjects" index="13"]
+position = Vector2( -5550, 361 )
+texture = ExtResource( 12 )
+
+[node name="Cabinet2" type="Sprite" parent="BackgroundObjects" index="14"]
+position = Vector2( -4638, 361 )
+texture = ExtResource( 13 )
+
+[node name="Cabinet3" type="Sprite" parent="BackgroundObjects" index="15"]
+position = Vector2( -1281, 356 )
+texture = ExtResource( 13 )
+
+[node name="BallsInBasket" type="Sprite" parent="BackgroundObjects" index="16"]
+position = Vector2( 4659, 406 )
+texture = ExtResource( 14 )
+
+[node name="Sprite6" type="Sprite" parent="BackgroundObjects" index="17"]
+position = Vector2( 2073, 446 )
+texture = ExtResource( 9 )
+
+[node name="Bulletin" type="Sprite" parent="BackgroundObjects" index="18"]
+position = Vector2( 354, 261 )
+texture = ExtResource( 17 )
+
+[node name="Plant2" type="Sprite" parent="BackgroundObjects" index="19"]
+position = Vector2( 1782, 349 )
+texture = ExtResource( 18 )
+
+[node name="Plant3" type="Sprite" parent="BackgroundObjects" index="20"]
+position = Vector2( 637, 355 )
+texture = ExtResource( 18 )
+
+[node name="Reflections" type="Node2D" parent="." index="2"]
+modulate = Color( 1, 1, 1, 0.137255 )
+position = Vector2( 14, 751 )
+scale = Vector2( 1, -0.75 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="Reflections" index="0"]
+position = Vector2( 17, 291 )
+texture = ExtResource( 7 )
+
+[node name="Sprite11" type="Sprite" parent="Reflections" index="1"]
+position = Vector2( -4387, 291 )
+texture = ExtResource( 7 )
+
+[node name="Sprite13" type="Sprite" parent="Reflections" index="2"]
+position = Vector2( 4934, 302 )
+texture = ExtResource( 16 )
+
+[node name="Sprite3" type="Sprite" parent="Reflections" index="3"]
+position = Vector2( 1520, 302 )
+texture = ExtResource( 8 )
+
+[node name="Sprite14" type="Sprite" parent="Reflections" index="4"]
+position = Vector2( -3168, 302 )
+texture = ExtResource( 8 )
+
+[node name="Sprite4" type="Sprite" parent="Reflections" index="5"]
+position = Vector2( 349, 444 )
+texture = ExtResource( 9 )
+
+[node name="Sprite7" type="Sprite" parent="Reflections" index="6"]
+position = Vector2( 3184, 444 )
+texture = ExtResource( 9 )
+
+[node name="Sprite8" type="Sprite" parent="Reflections" index="7"]
+position = Vector2( -2705, 444 )
+texture = ExtResource( 9 )
+
+[node name="Sprite9" type="Sprite" parent="Reflections" index="8"]
+position = Vector2( -5509, 444 )
+texture = ExtResource( 9 )
+
+[node name="Sprite5" type="Sprite" parent="Reflections" index="9"]
+position = Vector2( -850, 406 )
+texture = ExtResource( 14 )
+
+[node name="Sprite16" type="Sprite" parent="Reflections" index="10"]
+position = Vector2( -1176, 430 )
+texture = ExtResource( 15 )
+
+[node name="NrPlant" type="Sprite" parent="Reflections" index="11"]
+position = Vector2( -3462, 353 )
+texture = ExtResource( 11 )
+
+[node name="NrPlant7" type="Sprite" parent="Reflections" index="12"]
+position = Vector2( 3170, 364 )
+texture = ExtResource( 12 )
+
+[node name="NrPlant2" type="Sprite" parent="Reflections" index="13"]
+position = Vector2( -4187, 353 )
+texture = ExtResource( 11 )
+
+[node name="Cabinet" type="Sprite" parent="Reflections" index="14"]
+position = Vector2( -5544, 361 )
+texture = ExtResource( 12 )
+
+[node name="Cabinet2" type="Sprite" parent="Reflections" index="15"]
+position = Vector2( -4638, 361 )
+texture = ExtResource( 13 )
+
+[node name="Cabinet3" type="Sprite" parent="Reflections" index="16"]
+position = Vector2( -1281, 356 )
+texture = ExtResource( 13 )
+
+[node name="BallsInBasket" type="Sprite" parent="Reflections" index="17"]
+position = Vector2( 4659, 406 )
+texture = ExtResource( 14 )
+
+[node name="Sprite6" type="Sprite" parent="Reflections" index="18"]
+position = Vector2( 2073, 446 )
+texture = ExtResource( 9 )
+
+[node name="Bulletin" type="Sprite" parent="Reflections" index="19"]
+position = Vector2( 354, 261 )
+texture = ExtResource( 17 )
+
+[node name="Plant2" type="Sprite" parent="Reflections" index="20"]
+position = Vector2( 1782, 349 )
+texture = ExtResource( 18 )
+
+[node name="Plant3" type="Sprite" parent="Reflections" index="21"]
+position = Vector2( 637, 355 )
+texture = ExtResource( 18 )
+
+[node name="Lockers" parent="." index="3"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Locker0" parent="Lockers" index="0" instance=ExtResource( 10 )]
+position = Vector2( -5172, 335 )
+locker_id = 1300
+
+[node name="Locker1" parent="Lockers" index="1" instance=ExtResource( 10 )]
+position = Vector2( -5051, 335 )
+locker_id = 1301
+
+[node name="Locker2" parent="Lockers" index="2" instance=ExtResource( 10 )]
+position = Vector2( -4933, 335 )
+locker_id = 1302
+
+[node name="Locker3" parent="Lockers" index="3" instance=ExtResource( 10 )]
+position = Vector2( -4813, 335 )
+locker_id = 1303
+
+[node name="Locker4" parent="Lockers" index="4" instance=ExtResource( 10 )]
+position = Vector2( -4009, 335 )
+locker_id = 1304
+
+[node name="Locker5" parent="Lockers" index="5" instance=ExtResource( 10 )]
+position = Vector2( -3888, 335 )
+locker_id = 1305
+
+[node name="Locker6" parent="Lockers" index="6" instance=ExtResource( 10 )]
+position = Vector2( -3770, 335 )
+locker_id = 1306
+
+[node name="Locker7" parent="Lockers" index="7" instance=ExtResource( 10 )]
+position = Vector2( -3650, 335 )
+locker_id = 1307
+
+[node name="Locker8" parent="Lockers" index="8" instance=ExtResource( 10 )]
+position = Vector2( -2365, 335 )
+locker_id = 1308
+
+[node name="Locker9" parent="Lockers" index="9" instance=ExtResource( 10 )]
+position = Vector2( -2244, 335 )
+locker_id = 1309
+
+[node name="Locker10" parent="Lockers" index="10" instance=ExtResource( 10 )]
+position = Vector2( -2126, 335 )
+locker_id = 1310
+
+[node name="Locker11" parent="Lockers" index="11" instance=ExtResource( 10 )]
+position = Vector2( -2006, 335 )
+locker_id = 1311
+
+[node name="Locker12" parent="Lockers" index="12" instance=ExtResource( 10 )]
+position = Vector2( -1886, 335 )
+locker_id = 1312
+
+[node name="Locker13" parent="Lockers" index="13" instance=ExtResource( 10 )]
+position = Vector2( -1765, 335 )
+locker_id = 1313
+
+[node name="Locker14" parent="Lockers" index="14" instance=ExtResource( 10 )]
+position = Vector2( -1647, 335 )
+locker_id = 1314
+
+[node name="Locker15" parent="Lockers" index="15" instance=ExtResource( 10 )]
+position = Vector2( -1527, 335 )
+locker_id = 1315
+
+[node name="Locker16" parent="Lockers" index="16" instance=ExtResource( 10 )]
+position = Vector2( -594, 335 )
+locker_id = 1316
+
+[node name="Locker17" parent="Lockers" index="17" instance=ExtResource( 10 )]
+position = Vector2( -473, 335 )
+locker_id = 1317
+
+[node name="Locker18" parent="Lockers" index="18" instance=ExtResource( 10 )]
+position = Vector2( -355, 335 )
+locker_id = 1318
+
+[node name="Locker19" parent="Lockers" index="19" instance=ExtResource( 10 )]
+position = Vector2( -235, 335 )
+locker_id = 1319
+
+[node name="Locker20" parent="Lockers" index="20" instance=ExtResource( 10 )]
+position = Vector2( 825, 335 )
+locker_id = 1320
+
+[node name="Locker21" parent="Lockers" index="21" instance=ExtResource( 10 )]
+position = Vector2( 946, 335 )
+locker_id = 1321
+
+[node name="Locker22" parent="Lockers" index="22" instance=ExtResource( 10 )]
+position = Vector2( 1064, 335 )
+locker_id = 1322
+
+[node name="Locker23" parent="Lockers" index="23" instance=ExtResource( 10 )]
+position = Vector2( 1184, 335 )
+locker_id = 1323
+
+[node name="Locker24" parent="Lockers" index="24" instance=ExtResource( 10 )]
+position = Vector2( 2412, 335 )
+locker_id = 1324
+
+[node name="Locker25" parent="Lockers" index="25" instance=ExtResource( 10 )]
+position = Vector2( 2533, 335 )
+locker_id = 1325
+
+[node name="Locker26" parent="Lockers" index="26" instance=ExtResource( 10 )]
+position = Vector2( 2651, 335 )
+locker_id = 1326
+
+[node name="Locker27" parent="Lockers" index="27" instance=ExtResource( 10 )]
+position = Vector2( 2771, 335 )
+locker_id = 1327
+
+[node name="Locker28" parent="Lockers" index="28" instance=ExtResource( 10 )]
+position = Vector2( 3532, 335 )
+locker_id = 1328
+
+[node name="Locker29" parent="Lockers" index="29" instance=ExtResource( 10 )]
+position = Vector2( 3653, 335 )
+locker_id = 1329
+
+[node name="Locker30" parent="Lockers" index="30" instance=ExtResource( 10 )]
+position = Vector2( 3771, 335 )
+locker_id = 1330
+
+[node name="Locker31" parent="Lockers" index="31" instance=ExtResource( 10 )]
+position = Vector2( 3891, 335 )
+locker_id = 1331
+
+[node name="Locker32" parent="Lockers" index="32" instance=ExtResource( 10 )]
+position = Vector2( 4009, 335 )
+locker_id = 1332
+
+[node name="Locker33" parent="Lockers" index="33" instance=ExtResource( 10 )]
+position = Vector2( 4130, 335 )
+locker_id = 1333
+
+[node name="Locker34" parent="Lockers" index="34" instance=ExtResource( 10 )]
+position = Vector2( 4248, 335 )
+locker_id = 1334
+
+[node name="Locker35" parent="Lockers" index="35" instance=ExtResource( 10 )]
+position = Vector2( 4368, 335 )
+locker_id = 1335
+
+[node name="HallwayStart" parent="." index="4"]
+position = Vector2( -6073, 405 )
+
+[node name="HallwayEnd" parent="." index="5"]
+position = Vector2( 5356, 405 )
+
+[node name="Side" type="Node2D" parent="." index="7"]
+z_index = 2
+
+[node name="3" type="Sprite" parent="Side" index="0"]
+position = Vector2( -6559.67, 606.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 5 )
+
+[node name="6" type="Sprite" parent="Side" index="1"]
+position = Vector2( -7967.34, 606.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 5 )
+
+[node name="4" type="Sprite" parent="Side" index="2"]
+position = Vector2( -5268.68, 605.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 5 )
+
+[node name="5" type="Sprite" parent="Side" index="3"]
+position = Vector2( -3979.68, 605.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 5 )
+
+[node name="7" type="Sprite" parent="Side" index="4"]
+position = Vector2( -1162.67, 606.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 5 )
+
+[node name="8" type="Sprite" parent="Side" index="5"]
+position = Vector2( -2570.34, 606.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 5 )
+
+[node name="9" type="Sprite" parent="Side" index="6"]
+position = Vector2( 128.322, 605.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 5 )
+
+[node name="10" type="Sprite" parent="Side" index="7"]
+position = Vector2( 1417.32, 605.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 5 )
+
+[node name="11" type="Sprite" parent="Side" index="8"]
+position = Vector2( 4236.33, 606.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 5 )
+
+[node name="12" type="Sprite" parent="Side" index="9"]
+position = Vector2( 2828.66, 606.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 5 )
+
+[node name="13" type="Sprite" parent="Side" index="10"]
+position = Vector2( 5527.32, 605.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 5 )
+
+[node name="14" type="Sprite" parent="Side" index="11"]
+position = Vector2( 6816.32, 605.579 )
+scale = Vector2( 1.07491, 1.07491 )
+texture = ExtResource( 5 )
+
+[node name="Water" type="Sprite" parent="." index="9"]
+self_modulate = Color( 1, 1, 1, 0.662745 )
+material = SubResource( 2 )
+position = Vector2( -864, 791 )
+scale = Vector2( 245.469, 7.79475 )
+z_index = 2
+texture = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Water" index="0"]
+show_behind_parent = true
+position = Vector2( 4.0494, -32.8426 )
+scale = Vector2( 0.00407384, 0.128291 )
+texture = ExtResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="Water" index="1"]
+show_behind_parent = true
+position = Vector2( 14.7146, -32.8426 )
+scale = Vector2( 0.00407384, 0.128291 )
+texture = ExtResource( 6 )
+
+[node name="Sprite3" type="Sprite" parent="Water" index="2"]
+show_behind_parent = true
+position = Vector2( 24.1987, -32.8426 )
+scale = Vector2( 0.00407384, 0.128291 )
+texture = ExtResource( 6 )
+
+[node name="Sprite4" type="Sprite" parent="Water" index="3"]
+show_behind_parent = true
+position = Vector2( -4.95386, -32.8426 )
+scale = Vector2( 0.00407384, 0.128291 )
+texture = ExtResource( 6 )
+
+[node name="Sprite5" type="Sprite" parent="Water" index="4"]
+show_behind_parent = true
+position = Vector2( -16.6499, -32.8426 )
+scale = Vector2( 0.00407384, 0.128291 )
+texture = ExtResource( 6 )
+
+[node name="Sprite6" type="Sprite" parent="Water" index="5"]
+show_behind_parent = true
+position = Vector2( -29.1279, -32.8426 )
+scale = Vector2( 0.00407384, 0.128291 )
+texture = ExtResource( 6 )

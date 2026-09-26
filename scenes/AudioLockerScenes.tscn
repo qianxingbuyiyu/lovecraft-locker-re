@@ -1,0 +1,37 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/sound/moan12.mp3" type="AudioStream" id=1]
+[ext_resource path="res://assets/sound/moan11.mp3" type="AudioStream" id=2]
+[ext_resource path="res://assets/sound/moan5.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/sound/moan1.mp3" type="AudioStream" id=4]
+[ext_resource path="res://assets/sound/moan7.mp3" type="AudioStream" id=5]
+[ext_resource path="res://assets/sound/tentaclefuck.mp3" type="AudioStream" id=6]
+[ext_resource path="res://assets/sound/climax1.mp3" type="AudioStream" id=7]
+[ext_resource path="res://assets/sound/moan17.mp3" type="AudioStream" id=8]
+
+[node name="AudioLockerScenes" type="Node"]
+
+[node name="Moan12" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[node name="Moan5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Moan7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Moan11" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="Moan1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Moan17" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+pitch_scale = 0.9
+
+[node name="Climax" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="Tentafuck" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )

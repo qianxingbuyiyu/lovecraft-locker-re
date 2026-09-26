@@ -23,15 +23,40 @@ jobs:
           wget -q https://github.com/godotengine/godot/releases/download/3.5.1-stable/Godot_v3.5.1-stable_export_templates.tpz
           mkdir -p ~/.local/share/godot/templates/3.5.1.stable
           cd ~/.local/share/godot/templates/3.5.1.stable
-          unzip -o $GITHUB_WORKSPACE/Godot_v3.5.1-stable_export_templates.tpz "templates/android_debug.apk" "templates/android_release.apk"
-          ls -la
+          unzip -o $GITHUB_WORKSPACE/Godot_v3.5.1-stable_export_templates.tpz templates/android_debug.apk templates/android_release.apk
 
-      - name: Import
+      - name: Get original APK
+        run: |
+          # 从 release 下载原版 APK（含完整资源）
+          wget -q -L -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/qianxingbuyiyu/lovecraft-locker-re/releases/tags/base-apk" -O /tmp/rel.json
+          python3 -c "import json; d=json.load(open('/tmp/rel.json')); print([a['browser_download_url'] for a in d['assets']])"
+          URL=$(python3 -c "import json; d=json.load(open('/tmp/rel.json')); print([a['browser_download_url'] for a in d['assets'] if 'apk' in a['name']][0])")
+          echo "APK_URL=$URL"
+          wget -q -L "$URL" -O base_original.apk
+          ls -la base_original.apk
+
+      - name: Extract resources from APK
         run: |
           cd $GITHUB_WORKSPACE
-          ./godot --path . --editor --quit --headless 2>&1 | tail -3 || true
+          python3 - <<'PYEOF'
+import zipfile, os
+z = zipfile.ZipFile('base_original.apk')
+for n in z.namelist():
+    if n.startswith('assets/'):
+        rel = n[7:]
+        out = os.path.join('assets', rel)
+        os.makedirs(os.path.dirname(out), exist_ok=True)
+        with open(out, 'wb') as f:
+            f.write(z.read(n))
+print('解出资源完成')
+PYEOF
 
-      - name: Export
+      - name: Import quick
+        run: |
+          cd $GITHUB_WORKSPACE
+          ./godot --path . --editor --quit --headless 2>&1 | tail -5 || true
+
+      - name: Export APK
         run: |
           cd $GITHUB_WORKSPACE
           ./godot --path . --export-debug "Android" lovecraft-locker-re.apk 2>&1 | tail -10 || true

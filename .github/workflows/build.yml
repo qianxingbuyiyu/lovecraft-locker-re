@@ -1,0 +1,114 @@
+name: Build Godot APK
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Godot 3.5.1 headless
+        run: |
+          wget -q https://github.com/godotengine/godot/releases/download/3.5.1-stable/Godot_v3.5.1-stable_linux_headless.64.zip
+          unzip -q Godot_v3.5.1-stable_linux_headless.64.zip
+          mv Godot_v3.5.1-stable_linux_headless.64 godot
+          chmod +x godot
+          ./godot --version
+
+      - name: Setup export templates
+        run: |
+          wget -q https://github.com/godotengine/godot/releases/download/3.5.1-stable/Godot_v3.5.1-stable_export_templates.tpz
+          mkdir -p ~/.local/share/godot/templates/3.5.1.stable
+          cd ~/.local/share/godot/templates/3.5.1.stable
+          python3 - <<'EOF'
+import zipfile, glob
+tpz = glob.glob('/home/runner/work/*/*/*.tpz')[0]
+with zipfile.ZipFile(tpz) as z:
+    for n in z.namelist():
+        if n.endswith('.apk') and ('android_debug' in n or 'android_release' in n):
+            with open(n.split('/')[-1], 'wb') as f:
+                f.write(z.read(n))
+            print('解出模板:', n.split('/')[-1])
+EOF
+          ls -la
+
+      - name: Import resources
+        run: |
+          # 用 Godot 无头模式导入工程（生成 .godot 缓存）
+          cd $GITHUB_WORKSPACE
+          /home/runner/work/*/*/godot/godot --path . --editor --quit --headless 2>&1 | tail -5 || true
+
+      - name: Export Android APK
+        run: |
+          cd $GITHUB_WORKSPACE
+          # 添加 Android 导出预设
+          cat > export_presets.cfg <<'EOF'
+[preset.0]
+
+name="Android"
+platform="Android"
+runnable=true
+custom_features=""
+export_filter="all_resources"
+include_filter=""
+exclude_filter=""
+export_path="lovecraft-locker-re.apk"
+script_export_mode=2
+
+[preset.0.options]
+
+custom_template/debug=""
+custom_template/release=""
+gradle_build/use_gradle_build=false
+gradle_build/gradle_build_directory=""
+gradle_build/compress_native_libraries=true
+gradle_build/export_format=0
+architectures/armeabi-v7a=true
+architectures/arm64-v8a=true
+architectures/x86=false
+architectures/x86_64=false
+version/code=1
+version/name="1.4.03"
+package/unique_name="org.kenomicgames.lovecraftlocker"
+package/name="Lovecraft Locker"
+package/signed=true
+package/app_category="game"
+launcher_icons/main_192x192=""
+launcher_icons/adaptive_foreground_432x432=""
+launcher_icons/adaptive_background_432x432=""
+graphics/opengl_debug=false
+screen/immersive_mode=true
+screen/support_small=true
+screen/support_normal=true
+screen/support_large=true
+screen/support_xlarge=true
+user_data_backup/allow=true
+command_line/extra_args=""
+EOF
+          # 导出 debug APK（自动签名 debug keystore）
+          /home/runner/work/*/*/godot/godot --path . --export-debug "Android" lovecraft-locker-re.apk 2>&1 | tail -20 || true
+          ls -la *.apk 2>/dev/null
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: lovecraft-locker-re-apk
+          path: |
+            *.apk
+          if-no-files-found: error
+
+      - name: Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            *.apk
+          tag_name: ${{ github.ref_name }}
